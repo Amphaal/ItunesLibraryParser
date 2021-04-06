@@ -5,13 +5,15 @@
 
 #include <string_view>
 
+#include "Pipeable.hpp"
+
 // ITunes XML Library file stored on memory
-struct ITunesXMLLibrary {
+struct ITunesXMLLibrary : public IPipeableSource<ITunesXMLLibrary> {
     long fileSize;
     char* ptr;
 
-    ITunesXMLLibrary(const char* filePath) {
-        auto f = fopen(filePath, "rb");
+    ITunesXMLLibrary(const std::string_view& filePath) : IPipeableSource(this) {
+        auto f = fopen(filePath.begin(), "rb");
         assert(f);
             
             fseek(f, 0, SEEK_END); // seek to end of file

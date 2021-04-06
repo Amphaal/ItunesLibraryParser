@@ -14,6 +14,10 @@ class Measurable {
         std::cout << "[" << _mesureDescription << "] : " << std::chrono::duration <double, std::milli> (_elapsedNs()).count() << "ms" << '\n';
     }
 
+    static void makeMorePrecise() {
+        std::ios_base::sync_with_stdio(false);
+    }
+
  private:
     Clock::time_point _start_tp;
     const char * _mesureDescription;

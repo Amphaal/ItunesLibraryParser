@@ -3,16 +3,19 @@
 #include "Tracks.hpp"
 #include "RawTracksCollection.hpp"
 
-struct TracksData : public MTBatcher<RawTracksCollection, FieldType::ITracksData>, public std::vector<FieldType::ITracksData> {
+struct TracksBoundingResult : public MTBatcher<RawTracksCollection, FieldType::TrackFieldsBoundingResult>, public IPipeableSource<TracksBoundingResult>, public std::vector<FieldType::TrackFieldsBoundingResult> {
  public:
-    TracksData(const Input&& rawTracks) : MTBatcher(this) {
+    TracksBoundingResult(const Input&& rawTracks) : MTBatcher(this), IPipeableSource(this) {
         reserve(rawTracks.size());
         auto results = _processBatches(rawTracks);
         results.swap(*this);
     }
+
+    ~TracksBoundingResult() {}
     
-    TracksData(const TracksData&) = delete;
-    void operator=(const TracksData&) = delete;
+    TracksBoundingResult(TracksBoundingResult&&) = default;
+    TracksBoundingResult(const TracksBoundingResult&) = delete;
+    void operator=(const TracksBoundingResult&) = delete;
 
     void fillDefaultingValuesOnMissingFields() {
         //

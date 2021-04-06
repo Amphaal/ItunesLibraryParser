@@ -18,28 +18,35 @@ struct StringLiteral {
 };
 
 template<unsigned short SizeVal>
-struct ParsedTrackResult {
+struct ITrackFieldsBoundingResult {
     static constexpr auto Size = SizeVal;
     std::array<std::string_view, SizeVal>  trackFields;
     std::array<bool, SizeVal>              missingFields;
 };
 
-typedef ParsedTrackResult<9> ITracksData;
+// determine number of fields to scan
+typedef ITrackFieldsBoundingResult<9> TrackFieldsBoundingResult;
+
+template<auto S = FieldType::TrackFieldsBoundingResult::Size>
+struct IPackedTracks {
+    std::vector<std::array<std::string_view, S>> OKTracks;
+    std::vector<std::array<std::string_view, S>> missingFieldsTracks;
+};
 
 struct IScanner {
-    virtual void scanFill(const std::string_view &source, std::size_t &pos, ITracksData &result) const = 0;
+    virtual void scanFill(const std::string_view &source, std::size_t &pos, TrackFieldsBoundingResult &result) const = 0;
 };
 
 template<unsigned int IndexT, StringLiteral FieldName, StringLiteral LBegin, StringLiteral LEnd>
 struct FieldTypeStruct : public IScanner {
 
  // make sure any FieldTypeStruct respects boundaries
- static_assert(IndexT < ITracksData::Size);
+ static_assert(IndexT < TrackFieldsBoundingResult::Size);
 
  public:
     constexpr FieldTypeStruct() {}
 
-    void scanFill(const std::string_view &source, std::size_t &pos, ITracksData &result) const final {       
+    void scanFill(const std::string_view &source, std::size_t &pos, TrackFieldsBoundingResult &result) const final {       
         //
         auto &trackField = result.trackFields[index];
         auto &missingField = result.missingFields[index];
@@ -96,7 +103,7 @@ constexpr FieldTypeStruct<6, "Album Artist",   "<key>Album Artist</key><string>"
 constexpr FieldTypeStruct<7, "Album",          "<key>Album</key><string>",           "</string>">    Album;
 constexpr FieldTypeStruct<8, "Genre",          "<key>Genre</key><string>",           "</string>">    Genre;
 
-constexpr std::array<const IScanner*, ITracksData::Size> orderedScans {
+constexpr std::array<const IScanner*, TrackFieldsBoundingResult::Size> orderedScans {
     &TrackID,
     &DiscNumber,
     &TrackNumber,

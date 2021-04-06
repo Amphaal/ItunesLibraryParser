@@ -1,36 +1,43 @@
-#include "Mesurable.hpp"
-#include "TracksData.hpp"
+#include "PackedTracks.hpp"
+
+#include <fstream>
 
 #include <cstdio>
 
 int main() {
-    std::ios_base::sync_with_stdio(false);
+    // make measurements more precise
+    Measurable::makeMorePrecise();
 
-    auto m = Measurable { "XML file memory copy" };
-        const auto xmlLib = ITunesXMLLibrary { "D:/Musique/iTunes/iTunes Music Library.xml" };
-    m.printElapsedMs();
+    constexpr auto destLib = std::string_view { "D:/Musique/iTunes/iTunes Music Library.xml" };
 
-    m = { "Get infile track boundaries" };
-        auto boundaries = TracksBoundaries { xmlLib };
-    m.printElapsedMs();
+    auto packedTracks = 
+        IPipeableSource(&destLib)
+        .pipe<ITunesXMLLibrary>                                                         ("XML file memory copy")
+        .pipe<TracksBoundaries>                                                         ("Get infile track boundaries")
+        .pipeMove<const RawTracksCollection>                                            ("Get infile end-track positions (multi-threaded)")
+        .pipeMove<TracksBoundingResult>                                                 ("Find tracks data elements positions (multi-threaded)")
+            .execTrace<&TracksBoundingResult::fillDefaultingValuesOnMissingFields>      ("Fill defaulting values")
+        .pipeMove<const PackedTracks>                                                   ("Pack tracks into bundles for parsing");
 
-    m = { "Get infile end-track positions (multi-threaded)" };
-        const auto rawTracks = RawTracksCollection { std::move(boundaries) };
-    m.printElapsedMs();
-
-    std::cout << ">> Tracks found : " << rawTracks.size() << '\n';
-
-    m = { "Find tracks data elements positions (multi-threaded)" };
-        auto tracksData = TracksData { std::move(rawTracks) };
-    m.printElapsedMs();
-
-    m = { "Fill defaulting values" };
-        tracksData.fillDefaultingValuesOnMissingFields();
-    m.printElapsedMs();
-
+    // TODO : pack tracks data for parsing
     // TODO : parse output JSON File
     // TODO : parse warning File
-    // TODO : auto-fill Disc Number
+
+    // {
+    //     auto outputWarning = std::ofstream { "warnings.json", std::ifstream::out | std::ifstream::trunc | std::ifstream::binary };
+    //     outputWarning << '[';
+    //     for(const auto &trackData : tracksData) {
+    //         outputWarning << '{';
+    //         for(auto i = 0; i < FieldType::orderedScans.size(); ++i) {
+    //             auto &fieldType = FieldType::orderedScans[i];
+    //             trackData.missingFields[]
+    //             outputWarning << '{'
+
+    //         }
+    //         outputWarning << '}';
+    //     }
+    //     outputWarning << ']';
+    // }
 
     return 0;
 }
