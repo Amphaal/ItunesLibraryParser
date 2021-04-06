@@ -5,14 +5,37 @@
 
 struct TracksData : public MTBatcher<RawTracksCollection, FieldType::ITracksData>, public std::vector<FieldType::ITracksData> {
  public:
-    TracksData(const Input& rawTracks) : MTBatcher(this) {
+    TracksData(const Input&& rawTracks) : MTBatcher(this) {
         reserve(rawTracks.size());
         auto results = _processBatches(rawTracks);
         results.swap(*this);
     }
- 
+    
+    TracksData(const TracksData&) = delete;
+    void operator=(const TracksData&) = delete;
+
+    void fillDefaultingValuesOnMissingFields() {
+        //
+        constexpr auto numP = std::string_view {"1"};
+        constexpr auto discNumberIndex = FieldType::DiscNumber.index;
+        
+        //
+        for(auto &trackData : *this) {
+            //
+            auto &target = trackData.missingFields[discNumberIndex];
+            if(!target) continue;
+
+            //
+            trackData.trackFields[discNumberIndex] = numP;
+            target = false;
+        }
+    }
+
  private:
-    virtual const PackedOutput _processBatch(const Input& input, const std::size_t startAt, const std::size_t jobSize) const final {
+    virtual const PackedOutput _processBatch(std::reference_wrapper<const Input> inputRef, const std::size_t startAt, const std::size_t jobSize) const final {
+        //
+        auto &input = inputRef.get();
+
         //
         PackedOutput output;
         auto count = jobSize ? jobSize : input.size();

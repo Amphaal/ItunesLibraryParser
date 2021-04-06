@@ -6,6 +6,9 @@ struct TracksBoundaries : public std::string_view {
     using std::string_view::operator=;
     TracksBoundaries(const ITunesXMLLibrary& lib) : std::string_view(_getBoundaries(lib)) {}
 
+    TracksBoundaries(const TracksBoundaries&) = delete;
+    void operator=(const TracksBoundaries&) = delete;
+
  private:
     static const std::string_view _getBoundaries(const ITunesXMLLibrary& lib) {
         auto searchSV = lib.asStringView();

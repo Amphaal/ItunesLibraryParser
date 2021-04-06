@@ -31,12 +31,12 @@ class MTBatcher {
         // create batched jobs
         auto last = _howManyThreads - 1;
         for(auto i = 0; i < last; ++i) {
-            futures[i] = std::async(std::launch::async, &_processBatch, _target, input, jobPosStart, jobDefaultSize);
+            futures[i] = std::async(std::launch::async, &_processBatch, _target, std::cref(input), jobPosStart, jobDefaultSize);
             jobPosStart += jobDefaultSize;
         }
         
         // last batched job take remaining
-        futures[last] = std::async(std::launch::async, &_processBatch, _target, input, jobPosStart, 0);
+        futures[last] = std::async(std::launch::async, &_processBatch, _target, std::cref(input), jobPosStart, 0);
         
         // wait for first results
         auto results = futures[0].get();
@@ -55,5 +55,5 @@ class MTBatcher {
         toFill.insert(toFill.end(), toCollate.begin(), toCollate.end());
     };
 
-    virtual const PackedOutput _processBatch(const Input& input, const std::size_t startAt, const std::size_t jobSize) const = 0;
+    virtual const PackedOutput _processBatch(std::reference_wrapper<const Input> inputRef, const std::size_t startAt, const std::size_t jobSize) const = 0;
 };

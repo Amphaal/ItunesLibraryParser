@@ -3,22 +3,22 @@
 #include <iostream>
 #include <chrono>
 
-class Mesurable {
+class Measurable {
  public:
-    Mesurable(const char * mesureDescription) : _start_tp(std::chrono::system_clock::now()), _mesureDescription(mesureDescription) {}
-    void printElapsedMs() const {
-        std::cout << "[" << _mesureDescription << "] : " << _elapsedNs().count() * 1e-6 << "ms" << '\n';
-    }
+    using Clock = std::chrono::steady_clock;
+    Measurable(const char * mesureDescription) : 
+        _start_tp(Clock::now()), 
+        _mesureDescription(mesureDescription) {}
 
-    void printElapsedNs() const {
-        std::cout << "[" << _mesureDescription << "] : " << _elapsedNs().count() << "ns" << '\n';
+    void printElapsedMs() {
+        std::cout << "[" << _mesureDescription << "] : " << std::chrono::duration <double, std::milli> (_elapsedNs()).count() << "ms" << '\n';
     }
 
  private:
-    std::chrono::_V2::system_clock::time_point _start_tp;
+    Clock::time_point _start_tp;
     const char * _mesureDescription;
 
     const std::chrono::nanoseconds _elapsedNs() const {
-        return std::chrono::system_clock::now() - _start_tp;
+        return Clock::now() - _start_tp;
     }
 };

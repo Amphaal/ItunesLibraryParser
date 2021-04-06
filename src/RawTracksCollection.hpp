@@ -4,15 +4,7 @@
 #include "TracksBoundaries.hpp"
 
 struct RawTracksCollection : public MTBatcher<TracksBoundaries, const char*>, public std::vector<std::string_view> {
-    RawTracksCollection(Input boundaries) : MTBatcher(this) { 
-        _getResultsAndFill(std::move(boundaries));
-    }
-
- private:
-    static constexpr const char _endPattern[] = "</dict>";
-    static constexpr const std::size_t _avgTrackSize = 1500;
-
-    void _getResultsAndFill(Input &&boundaries) {
+    RawTracksCollection(Input &&boundaries) : MTBatcher(this) { 
         // remove dict from boundaries
         auto bDict = sizeof("\n\t<dict>");
         auto eDict = sizeof("\n\t</dict>");
@@ -21,12 +13,19 @@ struct RawTracksCollection : public MTBatcher<TracksBoundaries, const char*>, pu
             boundaries.size() - bDict - eDict
         );
         
-        //
+        // process and fill
         auto results = _processBatches(boundaries);
-        _fill(results, boundaries.size());
+        _fillSelfWithResults(results, boundaries.size());
     }
+
+    RawTracksCollection(const RawTracksCollection&) = delete;
+    void operator=(const RawTracksCollection&) = delete;
+
+ private:
+    static constexpr const char _endPattern[] = "</dict>";
+    static constexpr const std::size_t _avgTrackSize = 1500;
     
-    void _fill(const PackedOutput &toConvert, std::size_t boundariesSize) {
+    void _fillSelfWithResults(const PackedOutput &toConvert, std::size_t boundariesSize) {
         //
         auto fromSize = toConvert.size();
         this->reserve(fromSize);
@@ -62,7 +61,9 @@ struct RawTracksCollection : public MTBatcher<TracksBoundaries, const char*>, pu
         }
     }
 
-    virtual const PackedOutput _processBatch(const Input& input, const std::size_t startAt, const std::size_t jobSize) const final {
+    virtual const PackedOutput _processBatch(std::reference_wrapper<const Input> inputRef, const std::size_t startAt, const std::size_t jobSize) const final {
+        auto &input = inputRef.get();
+        
         // approx avg. track dict size
         PackedOutput results;
         auto estimatedTrackCount = (input.size() - startAt) / _avgTrackSize;

@@ -1,35 +1,36 @@
 #include "Mesurable.hpp"
 #include "TracksData.hpp"
 
+#include <cstdio>
+
 int main() {
-    auto m = Mesurable {"XML file memory copy"};
+    std::ios_base::sync_with_stdio(false);
+
+    auto m = Measurable { "XML file memory copy" };
         const auto xmlLib = ITunesXMLLibrary { "D:/Musique/iTunes/iTunes Music Library.xml" };
     m.printElapsedMs();
 
-    m = {"Get infile track boundaries"};
-        const auto boundaries = TracksBoundaries { xmlLib };
+    m = { "Get infile track boundaries" };
+        auto boundaries = TracksBoundaries { xmlLib };
     m.printElapsedMs();
 
-    m = {"Get infile end-track positions (multi-threaded)"};
-        const auto rawTracks = RawTracksCollection { boundaries };
+    m = { "Get infile end-track positions (multi-threaded)" };
+        const auto rawTracks = RawTracksCollection { std::move(boundaries) };
     m.printElapsedMs();
 
     std::cout << ">> Tracks found : " << rawTracks.size() << '\n';
 
-    m = {"Find tracks data elements positions (multi-threaded)"};
-        const auto tracksData = TracksData { rawTracks };
+    m = { "Find tracks data elements positions (multi-threaded)" };
+        auto tracksData = TracksData { std::move(rawTracks) };
+    m.printElapsedMs();
+
+    m = { "Fill defaulting values" };
+        tracksData.fillDefaultingValuesOnMissingFields();
     m.printElapsedMs();
 
     // TODO : parse output JSON File
     // TODO : parse warning File
     // TODO : auto-fill Disc Number
-
-    // constexpr std::string_view numP = "1";
-    // constexpr auto discNumberIndex = FieldType::DiscNumber.index;
-    // for(const auto &trackData : tracksData) {
-    //     if(!trackData.missingFields[discNumberIndex]) continue;
-    //     trackData.trackFields[discNumberIndex] = numP;
-    // }
 
     return 0;
 }
