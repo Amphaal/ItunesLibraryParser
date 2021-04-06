@@ -3,7 +3,7 @@
 #include "Tracks.hpp"
 #include "RawTracksCollection.hpp"
 
-struct TracksData : public MTBatcher<RawTracksCollection, ITracksData>, public std::vector<ITracksData> {
+struct TracksData : public MTBatcher<RawTracksCollection, FieldType::ITracksData>, public std::vector<FieldType::ITracksData> {
  public:
     TracksData(const Input& rawTracks) : MTBatcher(this) {
         reserve(rawTracks.size());
@@ -24,21 +24,20 @@ struct TracksData : public MTBatcher<RawTracksCollection, ITracksData>, public s
             //
             const auto &source = input[i];
             auto &dest = output.emplace_back();
-            auto &result = dest.trackFields;
-            auto &missing = dest.missingFields;
 
             //
             std::size_t pos = 0;
 
             //
-            FieldType::TrackID      .scanFill(source, pos, result[0], missing[0]);
-            FieldType::TrackNumber  .scanFill(source, pos, result[1], missing[1]);
-            FieldType::Year         .scanFill(source, pos, result[2], missing[2]);
-            FieldType::DateAdded    .scanFill(source, pos, result[3], missing[3]);
-            FieldType::Name         .scanFill(source, pos, result[4], missing[4]);
-            FieldType::AlbumArtist  .scanFill(source, pos, result[5], missing[5]);
-            FieldType::Album        .scanFill(source, pos, result[6], missing[6]);
-            FieldType::Genre        .scanFill(source, pos, result[7], missing[7]);
+            FieldType::TrackID      .scanFill(source, pos, dest);
+            FieldType::DiscNumber   .scanFill(source, pos, dest);
+            FieldType::TrackNumber  .scanFill(source, pos, dest);
+            FieldType::Year         .scanFill(source, pos, dest);
+            FieldType::DateAdded    .scanFill(source, pos, dest);
+            FieldType::Name         .scanFill(source, pos, dest);
+            FieldType::AlbumArtist  .scanFill(source, pos, dest);
+            FieldType::Album        .scanFill(source, pos, dest);
+            FieldType::Genre        .scanFill(source, pos, dest);
         }
 
         //

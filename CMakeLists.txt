@@ -31,4 +31,4 @@ set(CMAKE_C_STANDARD 11)
 ## Sources ##
 #############
 
-add_executable(test main.cpp)
+add_executable(test src/main.cpp)

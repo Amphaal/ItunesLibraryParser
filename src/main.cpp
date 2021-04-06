@@ -20,8 +20,12 @@ int main() {
         const auto tracksData = TracksData { rawTracks };
     m.printElapsedMs();
 
+    constexpr std::string_view numP = "1";
     for(const auto &trackData : tracksData) {
-        trackData.missingFields.
+        for(auto i = 0; i < trackData.missingFields.size(); ++i) {
+            if(trackData.missingFields[i] == false) continue;
+
+        }
     }
 
     return 0;
