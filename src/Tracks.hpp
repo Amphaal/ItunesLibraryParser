@@ -75,9 +75,9 @@ struct FieldTypeStruct : public IScanner {
         };
     }
  
- private:
     static constexpr const unsigned int index = IndexT;
 
+ private:
     static constexpr const char* _fieldName = FieldName.value;
     static constexpr const char* _beginFP = LBegin.value;
     static constexpr const char* _endFP = LEnd.value;
@@ -95,5 +95,17 @@ constexpr FieldTypeStruct<5, "Name",           "<key>Name</key><string>",       
 constexpr FieldTypeStruct<6, "Album Artist",   "<key>Album Artist</key><string>",    "</string>">    AlbumArtist;
 constexpr FieldTypeStruct<7, "Album",          "<key>Album</key><string>",           "</string>">    Album;
 constexpr FieldTypeStruct<8, "Genre",          "<key>Genre</key><string>",           "</string>">    Genre;
+
+constexpr std::array<const IScanner*, ITracksData::Size> orderedScans {
+    &TrackID,
+    &DiscNumber,
+    &TrackNumber,
+    &Year,
+    &DateAdded,
+    &Name,
+    &AlbumArtist,
+    &Album,
+    &Genre,
+};
 
 }

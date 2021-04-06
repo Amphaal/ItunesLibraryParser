@@ -29,15 +29,10 @@ struct TracksData : public MTBatcher<RawTracksCollection, FieldType::ITracksData
             std::size_t pos = 0;
 
             //
-            FieldType::TrackID      .scanFill(source, pos, dest);
-            FieldType::DiscNumber   .scanFill(source, pos, dest);
-            FieldType::TrackNumber  .scanFill(source, pos, dest);
-            FieldType::Year         .scanFill(source, pos, dest);
-            FieldType::DateAdded    .scanFill(source, pos, dest);
-            FieldType::Name         .scanFill(source, pos, dest);
-            FieldType::AlbumArtist  .scanFill(source, pos, dest);
-            FieldType::Album        .scanFill(source, pos, dest);
-            FieldType::Genre        .scanFill(source, pos, dest);
+            for(auto i = 0; i < FieldType::orderedScans.size(); ++i) {
+                auto &fieldType = FieldType::orderedScans[i];
+                fieldType->scanFill(source, pos, dest);
+            }
         }
 
         //

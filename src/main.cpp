@@ -20,13 +20,16 @@ int main() {
         const auto tracksData = TracksData { rawTracks };
     m.printElapsedMs();
 
-    constexpr std::string_view numP = "1";
-    for(const auto &trackData : tracksData) {
-        for(auto i = 0; i < trackData.missingFields.size(); ++i) {
-            if(trackData.missingFields[i] == false) continue;
+    // TODO : parse output JSON File
+    // TODO : parse warning File
+    // TODO : auto-fill Disc Number
 
-        }
-    }
+    // constexpr std::string_view numP = "1";
+    // constexpr auto discNumberIndex = FieldType::DiscNumber.index;
+    // for(const auto &trackData : tracksData) {
+    //     if(!trackData.missingFields[discNumberIndex]) continue;
+    //     trackData.trackFields[discNumberIndex] = numP;
+    // }
 
     return 0;
 }
