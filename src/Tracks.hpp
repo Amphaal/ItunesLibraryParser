@@ -29,12 +29,14 @@ typedef ITrackFieldsBoundingResult<9> TrackFieldsBoundingResult;
 
 template<auto S = FieldType::TrackFieldsBoundingResult::Size>
 struct IPackedTracks {
-    std::vector<std::array<std::string_view, S>> OKTracks;
-    std::vector<std::array<std::string_view, S>> missingFieldsTracks;
+    using Container = std::vector<std::array<std::string_view, S>>;
+    Container OKTracks;
+    Container missingFieldsTracks;
 };
 
 struct IScanner {
     virtual void scanFill(const std::string_view &source, std::size_t &pos, TrackFieldsBoundingResult &result) const = 0;
+    virtual const char* fieldName() const = 0;
 };
 
 template<unsigned int IndexT, StringLiteral FieldName, StringLiteral LBegin, StringLiteral LEnd>
@@ -82,6 +84,10 @@ struct FieldTypeStruct : public IScanner {
         };
     }
  
+    const char* fieldName() const final {
+        return _fieldName;
+    }
+
     static constexpr const unsigned int index = IndexT;
 
  private:
