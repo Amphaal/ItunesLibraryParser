@@ -23,17 +23,17 @@ int main() {
 
     // TODO prevent '"' character breaking
 
-    // //
-    // IPipeableSource(&packedTracks.missingFieldsTracks)
-    //     .pipeMove<MissingFieldsJSONParser>                              ("Generate warnings tracks manifest")
-    //     .execTrace<&MissingFieldsJSONParser::escapeUnsafe>              ("Escape warnings tracks manifest quotes")
-    //     .copyToFile                                   ("warnings.json", "create [warnings.json] manifest");
+    //
+    IPipeableSource(&packedTracks.missingFieldsTracks)
+        .pipeMove<MissingFieldsJSONParser>                              ("Generate warnings tracks manifest")
+        .execTrace<&MissingFieldsJSONParser::escapeUnsafe>              ("Escape warnings tracks manifest quotes")
+        .copyToFile("warnings.json",                                     "create [warnings.json] manifest");
 
     // //
     // IPipeableSource(&packedTracks.OKTracks)
-    //     .pipeMove<SuccessfulJSONParser>                                 ("Generate successful tracks manifest")
-    //     .execTrace<&SuccessfulJSONParser::escapeUnsafe>                 ("Escape successful tracks manifest quotes")
-    //     .copyToFile                                     ("output.json", "create [output.json] manifest");
+    //     .pipeMove<SuccessfulJSONParser>                              ("Generate successful tracks manifest")
+    //     .execTrace<&SuccessfulJSONParser::escapeUnsafe>              ("Escape successful tracks manifest quotes")
+    //     .copyToFile("output.json",                                    "create [output.json] manifest");
 
     return 0;
 }

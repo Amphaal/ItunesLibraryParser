@@ -24,11 +24,11 @@ struct IPipeableSource {
     }
 
     template<void (Self::*MemberFunction) ()>
-    IPipeableSource<Self>& execTrace(const char* measurementDescr) {
+    Self& execTrace(const char* measurementDescr) {
         auto m = Measurable { measurementDescr };
             (_p->*MemberFunction)();
         m.printElapsedMs();
-        return *this;
+        return *_p;
     }
 
     Self* _p;

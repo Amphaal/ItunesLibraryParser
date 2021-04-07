@@ -29,7 +29,7 @@ class JSONParser :  public IPipeableSource<JSONParser<T>>,
                     public std::ostringstream {
  public:
     JSONParser(FieldType::IPackedTracks<>::Container &&);
-
+    
     JSONParser(JSONParser&&) = default;
     JSONParser(const JSONParser&) = delete;
     void operator=(const JSONParser&) = delete;
