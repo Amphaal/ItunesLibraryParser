@@ -3,23 +3,34 @@
 #include <stdio.h>
 #include <assert.h>
 
+#include <filesystem>
 #include <string_view>
 
 #include "Pipeable.hpp"
 
+class ITunesLibraryFileName : public std::filesystem::path {
+ public:
+    ITunesLibraryFileName(const char * filePath) : std::filesystem::path(filePath), fileSize(std::filesystem::file_size(*this)) {
+        assert(std::filesystem::exists(*this));
+        assert(!std::filesystem::is_directory(*this));
+    }
+
+    ITunesLibraryFileName(ITunesLibraryFileName&&) = default;
+    ITunesLibraryFileName(const ITunesLibraryFileName&) = delete;
+    void operator=(const ITunesLibraryFileName&) = delete;
+
+    const uintmax_t fileSize;
+};
+
 // ITunes XML Library file stored on memory
 struct ITunesXMLLibrary : public IPipeableSource<ITunesXMLLibrary> {
  public:
-    long fileSize;
+    const uintmax_t fileSize;
     char* ptr;
 
-    ITunesXMLLibrary(const std::string_view& filePath) : IPipeableSource(this) {
-        auto f = fopen(filePath.begin(), "rb");
+    ITunesXMLLibrary(const ITunesLibraryFileName&& filePath) : IPipeableSource(this), fileSize(filePath.fileSize) {
+        auto f = fopen(filePath.string().c_str(), "rb");
         assert(f);
-            
-            fseek(f, 0, SEEK_END); // seek to end of file
-            fileSize = ftell(f); // get current file pointer
-            fseek(f, 0, SEEK_SET); // seek back to beginning of file
 
             ptr = (char *)malloc(fileSize);
 

@@ -7,11 +7,13 @@ int main() {
     Measurable::makeMorePrecise();
 
     // xml file to read
-    constexpr auto destLib = std::string_view { "D:/Musique/iTunes/iTunes Music Library.xml" };
+    auto m = Measurable { "Check XML file exists" };
+        const ITunesLibraryFileName destLib { "D:/Musique/iTunes/iTunes Music Library.xml" };
+    m.printElapsed();
 
     // file read in memory, to keep alive until parsing is done
     auto inMemoryFile = IPipeableSource(&destLib)
-        .pipe<ITunesXMLLibrary>                                         ("XML file memory copy");
+        .pipeMove<ITunesXMLLibrary>                                         ("XML file memory copy");
     
     // process to get packed tracks, used for file parsing
     auto packedTracks = inMemoryFile       
@@ -29,11 +31,14 @@ int main() {
         .execTrace<&MissingFieldsJSONParser::escapeUnsafe>              ("Escape warnings tracks manifest quotes")
         .copyToFile("warnings.json",                                     "create [warnings.json] manifest");
 
-    // //
-    // IPipeableSource(&packedTracks.OKTracks)
-    //     .pipeMove<SuccessfulJSONParser>                              ("Generate successful tracks manifest")
-    //     .execTrace<&SuccessfulJSONParser::escapeUnsafe>              ("Escape successful tracks manifest quotes")
-    //     .copyToFile("output.json",                                    "create [output.json] manifest");
+    //
+    IPipeableSource(&packedTracks.OKTracks)
+        .pipeMove<SuccessfulJSONParser>                              ("Generate successful tracks manifest")
+        .execTrace<&SuccessfulJSONParser::escapeUnsafe>              ("Escape successful tracks manifest quotes")
+        .copyToFile("output.json",                                    "create [output.json] manifest");
+
+    //
+    Measurable::printCumulated();
 
     return 0;
 }
