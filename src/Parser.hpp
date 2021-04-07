@@ -2,12 +2,14 @@
 
 #include <assert.h>
 
+#include <sstream>
 #include <fstream>
 #include <string>
 
 #include "PackedTracks.hpp"
 
 struct Padding : public std::string {
+ public:
     void incr() {
         *this += '\t';
     }
@@ -17,65 +19,95 @@ struct Padding : public std::string {
     }
 };
 
-void parseIntoJSON_CompleteFields(const char* destFilePath, const FieldType::IPackedTracks<>::Container &OKTracks) {
-    
-    //
-    auto output = std::ofstream { destFilePath, std::ifstream::out | std::ifstream::trunc | std::ifstream::binary };
-    assert(output.good());
+enum class ParseFileType {
+    MissingFields,
+    Successful
+};
 
+template<ParseFileType T>
+class JSONParser :  public IPipeableSource<JSONParser<T>>, 
+                    public std::ostringstream {
+ public:
+    JSONParser(FieldType::IPackedTracks<>::Container &&);
+
+    JSONParser(JSONParser&&) = default;
+    JSONParser(const JSONParser&) = delete;
+    void operator=(const JSONParser&) = delete;
+
+    ~JSONParser() {}
+
+    void copyToFile(const char * filePath, const char* descr) {
+        auto m = Measurable { descr };   
+            std::ofstream { filePath, std::ifstream::out | std::ifstream::trunc | std::ifstream::binary } << this->str();
+        m.printElapsedMs();
+    }
+
+    void escapeUnsafe() {
+        // TODO
+    }
+};
+
+using MissingFieldsJSONParser = JSONParser<ParseFileType::MissingFields>;
+using SuccessfulJSONParser = JSONParser<ParseFileType::Successful>;
+
+//
+//
+//
+
+template<>
+SuccessfulJSONParser::JSONParser(FieldType::IPackedTracks<>::Container &&tracks) : IPipeableSource(this) {
     //
     constexpr auto fieldsC = FieldType::orderedScans.size();
-    const auto tracksC = OKTracks.size();
+    const auto tracksC = tracks.size();
 
-    output << '[';
+    *this << '[';
 
     for(auto i = 0; i < tracksC; ++i) {
         //
-        output << '{';
+        *this << '{';
 
             // field
             for(auto y = 0; y < fieldsC; ++y) {
                 //
-                output << '"';
-                output << FieldType::orderedScans[y]->fieldName(); 
-                output << "\":\"";
-                output << OKTracks[i][y];
-                output << '"';
+                *this << '"';
+                *this << FieldType::orderedScans[y]->fieldName(); 
+                *this << "\":\"";
+                *this << tracks[i][y];
+                *this << '"';
 
                 // conditionnal join
                 if(y < fieldsC - 1) 
-                    output << ',';
+                    *this << ',';
             }
 
         //
-        output << '}';
+        *this << '}';
 
         // conditionnal join
         if(i < tracksC - 1)
-            output << ',';
+            *this << ',';
     }
 
     //
-    output << ']';
+    *this << ']';
 };
 
-void parseIntoJSON_MissingFields(const char* destFilePath, const FieldType::IPackedTracks<>::Container &missingFieldsTracks) {
+template<>
+MissingFieldsJSONParser::JSONParser(FieldType::IPackedTracks<>::Container &&tracks) : IPipeableSource(this) {
     //
     Padding padding;
-    auto outputWarning = std::ofstream { destFilePath, std::ifstream::out | std::ifstream::trunc | std::ifstream::binary };
-    assert(outputWarning.good());
     
     //
     const auto fieldsC = FieldType::orderedScans.size();
-    const auto tracksC = missingFieldsTracks.size();
+    const auto tracksC = tracks.size();
 
-    outputWarning << '['<< '\n';
+    *this << '['<< '\n';
 
     padding.incr();
     
     for(auto i = 0; i < tracksC; ++i) {
         //
-        outputWarning << padding << '{' << '\n';
+        *this << padding << '{' << '\n';
 
         //
         padding.incr();
@@ -83,34 +115,34 @@ void parseIntoJSON_MissingFields(const char* destFilePath, const FieldType::IPac
             // field
             for(auto y = 0; y < fieldsC; ++y) {
                 //
-                outputWarning << padding;
+                *this << padding;
 
                 //
-                outputWarning << '"';
-                outputWarning << FieldType::orderedScans[y]->fieldName(); 
-                outputWarning << "\":\"";
-                outputWarning << missingFieldsTracks[i][y];
-                outputWarning << '"';
+                *this << '"';
+                *this << FieldType::orderedScans[y]->fieldName(); 
+                *this << "\":\"";
+                *this << tracks[i][y];
+                *this << '"';
 
                 // conditionnal join
                 if(y < fieldsC - 1) 
-                    outputWarning << ",\n";
+                    *this << ",\n";
             }
 
         //
         padding.decr();
 
         //
-        outputWarning << '\n' << padding << "}";
+        *this << '\n' << padding << "}";
 
         // conditionnal join
         if(i < tracksC - 1)
-            outputWarning << ",\n";
+            *this << ",\n";
     }
 
     //
     padding.decr();
 
     //
-    outputWarning << '\n' << ']';
+    *this << '\n' << ']';
 };

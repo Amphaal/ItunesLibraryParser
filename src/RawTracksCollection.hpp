@@ -3,7 +3,10 @@
 #include "Async.hpp"
 #include "TracksBoundaries.hpp"
 
-struct RawTracksCollection : public MTBatcher<TracksBoundaries, const char*>, public IPipeableSource<RawTracksCollection>, public std::vector<std::string_view> {
+struct RawTracksCollection :    public MTBatcher<TracksBoundaries, const char*>, 
+                                public IPipeableSource<RawTracksCollection>, 
+                                public std::vector<std::string_view> {
+ public:
     RawTracksCollection(Input &&boundaries) : MTBatcher(this), IPipeableSource(this) { 
         // remove dict from boundaries
         auto bDict = sizeof("\n\t<dict>");
@@ -18,12 +21,12 @@ struct RawTracksCollection : public MTBatcher<TracksBoundaries, const char*>, pu
         _fillSelfWithResults(results, boundaries.size());
 
         //
-        std::cout << ">> Tracks found : " << this->size() << '\n';
+        // std::cout << ">> Tracks found : " << this->size() << '\n';
     }
 
     ~RawTracksCollection() {}
 
-    RawTracksCollection(RawTracksCollection &&) = default;
+    RawTracksCollection(RawTracksCollection&&) = default;
     RawTracksCollection(const RawTracksCollection&) = delete;
     void operator=(const RawTracksCollection&) = delete;
 

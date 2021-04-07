@@ -11,28 +11,29 @@ int main() {
 
     // file read in memory, to keep alive until parsing is done
     auto inMemoryFile = IPipeableSource(&destLib)
-        .pipe<ITunesXMLLibrary>                                                         ("XML file memory copy");
+        .pipe<ITunesXMLLibrary>                                         ("XML file memory copy");
     
     // process to get packed tracks, used for file parsing
     auto packedTracks = inMemoryFile       
-        .pipe<TracksBoundaries>                                                         ("Get infile track boundaries")
-        .pipeMove<const RawTracksCollection>                                            ("Get infile end-track positions (multi-threaded)")
-        .pipeMove<TracksBoundingResult>                                                 ("Find tracks data elements positions (multi-threaded)")
-            .execTrace<&TracksBoundingResult::fillDefaultingValuesOnMissingFields>      ("Fill defaulting values")
-        .pipeMove<const PackedTracks>                                                   ("Pack tracks into bundles for parsing");
+        .pipe<TracksBoundaries>                                         ("Get infile track boundaries")
+        .pipeMove<const RawTracksCollection>                            ("Get infile end-track positions (multi-threaded)")
+        .pipeMove<TracksBoundingResult>                                 ("Find tracks data elements positions (multi-threaded)")
+            .execTrace<&TracksBoundingResult::fillDefaultingValues>     ("Fill defaulting values")
+        .pipeMove<PackedTracks>                                         ("Pack tracks into bundles for parsing");
 
     // TODO prevent '"' character breaking
-    // TODO use http://www.fastformat.org/ for fast writing ?
 
-    //
-    auto m = Measurable { "Generate warnings tracks manifest" };
-        parseIntoJSON_MissingFields("warnings.json", packedTracks.missingFieldsTracks);
-    m.printElapsedMs();
+    // //
+    // IPipeableSource(&packedTracks.missingFieldsTracks)
+    //     .pipeMove<MissingFieldsJSONParser>                              ("Generate warnings tracks manifest")
+    //     .execTrace<&MissingFieldsJSONParser::escapeUnsafe>              ("Escape warnings tracks manifest quotes")
+    //     .copyToFile                                   ("warnings.json", "create [warnings.json] manifest");
 
-    //
-    m = Measurable { "Generate tracks manifest" };
-        parseIntoJSON_CompleteFields("output.json", packedTracks.OKTracks);
-    m.printElapsedMs();
+    // //
+    // IPipeableSource(&packedTracks.OKTracks)
+    //     .pipeMove<SuccessfulJSONParser>                                 ("Generate successful tracks manifest")
+    //     .execTrace<&SuccessfulJSONParser::escapeUnsafe>                 ("Escape successful tracks manifest quotes")
+    //     .copyToFile                                     ("output.json", "create [output.json] manifest");
 
     return 0;
 }

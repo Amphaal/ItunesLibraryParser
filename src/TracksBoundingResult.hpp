@@ -3,7 +3,9 @@
 #include "Tracks.hpp"
 #include "RawTracksCollection.hpp"
 
-struct TracksBoundingResult : public MTBatcher<RawTracksCollection, FieldType::TrackFieldsBoundingResult>, public IPipeableSource<TracksBoundingResult>, public std::vector<FieldType::TrackFieldsBoundingResult> {
+struct TracksBoundingResult :   public MTBatcher<RawTracksCollection, FieldType::TrackFieldsBoundingResult>, 
+                                public IPipeableSource<TracksBoundingResult>, 
+                                public std::vector<FieldType::TrackFieldsBoundingResult> {
  public:
     TracksBoundingResult(const Input&& rawTracks) : MTBatcher(this), IPipeableSource(this) {
         reserve(rawTracks.size());
@@ -17,7 +19,8 @@ struct TracksBoundingResult : public MTBatcher<RawTracksCollection, FieldType::T
     TracksBoundingResult(const TracksBoundingResult&) = delete;
     void operator=(const TracksBoundingResult&) = delete;
 
-    void fillDefaultingValuesOnMissingFields() {
+    // fill defaulting values on missing disc number fields
+    void fillDefaultingValues() {
         //
         constexpr auto numP = std::string_view {"1"};
         constexpr auto discNumberIndex = FieldType::DiscNumber.index;

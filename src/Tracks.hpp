@@ -10,6 +10,7 @@ namespace FieldType {
 
 template<size_t N>
 struct StringLiteral {
+ public:
     constexpr StringLiteral(const char (&str)[N]) {
         std::copy_n(str, N, value);
     }
@@ -35,6 +36,7 @@ struct IPackedTracks {
 };
 
 struct IScanner {
+ public:
     virtual void scanFill(const std::string_view &source, std::size_t &pos, TrackFieldsBoundingResult &result) const = 0;
     virtual const char* fieldName() const = 0;
 };

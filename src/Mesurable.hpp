@@ -11,7 +11,7 @@ class Measurable {
         _mesureDescription(mesureDescription) {}
 
     void printElapsedMs() {
-        std::cout << "[" << _mesureDescription << "] : " << std::chrono::duration <double, std::milli> (_elapsedNs()).count() << "ms" << '\n';
+        std::cout << "[" << std::chrono::duration <double, std::milli> (_elapsedNs()).count() << "ms" << "]\t" << _mesureDescription << '\n';
     }
 
     static void makeMorePrecise() {

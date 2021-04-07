@@ -9,6 +9,7 @@
 
 // ITunes XML Library file stored on memory
 struct ITunesXMLLibrary : public IPipeableSource<ITunesXMLLibrary> {
+ public:
     long fileSize;
     char* ptr;
 

@@ -3,11 +3,12 @@
 #include "ITunesXMLLibrary.hpp"
 
 struct TracksBoundaries : public IPipeableSource<TracksBoundaries>, public std::string_view { 
+ public:
     using std::string_view::operator=;
     TracksBoundaries(const ITunesXMLLibrary& lib) : IPipeableSource(this), std::string_view(_getBoundaries(lib)) {}
     ~TracksBoundaries() {}
 
-    TracksBoundaries(TracksBoundaries &&) = default;
+    TracksBoundaries(TracksBoundaries&&) = default;
     TracksBoundaries(const TracksBoundaries&) = delete;
     void operator=(const TracksBoundaries&) = delete;
 
