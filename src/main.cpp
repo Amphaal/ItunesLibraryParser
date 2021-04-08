@@ -3,6 +3,9 @@
 #include <cstdio>
 
 int main() {
+    // TODO : avx2 rfind()
+    // TODO : avx2 on EVERY find()
+
     // make measurements more precise
     Measurable::makeMorePrecise();
 

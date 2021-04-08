@@ -40,7 +40,7 @@ struct TracksBoundaries : public IPipeableSource<TracksBoundaries>, public std::
         static constexpr const auto _endTracksPattern = std::string_view { "<key>Playlists</key>" };
 
         //
-        auto foundEnd = avx2_naive_strstr64(searchSV, _endTracksPattern);
+        auto foundEnd = searchSV.rfind(_endTracksPattern);
         assert(foundEnd != searchSV.npos);
         return foundEnd;
     }

@@ -9,6 +9,54 @@
 
 #include "PackedTracks.hpp"
 
+template<std::size_t EstMaxTrackLength>
+class OneWayBuffer {
+ public:
+    OneWayBuffer(const std::size_t tracksCount) : 
+        _size(tracksCount * EstMaxTrackLength) {
+            _buffer = (char*)malloc(_size);
+        }
+
+    ~OneWayBuffer() {
+        free(_buffer);
+    }
+
+    OneWayBuffer& operator<<(const char& c) {
+        _buffer[_index] = c;
+        _index++;
+        return *this;
+    }
+
+    OneWayBuffer& operator<<(const std::string_view& view) {
+        for(const auto &c : view) {
+            *this << c;
+        }
+        return *this;
+    }
+
+    const std::size_t& tellp() const {
+        return _index;
+    }
+
+    const std::string_view str() const {
+        return std::string_view { _buffer, _eofIndex };
+    }
+
+    void seekp(std::size_t pos) {
+        _index = pos;
+    }
+
+    void eof() {
+        _eofIndex = _index;
+    }
+
+ private:
+    std::size_t _size;
+    std::size_t _index = 0;
+    std::size_t _eofIndex = 0;
+    char* _buffer;
+};
+
 struct Padding : public std::string {
  public:
     void incr() {
@@ -25,8 +73,8 @@ enum class ParseFileType {
     Successful
 };
 
-template<ParseFileType T>
-class JSONParser :  public IPipeableSource<JSONParser<T>> {
+template<ParseFileType T, std::size_t EstMaxTrackLength>
+class JSONParser :  public IPipeableSource<JSONParser<T, EstMaxTrackLength>> {
  public:
     JSONParser(FieldType::IPackedTracks<>::Container &&);
     
@@ -42,7 +90,7 @@ class JSONParser :  public IPipeableSource<JSONParser<T>> {
         m.printElapsed();
     }
 
-    void lfQuotesToEscape(const std::string_view &toSearch, const std::streampos &sPos) {
+    void lfQuotesToEscape(const std::string_view &toSearch, const std::size_t &sPos) {
         //
         auto bPos = 0;
         std::size_t foundAt;
@@ -71,12 +119,12 @@ class JSONParser :  public IPipeableSource<JSONParser<T>> {
     }
  
  private:
-    std::ostringstream _memFileStream;
+    OneWayBuffer<EstMaxTrackLength> _memFileStream;
     std::vector<std::size_t> _dblQuotesPosToEscape;
 };
 
-using MissingFieldsJSONParser = JSONParser<ParseFileType::MissingFields>;
-using SuccessfulJSONParser = JSONParser<ParseFileType::Successful>;
+using MissingFieldsJSONParser = JSONParser<ParseFileType::MissingFields, 500>;
+using SuccessfulJSONParser    = JSONParser<ParseFileType::Successful,    350>;
 
 //
 //
@@ -93,66 +141,71 @@ MissingFieldsJSONParser::JSONParser(MissingFieldsJSONParser&& s) :
     _memFileStream(std::move(s._memFileStream)) {}
 
 template<>
-SuccessfulJSONParser::JSONParser(FieldType::IPackedTracks<>::Container &&tracks) : IPipeableSource(this) {
+SuccessfulJSONParser::JSONParser(FieldType::IPackedTracks<>::Container &&tracks) : IPipeableSource(this), _memFileStream{tracks.size()} {
     //
     constexpr auto fieldsC = FieldType::orderedScans.size();
     const auto tracksC = tracks.size();
+    auto &output = _memFileStream;
 
-    _memFileStream << '[';
+    output << '[';
 
     for(auto i = 0; i < tracksC; ++i) {
         //
-        _memFileStream << '{';
+        output << '{';
 
             // field
             for(auto y = 0; y < fieldsC; ++y) {
 
                 //
-                _memFileStream << '"';
-                _memFileStream << FieldType::orderedScans[y]->fieldName(); 
-                _memFileStream << "\":\"";
+                output << '"';
+                output << FieldType::orderedScans[y]->fieldName(); 
+                output << "\":\"";
 
                 //
-                auto pos = _memFileStream.tellp();
+                auto pos = output.tellp();
                 lfQuotesToEscape(tracks[i][y], pos);
 
                 //
-                _memFileStream << tracks[i][y];
-                _memFileStream << '"';
+                output << tracks[i][y];
+                output << '"';
 
                 // conditionnal join
                 if(y < fieldsC - 1) 
-                    _memFileStream << ',';
+                    output << ',';
             }
 
         //
-        _memFileStream << '}';
+        output << '}';
 
         // conditionnal join
         if(i < tracksC - 1)
-            _memFileStream << ',';
+            output << ',';
     }
 
     //
-    _memFileStream << ']';
+    output << ']';
+
+    //
+    output.eof();
 };
 
 template<>
-MissingFieldsJSONParser::JSONParser(FieldType::IPackedTracks<>::Container &&tracks) : IPipeableSource(this) {
+MissingFieldsJSONParser::JSONParser(FieldType::IPackedTracks<>::Container &&tracks) : IPipeableSource(this), _memFileStream{tracks.size()} {
     //
     Padding padding;
     
     //
+    auto &output = _memFileStream;
     const auto fieldsC = FieldType::orderedScans.size();
     const auto tracksC = tracks.size();
 
-    _memFileStream << '['<< '\n';
+    output << '['<< '\n';
 
     padding.incr();
     
     for(auto i = 0; i < tracksC; ++i) {
         //
-        _memFileStream << padding << '{' << '\n';
+        output << padding << '{' << '\n';
 
         //
         padding.incr();
@@ -160,40 +213,43 @@ MissingFieldsJSONParser::JSONParser(FieldType::IPackedTracks<>::Container &&trac
             // field
             for(auto y = 0; y < fieldsC; ++y) {
                 //
-                _memFileStream << padding;
+                output << padding;
 
                 //
-                _memFileStream << '"';
-                _memFileStream << FieldType::orderedScans[y]->fieldName(); 
-                _memFileStream << "\":\"";
+                output << '"';
+                output << FieldType::orderedScans[y]->fieldName(); 
+                output << "\":\"";
 
                 //
-                auto pos = _memFileStream.tellp();
+                auto pos = output.tellp();
                 lfQuotesToEscape(tracks[i][y], pos);
 
                 //
-                _memFileStream << tracks[i][y];
-                _memFileStream << '"';
+                output << tracks[i][y];
+                output << '"';
 
                 // conditionnal join
                 if(y < fieldsC - 1) 
-                    _memFileStream << ",\n";
+                    output << ",\n";
             }
 
         //
         padding.decr();
 
         //
-        _memFileStream << '\n' << padding << "}";
+        output << '\n' << padding << "}";
 
         // conditionnal join
         if(i < tracksC - 1)
-            _memFileStream << ",\n";
+            output << ",\n";
     }
 
     //
     padding.decr();
 
     //
-    _memFileStream << '\n' << ']';
+    output << '\n' << ']';
+
+    //
+    output.eof();
 };
