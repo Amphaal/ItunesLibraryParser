@@ -1,3 +1,7 @@
+//
+// Improvements are noticeable on release
+//
+
 #pragma once
 
 #include <assert.h>

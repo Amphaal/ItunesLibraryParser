@@ -9,8 +9,8 @@ struct RawTracksCollection :    public MTBatcher<TracksBoundaries, const char*>,
  public:
     RawTracksCollection(Input &&boundaries) : MTBatcher(this), IPipeableSource(this) { 
         // remove dict from boundaries
-        auto bDict = sizeof("\n\t<dict>");
-        auto eDict = sizeof("\n\t</dict>");
+        static constexpr const auto bDict = sizeof("\n\t<dict>");
+        static constexpr const auto eDict = sizeof("\n\t</dict>");
         boundaries = boundaries.substr(
             bDict,
             boundaries.size() - bDict - eDict
@@ -103,7 +103,7 @@ struct RawTracksCollection :    public MTBatcher<TracksBoundaries, const char*>,
             }
             
             //
-            pos += foundLength + sizeof(_endPattern);
+            pos += foundLength + _endPattern.size();
         }
 
         //
