@@ -1,6 +1,7 @@
 #pragma once
 
 #include "ITunesXMLLibrary.hpp"
+#include "AVX2Find.hpp"
 
 struct TracksBoundaries : public IPipeableSource<TracksBoundaries>, public std::string_view { 
  public:
@@ -24,16 +25,22 @@ struct TracksBoundaries : public IPipeableSource<TracksBoundaries>, public std::
     }
 
     static const std::size_t _findBeginTrackPos(const std::string_view& searchSV) {
-        static constexpr const char _beginTracksPattern[] = "<key>Tracks</key>";
-        auto foundBegin = searchSV.find(_beginTracksPattern);
+        //
+        static constexpr const auto _beginTracksPattern = std::string_view { "<key>Tracks</key>" };
+
+        //
+        auto foundBegin = avx2_naive_strstr64(searchSV, _beginTracksPattern);
         assert(foundBegin != searchSV.npos);
-        foundBegin += sizeof(_beginTracksPattern);
+        foundBegin += _beginTracksPattern.size();
         return foundBegin;
     }
 
     static const std::size_t _findEndTrackPos(const std::string_view& searchSV) {
-        static constexpr const char _endTracksPattern[] = "<key>Playlists</key>";
-        auto foundEnd = searchSV.rfind(_endTracksPattern);
+        //
+        static constexpr const auto _endTracksPattern = std::string_view { "<key>Playlists</key>" };
+
+        //
+        auto foundEnd = avx2_naive_strstr64(searchSV, _endTracksPattern);
         assert(foundEnd != searchSV.npos);
         return foundEnd;
     }

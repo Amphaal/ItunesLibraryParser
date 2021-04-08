@@ -38,7 +38,7 @@ struct IPackedTracks {
 struct IScanner {
  public:
     virtual void scanFill(const std::string_view &source, std::size_t &pos, TrackFieldsBoundingResult &result) const = 0;
-    virtual const char* fieldName() const = 0;
+    virtual constexpr const std::string_view& fieldName() const = 0;
 };
 
 template<unsigned int IndexT, StringLiteral FieldName, StringLiteral LBegin, StringLiteral LEnd>
@@ -57,19 +57,19 @@ struct FieldTypeStruct : public IScanner {
 
         //  
         std::size_t foundBegin;
-        foundBegin = source.find(_beginFP, pos);
+        foundBegin = source.find(_beginFP.data(), pos);
         if(foundBegin == source.npos) {
             missingField = true;
             return;
         }
 
         //
-        foundBegin += _beginFPSize;
+        foundBegin += _beginFP.size();
         pos = foundBegin;
 
         // 
         std::size_t foundEnd;
-        foundEnd = source.find(_endFP, pos);
+        foundEnd = source.find(_endFP.data(), pos);
         if(foundEnd == source.npos) {
             missingField = true;
             return;
@@ -77,7 +77,7 @@ struct FieldTypeStruct : public IScanner {
 
         //
         auto dataFieldLength = foundEnd - foundBegin;
-        pos += dataFieldLength + _endFPSize;
+        pos += dataFieldLength + _endFP.size();
 
         //
         trackField = std::string_view { 
@@ -86,19 +86,17 @@ struct FieldTypeStruct : public IScanner {
         };
     }
  
-    const char* fieldName() const final {
+    constexpr const std::string_view& fieldName() const final {
         return _fieldName;
     }
+
+    static constexpr const auto _fieldName = std::string_view { FieldName.value, sizeof(FieldName.value) - 1 };
 
     static constexpr const unsigned int index = IndexT;
 
  private:
-    static constexpr const char* _fieldName = FieldName.value;
-    static constexpr const char* _beginFP = LBegin.value;
-    static constexpr const char* _endFP = LEnd.value;
-
-    static constexpr auto _beginFPSize = sizeof(LBegin.value) - 1;
-    static constexpr auto _endFPSize = sizeof(LEnd.value) - 1;
+    static constexpr const auto _beginFP = std::string_view { LBegin.value, sizeof(LBegin.value) - 1 };
+    static constexpr const auto _endFP = std::string_view { LEnd.value, sizeof(LEnd.value) - 1 };
 };
 
 constexpr FieldTypeStruct<0, "Track ID",       "<key>Track ID</key><integer>",       "</integer>">   TrackID;

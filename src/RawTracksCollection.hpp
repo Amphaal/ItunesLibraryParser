@@ -31,7 +31,7 @@ struct RawTracksCollection :    public MTBatcher<TracksBoundaries, const char*>,
     void operator=(const RawTracksCollection&) = delete;
 
  private:
-    static constexpr const char _endPattern[] = "</dict>";
+    static constexpr const auto _endPattern = std::string_view { "</dict>" };
     static constexpr const std::size_t _avgTrackSize = 1500;
     
     void _fillSelfWithResults(const PackedOutput &toConvert, std::size_t boundariesSize) {

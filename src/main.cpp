@@ -23,8 +23,6 @@ int main() {
             .execTrace<&TracksBoundingResult::fillDefaultingValues>     ("Fill defaulting values")
         .pipeMove<PackedTracks>                                         ("Pack tracks into bundles for parsing");
 
-    // TODO prevent '"' character breaking
-
     //
     IPipeableSource(&packedTracks.missingFieldsTracks)
         .pipeMove<MissingFieldsJSONParser>                              ("Generate warnings tracks manifest")
