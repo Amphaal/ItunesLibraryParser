@@ -14,6 +14,7 @@ class OneWayBuffer {
  public:
     OneWayBuffer(const std::size_t tracksCount) : 
         _size(tracksCount * EstMaxTrackLength) {
+            assert(_size);
             _buffer = (char*)malloc(_size);
         }
 

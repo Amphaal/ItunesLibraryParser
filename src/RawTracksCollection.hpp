@@ -17,11 +17,13 @@ struct RawTracksCollection :    public MTBatcher<TracksBoundaries, const char*>,
         );
         
         // process and fill
-        auto results = _processBatches(boundaries);
-        _fillSelfWithResults(results, boundaries.size());
 
-        //
-        // std::cout << ">> Tracks found : " << this->size() << '\n';
+            // Multi-threaded AVX2 version, kinda slowish
+            // auto results = _processBatches(boundaries);
+            // _fillSelfWithResults(results, boundaries.size());
+
+            // Single-threaded AVX2 version, faster !
+            _fill_ST_AVX2(boundaries);
     }
 
     ~RawTracksCollection() {}
@@ -70,12 +72,48 @@ struct RawTracksCollection :    public MTBatcher<TracksBoundaries, const char*>,
         }
     }
 
+    const 
+
+    void _fill_ST_AVX2(const Input & input) {
+        // approx avg. track dict size
+        const auto estimatedTrackCount = input.size() / _avgTrackSize;
+        this->reserve(estimatedTrackCount);
+
+        std::size_t found;
+        std::size_t remainingLengthToSearch;
+        std::size_t pos = 0;
+        const char * startSearchingAt;
+
+        while(true) {
+            //
+            startSearchingAt = input.data() + pos;
+            remainingLengthToSearch = input.size() - pos;
+            assert(remainingLengthToSearch > 0);
+            assert(startSearchingAt < input.end());
+
+            //
+            found = avx2_naive_strstr64(
+                startSearchingAt, remainingLengthToSearch,
+                _endPattern.data(), _endPattern.size()
+            );
+            if(found == std::string::npos) {
+                break;
+            }
+
+            //
+            this->emplace_back(startSearchingAt, found);
+            pos += found + _endPattern.size();
+            auto i = true;
+        }
+    }
+
     virtual const PackedOutput _processBatch(std::reference_wrapper<const Input> inputRef, const std::size_t startAt, const std::size_t jobSize) const final {
         auto &input = inputRef.get();
+        const auto inputSize = input.size();
         
         // approx avg. track dict size
         PackedOutput results;
-        auto estimatedTrackCount = (input.size() - startAt) / _avgTrackSize;
+        auto estimatedTrackCount = (inputSize - startAt) / _avgTrackSize;
         results.reserve(estimatedTrackCount);
         
         //
@@ -87,8 +125,10 @@ struct RawTracksCollection :    public MTBatcher<TracksBoundaries, const char*>,
         //
         while(true) {
             //
-            found = input.find(_endPattern, pos);
-            if(found == input.npos) break;
+            found = avx2_naive_strstr64(input, _endPattern, pos);
+            if(found == std::string::npos) {
+                break;
+            }
 
             //
             foundLength = found - pos;
@@ -97,6 +137,7 @@ struct RawTracksCollection :    public MTBatcher<TracksBoundaries, const char*>,
             //
             if(jobSize) {
                 alreadySearchedLength += foundLength;
+
                 if(alreadySearchedLength > jobSize) {
                     break;
                 }

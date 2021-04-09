@@ -17,6 +17,7 @@ class Measurable {
     }
 
     static void printCumulated() {
+        std::cout << "||> ";
         _printMs("TOTAL", _cumulated);
     }
 

@@ -105,5 +105,6 @@ size_t avx2_naive_strstr64(const std::string_view& s, const std::string_view& ne
 }
 
 size_t avx2_naive_strstr64(const std::string_view& s, const std::string_view& needle, size_t pos) {
-    return avx2_naive_strstr64(s.data() + pos, s.size(), needle.data(), needle.size());
+    if(pos >= s.size()) return std::string::npos;
+    return avx2_naive_strstr64(s.data() + pos, s.size(), needle.data(), needle.size()) + pos;
 }

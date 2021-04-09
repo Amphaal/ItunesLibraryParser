@@ -23,9 +23,6 @@ class PackedTracks :    public IPipeableSource<PackedTracks>,
                 OKTracks.emplace_back(trackData.trackFields);
             }
         }
-
-        //
-        // std::cout << ">> Packed Tracks : OK -> " << OKTracks.size() << ", missingFields -> " << missingFieldsTracks.size() << ", TOTAL -> " << allTracksCount() << '\n';
     }
 
     std::size_t allTracksCount() const {

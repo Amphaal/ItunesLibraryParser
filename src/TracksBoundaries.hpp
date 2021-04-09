@@ -30,7 +30,7 @@ struct TracksBoundaries : public IPipeableSource<TracksBoundaries>, public std::
 
         //
         auto foundBegin = avx2_naive_strstr64(searchSV, _beginTracksPattern);
-        assert(foundBegin != searchSV.npos);
+        assert(foundBegin != std::string::npos);
         foundBegin += _beginTracksPattern.size();
         return foundBegin;
     }
@@ -41,7 +41,7 @@ struct TracksBoundaries : public IPipeableSource<TracksBoundaries>, public std::
 
         //
         auto foundEnd = searchSV.rfind(_endTracksPattern);
-        assert(foundEnd != searchSV.npos);
+        assert(foundEnd != std::string::npos);
         return foundEnd;
     }
 };

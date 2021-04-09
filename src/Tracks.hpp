@@ -58,7 +58,7 @@ struct FieldTypeStruct : public IScanner {
         //  
         std::size_t foundBegin;
         foundBegin = source.find(_beginFP.data(), pos);
-        if(foundBegin == source.npos) {
+        if(foundBegin == std::string::npos) {
             missingField = true;
             return;
         }
@@ -70,7 +70,7 @@ struct FieldTypeStruct : public IScanner {
         // 
         std::size_t foundEnd;
         foundEnd = source.find(_endFP.data(), pos);
-        if(foundEnd == source.npos) {
+        if(foundEnd == std::string::npos) {
             missingField = true;
             return;
         }

@@ -20,8 +20,8 @@ int main() {
     
     // process to get packed tracks, used for file parsing
     auto packedTracks = inMemoryFile       
-        .pipe<TracksBoundaries>                                         ("Get infile track boundaries")
-        .pipeMove<const RawTracksCollection>                            ("Get infile end-track positions (multi-threaded)")
+        .pipe<TracksBoundaries>                                         ("Get infile track boundaries (AVX2 + std::rfind)")
+        .pipeMove<const RawTracksCollection>                            ("Get infile end-track positions (AVX2)")
         .pipeMove<TracksBoundingResult>                                 ("Find tracks data elements positions (multi-threaded)")
             .execTrace<&TracksBoundingResult::fillDefaultingValues>     ("Fill defaulting values")
         .pipeMove<PackedTracks>                                         ("Pack tracks into bundles for parsing");
@@ -29,14 +29,14 @@ int main() {
     //
     IPipeableSource(&packedTracks.missingFieldsTracks)
         .pipeMove<MissingFieldsJSONParser>                              ("Generate warnings tracks manifest")
-        .execTrace<&MissingFieldsJSONParser::escapeUnsafe>              ("Escape warnings tracks manifest quotes")
-        .copyToFile("warnings.json",                                     "create [warnings.json] manifest");
+        .execTrace<&MissingFieldsJSONParser::escapeUnsafe>              ("Escape warnings tracks manifest quotes");
+        // .copyToFile("warnings.json",                                     "create [warnings.json] manifest");
 
     //
     IPipeableSource(&packedTracks.OKTracks)
         .pipeMove<SuccessfulJSONParser>                              ("Generate successful tracks manifest")
-        .execTrace<&SuccessfulJSONParser::escapeUnsafe>              ("Escape successful tracks manifest quotes")
-        .copyToFile("output.json",                                    "create [output.json] manifest");
+        .execTrace<&SuccessfulJSONParser::escapeUnsafe>              ("Escape successful tracks manifest quotes");
+        // .copyToFile("output.json",                                    "create [output.json] manifest");
 
     //
     Measurable::printCumulated();
