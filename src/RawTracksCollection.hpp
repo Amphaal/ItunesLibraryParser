@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Async.hpp"
+#include "helpers/Async.hpp"
 #include "TracksBoundaries.hpp"
 
 struct RawTracksCollection :    public MTBatcher<TracksBoundaries, const char*>, 
@@ -18,12 +18,12 @@ struct RawTracksCollection :    public MTBatcher<TracksBoundaries, const char*>,
         
         // process and fill
 
-            // Multi-threaded AVX2 version, kinda slowish
+            // Single-threaded AVX2 version
+            _fill_ST_AVX2(boundaries);
+
+            // Multi-threaded AVX2 version, slower than ST
             // auto results = _processBatches(boundaries);
             // _fillSelfWithResults(results, boundaries.size());
-
-            // Single-threaded AVX2 version, faster !
-            _fill_ST_AVX2(boundaries);
     }
 
     ~RawTracksCollection() {}
@@ -71,8 +71,6 @@ struct RawTracksCollection :    public MTBatcher<TracksBoundaries, const char*>,
             return;
         }
     }
-
-    const 
 
     void _fill_ST_AVX2(const Input & input) {
         // approx avg. track dict size

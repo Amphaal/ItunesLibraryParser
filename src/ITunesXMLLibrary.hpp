@@ -6,7 +6,7 @@
 #include <filesystem>
 #include <string_view>
 
-#include "Pipeable.hpp"
+#include "helpers/Pipeable.hpp"
 
 class ITunesLibraryFileName : public std::filesystem::path {
  public:

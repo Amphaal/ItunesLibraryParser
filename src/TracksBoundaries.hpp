@@ -1,7 +1,7 @@
 #pragma once
 
+#include "helpers/AVX2Find.hpp"
 #include "ITunesXMLLibrary.hpp"
-#include "AVX2Find.hpp"
 
 struct TracksBoundaries : public IPipeableSource<TracksBoundaries>, public std::string_view { 
  public:
