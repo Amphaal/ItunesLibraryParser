@@ -81,7 +81,7 @@ size_t FORCE_INLINE avx2_naive_strstr_anysize64(const char* s, size_t n, const c
 
 // ------------------------------------------------------------------------
 
-size_t avx2_naive_strstr64(const char* s, size_t n, const char* needle, size_t k) {
+size_t avx2_find(const char* s, size_t n, const char* needle, size_t k) {
 
     size_t result = std::string::npos;
 
@@ -100,11 +100,22 @@ size_t avx2_naive_strstr64(const char* s, size_t n, const char* needle, size_t k
 
 // ------------------------------------------------------------------------
 
-size_t avx2_naive_strstr64(const std::string_view& s, const std::string_view& needle) {
-    return avx2_naive_strstr64(s.data(), s.size(), needle.data(), needle.size());
+size_t avx2_find(const std::string_view& s, const std::string_view& needle) {
+    return avx2_find(s.data(), s.size(), needle.data(), needle.size());
 }
 
-size_t avx2_naive_strstr64(const std::string_view& s, const std::string_view& needle, size_t pos) {
+size_t avx2_find(const std::string_view& s, const std::string_view& needle, size_t pos) {
+    //
     if(pos >= s.size()) return std::string::npos;
-    return avx2_naive_strstr64(s.data() + pos, s.size(), needle.data(), needle.size()) + pos;
+
+    //
+    auto searchFrom = s.data() + pos;
+    auto found = avx2_find(searchFrom, s.size() - pos, needle.data(), needle.size());
+
+    //
+    if(found != std::string::npos) 
+        return found + pos;
+    
+    //
+    return found;
 }

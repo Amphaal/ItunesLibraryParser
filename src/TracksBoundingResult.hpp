@@ -1,5 +1,7 @@
 #pragma once
 
+#include "helpers/AVX2Find.hpp"
+
 #include "Tracks.hpp"
 #include "RawTracksCollection.hpp"
 
@@ -9,7 +11,8 @@ struct TracksBoundingResult :   public MTBatcher<RawTracksCollection, FieldType:
  public:
     TracksBoundingResult(const Input&& rawTracks) : MTBatcher(this), IPipeableSource(this) {
         reserve(rawTracks.size());
-        auto results = _processBatches(rawTracks);
+        // auto results = _processBatches(rawTracks);
+        auto results = _processBatch(rawTracks, 0, 0);
         results.swap(*this);
     }
 
@@ -22,8 +25,8 @@ struct TracksBoundingResult :   public MTBatcher<RawTracksCollection, FieldType:
     // fill defaulting values on missing disc number fields
     void fillDefaultingValues() {
         //
-        constexpr auto numP = std::string_view {"1"};
-        constexpr auto discNumberIndex = FieldType::DiscNumber.index;
+        constexpr const auto numP = std::string_view { "1" };
+        constexpr const auto discNumberIndex = FieldType::DiscNumber.index;
         
         //
         for(auto &trackData : *this) {

@@ -93,18 +93,19 @@ class JSONParser :  public IPipeableSource<JSONParser<T, EstMaxTrackLength>> {
 
     void lfQuotesToEscape(const std::string_view &toSearch, const std::size_t &sPos) {
         //
-        auto bPos = 0;
+        std::size_t bPos = 0;
         std::size_t foundAt;
+        static constexpr const auto toEscape = '\"';
         
         //
         while(true) {
             //
-            foundAt = toSearch.find('\"', bPos); 
+            foundAt = toSearch.find(toEscape, bPos); 
             if(foundAt == std::string_view::npos) return;
 
             //
             _dblQuotesPosToEscape.emplace_back(sPos + foundAt);
-            bPos = foundAt + 1;
+            bPos = foundAt + sizeof(toEscape);
         }
     }
 

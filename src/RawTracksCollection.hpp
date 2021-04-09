@@ -90,7 +90,7 @@ struct RawTracksCollection :    public MTBatcher<TracksBoundaries, const char*>,
             assert(startSearchingAt < input.end());
 
             //
-            found = avx2_naive_strstr64(
+            found = avx2_find(
                 startSearchingAt, remainingLengthToSearch,
                 _endPattern.data(), _endPattern.size()
             );
@@ -123,7 +123,7 @@ struct RawTracksCollection :    public MTBatcher<TracksBoundaries, const char*>,
         //
         while(true) {
             //
-            found = avx2_naive_strstr64(input, _endPattern, pos);
+            found = avx2_find(input, _endPattern, pos);
             if(found == std::string::npos) {
                 break;
             }

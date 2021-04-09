@@ -29,7 +29,7 @@ struct TracksBoundaries : public IPipeableSource<TracksBoundaries>, public std::
         static constexpr const auto _beginTracksPattern = std::string_view { "<key>Tracks</key>" };
 
         //
-        auto foundBegin = avx2_naive_strstr64(searchSV, _beginTracksPattern);
+        auto foundBegin = avx2_find(searchSV, _beginTracksPattern);
         assert(foundBegin != std::string::npos);
         foundBegin += _beginTracksPattern.size();
         return foundBegin;

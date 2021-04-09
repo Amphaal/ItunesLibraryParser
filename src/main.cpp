@@ -29,14 +29,14 @@ int main() {
     //
     IPipeableSource(&packedTracks.missingFieldsTracks)
         .pipeMove<MissingFieldsJSONParser>                              ("Generate warnings tracks manifest")
-        .execTrace<&MissingFieldsJSONParser::escapeUnsafe>              ("Escape warnings tracks manifest quotes");
-        // .copyToFile("warnings.json",                                     "create [warnings.json] manifest");
+        .execTrace<&MissingFieldsJSONParser::escapeUnsafe>              ("Escape warnings tracks manifest quotes")
+        .copyToFile("warnings.json",                                     "create [warnings.json] manifest");
 
     //
     IPipeableSource(&packedTracks.OKTracks)
         .pipeMove<SuccessfulJSONParser>                              ("Generate successful tracks manifest")
-        .execTrace<&SuccessfulJSONParser::escapeUnsafe>              ("Escape successful tracks manifest quotes");
-        // .copyToFile("output.json",                                    "create [output.json] manifest");
+        .execTrace<&SuccessfulJSONParser::escapeUnsafe>              ("Escape successful tracks manifest quotes")
+        .copyToFile("output.json",                                    "create [output.json] manifest");
 
     //
     Measurable::printCumulated();

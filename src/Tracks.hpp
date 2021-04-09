@@ -56,8 +56,7 @@ struct FieldTypeStruct : public IScanner {
         auto &missingField = result.missingFields[index];
 
         //  
-        std::size_t foundBegin;
-        foundBegin = source.find(_beginFP.data(), pos);
+        auto foundBegin = avx2_find(source, _beginFP, pos);
         if(foundBegin == std::string::npos) {
             missingField = true;
             return;
@@ -68,8 +67,7 @@ struct FieldTypeStruct : public IScanner {
         pos = foundBegin;
 
         // 
-        std::size_t foundEnd;
-        foundEnd = source.find(_endFP.data(), pos);
+        auto foundEnd = avx2_find(source, _endFP, pos);
         if(foundEnd == std::string::npos) {
             missingField = true;
             return;
