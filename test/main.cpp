@@ -1,11 +1,6 @@
 #include "Parser.hpp"
 
-#include <cstdio>
-
 int main() {
-    // TODO : avx2 rfind()
-    // TODO : avx2 on EVERY find()
-
     // make measurements more precise
     Measurable::makeMorePrecise();
 
@@ -22,7 +17,7 @@ int main() {
     auto packedTracks = inMemoryFile       
         .pipe<TracksBoundaries>                                         ("Get infile track boundaries (AVX2 + std::rfind)")
         .pipeMove<const RawTracksCollection>                            ("Get infile end-track positions (AVX2)")
-        .pipeMove<TracksBoundingResult>                                 ("Find tracks data elements positions (multi-threaded)")
+        .pipeMove<TracksBoundingResult>                                 ("Find tracks data elements positions (AVX2)")
             .execTrace<&TracksBoundingResult::fillDefaultingValues>     ("Fill defaulting values")
         .pipeMove<PackedTracks>                                         ("Pack tracks into bundles for parsing");
 

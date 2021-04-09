@@ -27,10 +27,17 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_C_STANDARD 11)
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -march=native")
-
 #############
 ## Sources ##
 #############
 
-add_executable(test src/main.cpp)
+# library interface
+add_library(itunes-library-parser INTERFACE)
+target_include_directories(itunes-library-parser INTERFACE src)
+target_compile_options(itunes-library-parser INTERFACE "-march=native")
+
+# test executable
+if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
+    add_executable(${PROJECT_NAME}_test test/main.cpp)
+    target_link_libraries(${PROJECT_NAME}_test itunes-library-parser)
+endif()

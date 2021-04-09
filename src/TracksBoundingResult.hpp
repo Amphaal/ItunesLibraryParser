@@ -10,9 +10,18 @@ struct TracksBoundingResult :   public MTBatcher<RawTracksCollection, FieldType:
                                 public std::vector<FieldType::TrackFieldsBoundingResult> {
  public:
     TracksBoundingResult(const Input&& rawTracks) : MTBatcher(this), IPipeableSource(this) {
+        //
         reserve(rawTracks.size());
-        // auto results = _processBatches(rawTracks);
-        auto results = _processBatch(rawTracks, 0, 0);
+
+        // process and fill
+            // Single-threaded AVX2 version
+            auto results = _processBatch(rawTracks, 0, 0);
+
+            // Multi-threaded AVX2 version, slower than ST
+            // auto results = _processBatches(rawTracks);
+            // _fillSelfWithResults(results, boundaries.size());
+
+        //
         results.swap(*this);
     }
 
