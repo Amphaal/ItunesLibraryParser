@@ -77,13 +77,12 @@ enum class ParseFileType {
 template<ParseFileType T, std::size_t EstMaxTrackLength>
 class JSONParser :  public IPipeableSource<JSONParser<T, EstMaxTrackLength>> {
  public:
-    JSONParser(FieldType::IPackedTracks<>::Container &&);
+    JSONParser(FieldType::OutputContainer &&);
     
+    ~JSONParser() {}
     JSONParser(JSONParser&&) = delete;
     JSONParser(const JSONParser&) = delete;
     void operator=(const JSONParser&) = delete;
-
-    ~JSONParser() {}
 
     void copyToFile(const char * filePath, const char* descr) const {
         auto m = Measurable { descr };   
@@ -143,7 +142,7 @@ MissingFieldsJSONParser::JSONParser(MissingFieldsJSONParser&& s) :
     _memFileStream(std::move(s._memFileStream)) {}
 
 template<>
-SuccessfulJSONParser::JSONParser(FieldType::IPackedTracks<>::Container &&tracks) : IPipeableSource(this), _memFileStream{tracks.size()} {
+SuccessfulJSONParser::JSONParser(FieldType::OutputContainer &&tracks) : IPipeableSource(this), _memFileStream{tracks.size()} {
     //
     constexpr auto fieldsC = FieldType::orderedScans.size();
     const auto tracksC = tracks.size();
@@ -192,7 +191,7 @@ SuccessfulJSONParser::JSONParser(FieldType::IPackedTracks<>::Container &&tracks)
 };
 
 template<>
-MissingFieldsJSONParser::JSONParser(FieldType::IPackedTracks<>::Container &&tracks) : IPipeableSource(this), _memFileStream{tracks.size()} {
+MissingFieldsJSONParser::JSONParser(FieldType::OutputContainer &&tracks) : IPipeableSource(this), _memFileStream{tracks.size()} {
     //
     Padding padding;
     

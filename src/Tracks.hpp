@@ -29,10 +29,13 @@ struct ITrackFieldsBoundingResult {
 typedef ITrackFieldsBoundingResult<9> TrackFieldsBoundingResult;
 
 template<auto S = FieldType::TrackFieldsBoundingResult::Size>
+struct IOutputContainer : public std::vector<std::array<std::string_view, S>> {};
+
+using OutputContainer = IOutputContainer<>;
+
 struct IPackedTracks {
-    using Container = std::vector<std::array<std::string_view, S>>;
-    Container OKTracks;
-    Container missingFieldsTracks;
+    OutputContainer OKTracks;
+    OutputContainer missingFieldsTracks;
 };
 
 struct IScanner {

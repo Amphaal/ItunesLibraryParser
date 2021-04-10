@@ -14,7 +14,6 @@ struct TracksBoundingResult :   public IPipeableSource<TracksBoundingResult>,
     }
 
     ~TracksBoundingResult() {}
-    
     TracksBoundingResult(TracksBoundingResult&&) = default;
     TracksBoundingResult(const TracksBoundingResult&) = delete;
     void operator=(const TracksBoundingResult&) = delete;

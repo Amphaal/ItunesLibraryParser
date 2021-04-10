@@ -19,7 +19,6 @@ struct RawTracksCollection :    public IPipeableSource<RawTracksCollection>,
     }
 
     ~RawTracksCollection() {}
-
     RawTracksCollection(RawTracksCollection&&) = default;
     RawTracksCollection(const RawTracksCollection&) = delete;
     void operator=(const RawTracksCollection&) = delete;

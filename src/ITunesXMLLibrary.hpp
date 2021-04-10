@@ -25,25 +25,26 @@ class ITunesLibraryFileName : public std::filesystem::path {
 // ITunes XML Library file stored on memory
 struct ITunesXMLLibrary : public IPipeableSource<ITunesXMLLibrary> {
  public:
-    const uintmax_t fileSize;
-    char* ptr;
-
-    ITunesXMLLibrary(const ITunesLibraryFileName&& filePath) : IPipeableSource(this), fileSize(filePath.fileSize) {
+    ITunesXMLLibrary(const ITunesLibraryFileName&& filePath) : IPipeableSource(this), _fileSize(filePath.fileSize) {
         auto f = fopen(filePath.string().c_str(), "rb");
         assert(f);
 
-            ptr = (char *)malloc(fileSize);
+            _ptr = (char *)malloc(_fileSize);
 
-            fread(ptr, 1, fileSize, f);
+            fread(_ptr, 1, _fileSize, f);
         
         fclose(f);
     }
 
-    const std::string_view asStringView() const {
-        return std::string_view { ptr, static_cast<std::size_t>(fileSize) };
+    ~ITunesXMLLibrary() {
+        free(_ptr);
     }
 
-    ~ITunesXMLLibrary() {
-        free(ptr);
+    const std::string_view asStringView() const {
+        return std::string_view { _ptr, static_cast<std::size_t>(_fileSize) };
     }
+ 
+ private:
+     const uintmax_t _fileSize;
+    char* _ptr;
 };

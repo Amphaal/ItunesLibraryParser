@@ -3,7 +3,7 @@
 #include "TracksBoundingResult.hpp"
 
 class PackedTracks :    public IPipeableSource<PackedTracks>, 
-                        public FieldType::IPackedTracks<> {
+                        public FieldType::IPackedTracks {
  public:
     PackedTracks(const TracksBoundingResult& orderedTracks) : IPipeableSource(this) {
         for(const auto &trackData : orderedTracks) {
@@ -25,13 +25,12 @@ class PackedTracks :    public IPipeableSource<PackedTracks>,
         }
     }
 
-    std::size_t allTracksCount() const {
-        return OKTracks.size() + missingFieldsTracks.size();
-    }
-
     ~PackedTracks() {}
-    
     PackedTracks(PackedTracks&&) = default;
     PackedTracks(const PackedTracks&) = delete;
     void operator=(const PackedTracks&) = delete;
+
+    std::size_t allTracksCount() const {
+        return OKTracks.size() + missingFieldsTracks.size();
+    }
 };

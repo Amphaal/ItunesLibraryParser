@@ -10,7 +10,7 @@ struct IPipeableSource {
     IPipeableSource(Self* p) : _p(p) {}
 
     ~IPipeableSource() {
-        // std::cout << "[] << " << _demangle(typeid(Self).name()) << "\n";
+        std::cout << "[] << " << _demangle(typeid(Self).name()) << "\n";
     }
 
     static std::string _demangle(char const* mangled) {

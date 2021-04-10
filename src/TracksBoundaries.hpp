@@ -6,13 +6,15 @@
 struct TracksBoundaries : public IPipeableSource<TracksBoundaries>, 
                           public std::string_view { 
  public:
-    using std::string_view::operator=;
     TracksBoundaries(const ITunesXMLLibrary& lib) : IPipeableSource(this), std::string_view(_getBoundaries(lib)) {}
-    ~TracksBoundaries() {}
 
+    ~TracksBoundaries() {}
     TracksBoundaries(TracksBoundaries&&) = default;
     TracksBoundaries(const TracksBoundaries&) = delete;
     void operator=(const TracksBoundaries&) = delete;
+
+    // uses string_view equal operator instead
+    using std::string_view::operator=;
 
  private:
     static const std::string_view _getBoundaries(const ITunesXMLLibrary& lib) {
@@ -22,7 +24,7 @@ struct TracksBoundaries : public IPipeableSource<TracksBoundaries>,
         assert(foundEnd > foundBegin);
 
         //
-        return { lib.ptr + foundBegin, foundEnd - foundBegin };
+        return { searchSV.data() + foundBegin, foundEnd - foundBegin };
     }
 
     static const std::size_t _findBeginTrackPos(const std::string_view& searchSV) {
