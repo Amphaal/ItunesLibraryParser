@@ -5,24 +5,12 @@
 #include "Tracks.hpp"
 #include "RawTracksCollection.hpp"
 
-struct TracksBoundingResult :   public MTBatcher<RawTracksCollection, FieldType::TrackFieldsBoundingResult>, 
-                                public IPipeableSource<TracksBoundingResult>, 
+struct TracksBoundingResult :   public IPipeableSource<TracksBoundingResult>, 
                                 public std::vector<FieldType::TrackFieldsBoundingResult> {
  public:
-    TracksBoundingResult(const Input&& rawTracks) : MTBatcher(this), IPipeableSource(this) {
-        //
-        reserve(rawTracks.size());
-
+    TracksBoundingResult(const RawTracksCollection&& rawTracks) : IPipeableSource(this) {
         // process and fill
-            // Single-threaded AVX2 version
-            auto results = _processBatch(rawTracks, 0, 0);
-
-            // Multi-threaded AVX2 version, slower than ST
-            // auto results = _processBatches(rawTracks);
-            // _fillSelfWithResults(results, boundaries.size());
-
-        //
-        results.swap(*this);
+        _fill_ST_AVX2(rawTracks);
     }
 
     ~TracksBoundingResult() {}
@@ -50,33 +38,24 @@ struct TracksBoundingResult :   public MTBatcher<RawTracksCollection, FieldType:
     }
 
  private:
-    virtual const PackedOutput _processBatch(std::reference_wrapper<const Input> inputRef, const std::size_t startAt, const std::size_t jobSize) const final {
+    void  _fill_ST_AVX2(const RawTracksCollection& rawTracks) {
         //
-        auto &input = inputRef.get();
+        const auto tracksC = rawTracks.size();
+        reserve(tracksC);
 
         //
-        PackedOutput output;
-        auto count = jobSize ? jobSize : input.size();
-        output.reserve(count);
-
-        //
-        auto until = jobSize ? startAt + jobSize : input.size();
-        for(auto i = startAt; i < until; ++i) {
+        for(const auto &rawTrack : rawTracks) {
             //
-            const auto &source = input[i];
-            auto &dest = output.emplace_back();
+            auto &dest = this->emplace_back();
 
             //
             std::size_t pos = 0;
 
             //
             for(auto i = 0; i < FieldType::orderedScans.size(); ++i) {
-                auto &fieldType = FieldType::orderedScans[i];
-                fieldType->scanFill(source, pos, dest);
+                const auto &fieldType = FieldType::orderedScans[i];
+                fieldType->scanFill(rawTrack, pos, dest);
             }
         }
-
-        //
-        return output;
     };
 };

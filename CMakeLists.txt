@@ -38,6 +38,18 @@ target_compile_options(itunes-library-parser INTERFACE "-march=native")
 
 # test executable
 if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
-    add_executable(${PROJECT_NAME}_test test/main.cpp)
-    target_link_libraries(${PROJECT_NAME}_test itunes-library-parser)
+    #
+    add_executable(${PROJECT_NAME}_test 
+        test/main.cpp
+    )
+    
+    # LTO on, reduces exe size
+    set_target_properties(${PROJECT_NAME}_test PROPERTIES 
+        INTERPROCEDURAL_OPTIMIZATION ON
+    )
+    
+    # link
+    target_link_libraries(${PROJECT_NAME}_test PRIVATE
+        itunes-library-parser
+    )
 endif()
