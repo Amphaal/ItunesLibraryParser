@@ -2,10 +2,10 @@
 
 #include "TracksBoundingResult.hpp"
 
-class PackedTracks :    public IPipeableSource<PackedTracks>, 
+class PackedTracks :    public IPipeable<PackedTracks>, 
                         public FieldType::IPackedTracks {
  public:
-    PackedTracks(const TracksBoundingResult& orderedTracks) : IPipeableSource(this) {
+    PackedTracks(const TracksBoundingResult& orderedTracks) : IPipeable(this) {
         for(const auto &trackData : orderedTracks) {
             //
             bool hasMissing = false;

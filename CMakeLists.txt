@@ -35,6 +35,7 @@ set(CMAKE_C_STANDARD 11)
 add_library(itunes-library-parser INTERFACE)
 target_include_directories(itunes-library-parser INTERFACE src)
 target_compile_options(itunes-library-parser INTERFACE "-march=native")
+target_compile_definitions(itunes-library-parser INTERFACE $<$<CONFIG:Debug>:_DEBUG>)
 
 # test executable
 if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)

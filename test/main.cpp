@@ -10,7 +10,7 @@ int main() {
     m.printElapsed();
 
     // file read in memory, to keep alive until parsing is done
-    auto inMemoryFile = IPipeableSource(&destLib)
+    auto inMemoryFile = IPipeable(&destLib)
         .pipeMove<ITunesXMLLibrary>                                         ("XML file memory copy");
     
     // process to get packed tracks, used for file parsing
@@ -22,13 +22,13 @@ int main() {
         .pipeMove<PackedTracks>                                         ("Pack tracks into bundles for parsing");
 
     //
-    IPipeableSource(&packedTracks.missingFieldsTracks)
+    IPipeable(&packedTracks.missingFieldsTracks)
         .pipeMove<MissingFieldsJSONParser>                              ("Generate warnings tracks manifest")
         .execTrace<&MissingFieldsJSONParser::escapeUnsafe>              ("Escape warnings tracks manifest quotes")
         .copyToFile("warnings.json",                                     "create [warnings.json] manifest");
 
     //
-    IPipeableSource(&packedTracks.OKTracks)
+    IPipeable(&packedTracks.OKTracks)
         .pipeMove<SuccessfulJSONParser>                              ("Generate successful tracks manifest")
         .execTrace<&SuccessfulJSONParser::escapeUnsafe>              ("Escape successful tracks manifest quotes")
         .copyToFile("output.json",                                    "create [output.json] manifest");

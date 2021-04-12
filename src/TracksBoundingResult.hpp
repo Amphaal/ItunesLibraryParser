@@ -5,10 +5,10 @@
 #include "Tracks.hpp"
 #include "RawTracksCollection.hpp"
 
-struct TracksBoundingResult :   public IPipeableSource<TracksBoundingResult>, 
+struct TracksBoundingResult :   public IPipeable<TracksBoundingResult>, 
                                 public std::vector<FieldType::TrackFieldsBoundingResult> {
  public:
-    TracksBoundingResult(const RawTracksCollection&& rawTracks) : IPipeableSource(this) {
+    TracksBoundingResult(const RawTracksCollection&& rawTracks) : IPipeable(this) {
         // process and fill
         _fill_ST_AVX2(rawTracks);
     }

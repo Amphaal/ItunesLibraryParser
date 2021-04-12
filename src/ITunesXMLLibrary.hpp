@@ -23,9 +23,9 @@ class ITunesLibraryFileName : public std::filesystem::path {
 };
 
 // ITunes XML Library file stored on memory
-struct ITunesXMLLibrary : public IPipeableSource<ITunesXMLLibrary> {
+struct ITunesXMLLibrary : public IPipeable<ITunesXMLLibrary> {
  public:
-    ITunesXMLLibrary(const ITunesLibraryFileName&& filePath) : IPipeableSource(this), _fileSize(filePath.fileSize) {
+    ITunesXMLLibrary(const ITunesLibraryFileName&& filePath) : IPipeable(this), _fileSize(filePath.fileSize) {
         auto f = fopen(filePath.string().c_str(), "rb");
         assert(f);
 

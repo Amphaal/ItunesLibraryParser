@@ -3,10 +3,10 @@
 #include "helpers/AVX2Find.hpp"
 #include "ITunesXMLLibrary.hpp"
 
-struct TracksBoundaries : public IPipeableSource<TracksBoundaries>, 
+struct TracksBoundaries : public IPipeable<TracksBoundaries>, 
                           public std::string_view { 
  public:
-    TracksBoundaries(const ITunesXMLLibrary& lib) : IPipeableSource(this), std::string_view(_getBoundaries(lib)) {}
+    TracksBoundaries(const ITunesXMLLibrary& lib) : IPipeable(this), std::string_view(_getBoundaries(lib)) {}
 
     ~TracksBoundaries() {}
     TracksBoundaries(TracksBoundaries&&) = default;

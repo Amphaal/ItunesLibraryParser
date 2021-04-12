@@ -2,10 +2,10 @@
 
 #include "TracksBoundaries.hpp"
 
-struct RawTracksCollection :    public IPipeableSource<RawTracksCollection>, 
+struct RawTracksCollection :    public IPipeable<RawTracksCollection>, 
                                 public std::vector<std::string_view> {
  public:
-    RawTracksCollection(TracksBoundaries &&boundaries) : IPipeableSource(this) { 
+    RawTracksCollection(TracksBoundaries &&boundaries) : IPipeable(this) { 
         // remove dict from boundaries
         static constexpr const auto bDict = sizeof("\n\t<dict>");
         static constexpr const auto eDict = sizeof("\n\t</dict>");
