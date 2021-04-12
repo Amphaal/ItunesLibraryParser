@@ -10,16 +10,22 @@ class ITunesLibraryParser {
     _warningJSONFilePath(warningJSONFilePath) {}
 
     void produceOutputs() const {
+        //
         const auto inMemoryFile = ITunesXMLLibrary { _xmlFilePath };
 
-        auto packedTracks = PackedTracks { RawTracksCollection { inMemoryFile } };
+        //
+        auto [OKTracks, missingFieldsTracks] = PackedTracks { 
+            RawTracksCollection { 
+                inMemoryFile 
+            } 
+        };
 
         //
-        MissingFieldsJSONParser { std::move(packedTracks.missingFieldsTracks) }
+        MissingFieldsJSONParser { std::move(missingFieldsTracks) }
             .copyToFile(_warningJSONFilePath);
         
         //
-        SuccessfulJSONParser { std::move(packedTracks.OKTracks) }
+        SuccessfulJSONParser { std::move(OKTracks) }
             .copyToFile(_outputJSONFilePath);
     }
 

@@ -5,36 +5,17 @@
 #include "Tracks.hpp"
 #include "RawTracksCollection.hpp"
 
-struct TracksBoundingResult :   public IPipeable<TracksBoundingResult>, 
-                                public std::vector<FieldType::TrackFieldsBoundingResult> {
+struct TracksBoundingResult : public std::vector<FieldType::TrackFieldsBoundingResult> {
  public:
-    TracksBoundingResult(const RawTracksCollection&& rawTracks) : IPipeable(this) {
+    TracksBoundingResult(const RawTracksCollection&& rawTracks) {
         // process and fill
         _fill_ST_AVX2(rawTracks);
+        _fillDefaultingValues();
     }
 
     ~TracksBoundingResult() {}
-    TracksBoundingResult(TracksBoundingResult&&) = default;
     TracksBoundingResult(const TracksBoundingResult&) = delete;
     void operator=(const TracksBoundingResult&) = delete;
-
-    // fill defaulting values on missing disc number fields
-    void fillDefaultingValues() {
-        //
-        constexpr const auto numP = std::string_view { "1" };
-        constexpr const auto discNumberIndex = FieldType::DiscNumber.index;
-        
-        //
-        for(auto &trackData : *this) {
-            //
-            auto &target = trackData.missingFields[discNumberIndex];
-            if(!target) continue;
-
-            //
-            trackData.trackFields[discNumberIndex] = numP;
-            target = false;
-        }
-    }
 
  private:
     void  _fill_ST_AVX2(const RawTracksCollection& rawTracks) {
@@ -57,4 +38,22 @@ struct TracksBoundingResult :   public IPipeable<TracksBoundingResult>,
             }
         }
     };
+
+    // fill defaulting values on missing disc number fields
+    void _fillDefaultingValues() {
+        //
+        constexpr const auto numP = std::string_view { "1" };
+        constexpr const auto discNumberIndex = FieldType::DiscNumber.index;
+        
+        //
+        for(auto &trackData : *this) {
+            //
+            auto &target = trackData.missingFields[discNumberIndex];
+            if(!target) continue;
+
+            //
+            trackData.trackFields[discNumberIndex] = numP;
+            target = false;
+        }
+    }
 };

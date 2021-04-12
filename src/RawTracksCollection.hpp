@@ -2,24 +2,14 @@
 
 #include "TracksBoundaries.hpp"
 
-struct RawTracksCollection :    public IPipeable<RawTracksCollection>, 
-                                public std::vector<std::string_view> {
+struct RawTracksCollection : public std::vector<std::string_view> {
  public:
-    RawTracksCollection(TracksBoundaries &&boundaries) : IPipeable(this) { 
-        // remove dict from boundaries
-        static constexpr const auto bDict = sizeof("\n\t<dict>");
-        static constexpr const auto eDict = sizeof("\n\t</dict>");
-        boundaries = boundaries.substr(
-            bDict,
-            boundaries.size() - bDict - eDict
-        );
-        
+    RawTracksCollection(const TracksBoundaries &&boundaries) {        
         // process and fill
         _fill_ST_AVX2(boundaries);
     }
 
     ~RawTracksCollection() {}
-    RawTracksCollection(RawTracksCollection&&) = default;
     RawTracksCollection(const RawTracksCollection&) = delete;
     void operator=(const RawTracksCollection&) = delete;
 

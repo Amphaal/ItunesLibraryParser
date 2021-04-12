@@ -2,10 +2,9 @@
 
 #include "TracksBoundingResult.hpp"
 
-class PackedTracks :    public IPipeable<PackedTracks>, 
-                        public FieldType::IPackedTracks {
+struct PackedTracks : public FieldType::IPackedTracks {
  public:
-    PackedTracks(const TracksBoundingResult& orderedTracks) : IPipeable(this) {
+    PackedTracks(const TracksBoundingResult&& orderedTracks) {
         for(const auto &trackData : orderedTracks) {
             //
             bool hasMissing = false;
@@ -26,7 +25,6 @@ class PackedTracks :    public IPipeable<PackedTracks>,
     }
 
     ~PackedTracks() {}
-    PackedTracks(PackedTracks&&) = default;
     PackedTracks(const PackedTracks&) = delete;
     void operator=(const PackedTracks&) = delete;
 

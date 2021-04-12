@@ -6,16 +6,13 @@
 #include <filesystem>
 #include <string_view>
 
-#include "helpers/Pipeable.hpp"
-
-class ITunesLibraryFileName : public std::filesystem::path {
+struct ITunesLibraryFileName : public std::filesystem::path {
  public:
     ITunesLibraryFileName(const char * filePath) : std::filesystem::path(filePath), fileSize(std::filesystem::file_size(*this)) {
         assert(std::filesystem::exists(*this));
         assert(!std::filesystem::is_directory(*this));
     }
 
-    ITunesLibraryFileName(ITunesLibraryFileName&&) = default;
     ITunesLibraryFileName(const ITunesLibraryFileName&) = delete;
     void operator=(const ITunesLibraryFileName&) = delete;
 
@@ -23,9 +20,9 @@ class ITunesLibraryFileName : public std::filesystem::path {
 };
 
 // ITunes XML Library file stored on memory
-struct ITunesXMLLibrary : public IPipeable<ITunesXMLLibrary> {
+struct ITunesXMLLibrary {
  public:
-    ITunesXMLLibrary(const ITunesLibraryFileName&& filePath) : IPipeable(this), _fileSize(filePath.fileSize) {
+    ITunesXMLLibrary(const ITunesLibraryFileName&& filePath) : _fileSize(filePath.fileSize) {
         auto f = fopen(filePath.string().c_str(), "rb");
         assert(f);
 
@@ -45,6 +42,6 @@ struct ITunesXMLLibrary : public IPipeable<ITunesXMLLibrary> {
     }
  
  private:
-     const uintmax_t _fileSize;
+    const uintmax_t _fileSize;
     char* _ptr;
 };

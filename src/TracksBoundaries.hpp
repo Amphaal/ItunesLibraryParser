@@ -3,13 +3,11 @@
 #include "helpers/AVX2Find.hpp"
 #include "ITunesXMLLibrary.hpp"
 
-struct TracksBoundaries : public IPipeable<TracksBoundaries>, 
-                          public std::string_view { 
+struct TracksBoundaries : public std::string_view { 
  public:
-    TracksBoundaries(const ITunesXMLLibrary& lib) : IPipeable(this), std::string_view(_getBoundaries(lib)) {}
+    TracksBoundaries(const ITunesXMLLibrary& lib) : std::string_view(_getBoundaries(lib)) {}
 
     ~TracksBoundaries() {}
-    TracksBoundaries(TracksBoundaries&&) = default;
     TracksBoundaries(const TracksBoundaries&) = delete;
     void operator=(const TracksBoundaries&) = delete;
 
@@ -22,6 +20,12 @@ struct TracksBoundaries : public IPipeable<TracksBoundaries>,
         auto foundBegin = _findBeginTrackPos(searchSV);
         auto foundEnd   = _findEndTrackPos(searchSV);
         assert(foundEnd > foundBegin);
+
+        // remove englobing <dict> from boundaries
+        static constexpr const auto bDict = sizeof("\n\t<dict>");
+        static constexpr const auto eDict = sizeof("</dict>\n\t");
+        foundBegin += bDict;
+        foundEnd -= eDict;
 
         //
         return { searchSV.data() + foundBegin, foundEnd - foundBegin };

@@ -10,7 +10,7 @@
 #include "PackedTracks.hpp"
 
 template<std::size_t EstMaxTrackLength>
-class OneWayBuffer {
+struct OneWayBuffer {
  public:
     OneWayBuffer(const std::size_t tracksCount) : 
         _size(tracksCount * EstMaxTrackLength) {
@@ -75,19 +75,16 @@ enum class ParseFileType {
 };
 
 template<ParseFileType T, std::size_t EstMaxTrackLength>
-class JSONParser :  public IPipeable<JSONParser<T, EstMaxTrackLength>> {
+struct JSONParser {
  public:
     JSONParser(FieldType::OutputContainer &&);
     
     ~JSONParser() {}
-    JSONParser(JSONParser&&) = delete;
     JSONParser(const JSONParser&) = delete;
     void operator=(const JSONParser&) = delete;
 
-    void copyToFile(const char * filePath, const char* descr) const {
-        auto m = Measurable { descr };   
-            std::ofstream { filePath, std::ifstream::out | std::ifstream::trunc | std::ifstream::binary } << _memFileStream.str();
-        m.printElapsed();
+    void copyToFile(const char * filePath) const {
+        std::ofstream { filePath, std::ifstream::out | std::ifstream::trunc | std::ifstream::binary } << _memFileStream.str();
     }
 
     void lfQuotesToEscape(const std::string_view &toSearch, const std::size_t &sPos) {
@@ -108,7 +105,12 @@ class JSONParser :  public IPipeable<JSONParser<T, EstMaxTrackLength>> {
         }
     }
 
-    void escapeUnsafe() {
+ 
+ private:
+    OneWayBuffer<EstMaxTrackLength> _memFileStream;
+    std::vector<std::size_t> _dblQuotesPosToEscape;
+
+    void _escapeUnsafe() {
         //
         for(const auto &characterToEscape : _dblQuotesPosToEscape) {
             _memFileStream.seekp(characterToEscape);
@@ -118,10 +120,7 @@ class JSONParser :  public IPipeable<JSONParser<T, EstMaxTrackLength>> {
         // prevent further escaping !
         _dblQuotesPosToEscape.clear();
     }
- 
- private:
-    OneWayBuffer<EstMaxTrackLength> _memFileStream;
-    std::vector<std::size_t> _dblQuotesPosToEscape;
+
 };
 
 using MissingFieldsJSONParser = JSONParser<ParseFileType::MissingFields, 500>;
@@ -132,17 +131,7 @@ using SuccessfulJSONParser    = JSONParser<ParseFileType::Successful,    350>;
 //
 
 template<>
-SuccessfulJSONParser::JSONParser(SuccessfulJSONParser&& s) : 
-    IPipeable(std::move(s._source)), 
-    _memFileStream(std::move(s._memFileStream)) {}
-
-template<>
-MissingFieldsJSONParser::JSONParser(MissingFieldsJSONParser&& s) : 
-    IPipeable(std::move(s._source)), 
-    _memFileStream(std::move(s._memFileStream)) {}
-
-template<>
-SuccessfulJSONParser::JSONParser(FieldType::OutputContainer &&tracks) : IPipeable(this), _memFileStream{tracks.size()} {
+SuccessfulJSONParser::JSONParser(FieldType::OutputContainer &&tracks) : _memFileStream{tracks.size()} {
     //
     constexpr auto fieldsC = FieldType::orderedScans.size();
     const auto tracksC = tracks.size();
@@ -188,10 +177,13 @@ SuccessfulJSONParser::JSONParser(FieldType::OutputContainer &&tracks) : IPipeabl
 
     //
     output.eof();
+
+    //
+    _escapeUnsafe();
 };
 
 template<>
-MissingFieldsJSONParser::JSONParser(FieldType::OutputContainer &&tracks) : IPipeable(this), _memFileStream{tracks.size()} {
+MissingFieldsJSONParser::JSONParser(FieldType::OutputContainer &&tracks) : _memFileStream{tracks.size()} {
     //
     Padding padding;
     
@@ -253,4 +245,7 @@ MissingFieldsJSONParser::JSONParser(FieldType::OutputContainer &&tracks) : IPipe
 
     //
     output.eof();
+
+    //
+    _escapeUnsafe();
 };

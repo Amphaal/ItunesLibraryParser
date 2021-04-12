@@ -3,7 +3,7 @@
 #include <iostream>
 #include <chrono>
 
-class Measurable {
+struct Measurable {
  public:
     using Clock = std::chrono::steady_clock;
     Measurable(const char * mesureDescription) : 
