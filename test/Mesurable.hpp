@@ -25,7 +25,7 @@
 struct Measurable {
  public:
     using Clock = std::chrono::steady_clock;
-    Measurable(const char * mesureDescription) :
+    explicit Measurable(const char * mesureDescription) :
         _start_tp(Clock::now()),
         _mesureDescription(mesureDescription) {}
 

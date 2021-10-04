@@ -23,7 +23,7 @@
 
 #include "helpers/AVX2Find.hpp"
 
-#include "Tracks.hpp"
+#include "config/TracksScan.hpp"
 #include "RawTracksCollection.hpp"
 
 struct TracksBoundingResult

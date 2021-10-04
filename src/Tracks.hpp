@@ -38,7 +38,7 @@ struct StringLiteral {
     char value[N];
 };
 
-template<unsigned short SizeVal>
+template<int8_t SizeVal>
 struct ITrackFieldsBoundingResult {
     static constexpr const auto Size = SizeVal;
     std::array<std::string_view, SizeVal>  trackFields;
@@ -61,11 +61,18 @@ struct IPackedTracks {
 
 struct IScanner {
  public:
-    virtual void scanFill(const std::string_view &source, std::size_t &pos, TrackFieldsBoundingResult &result) const = 0;
+    virtual void scanFill(
+        const std::string_view &source,
+        std::size_t &pos,
+        TrackFieldsBoundingResult &result) const = 0;
     virtual constexpr const std::string_view& fieldName() const = 0;
 };
 
-template<unsigned int IndexT, StringLiteral FieldName, StringLiteral LBegin, StringLiteral LEnd>
+template<
+    unsigned int IndexT,
+    StringLiteral FieldName,
+    StringLiteral LBegin,
+    StringLiteral LEnd>
 struct FieldTypeStruct : public IScanner {
     // make sure any FieldTypeStruct respects boundaries
     static_assert(IndexT < TrackFieldsBoundingResult::Size);
@@ -118,30 +125,13 @@ struct FieldTypeStruct : public IScanner {
     static constexpr const auto index = IndexT;
 
  private:
-    static constexpr const auto _beginFP = std::string_view { LBegin.value, sizeof(LBegin.value) - 1 };
-    static constexpr const auto _endFP = std::string_view { LEnd.value, sizeof(LEnd.value) - 1 };
+    static constexpr const auto _beginFP =
+        std::string_view { LBegin.value, sizeof(LBegin.value) - 1 };
+    static constexpr const auto _endFP =
+        std::string_view { LEnd.value, sizeof(LEnd.value) - 1 };
 };
 
-constexpr const FieldTypeStruct<0, "Track ID",       "<key>Track ID</key><integer>",       "</integer>">   TrackID;
-constexpr const FieldTypeStruct<1, "Disc Number",    "<key>Disc Number</key><integer>",    "</integer>">   DiscNumber;
-constexpr const FieldTypeStruct<2, "Track Number",   "<key>Track Number</key><integer>",   "</integer>">   TrackNumber;
-constexpr const FieldTypeStruct<3, "Year",           "<key>Year</key><integer>",           "</integer>">   Year;
-constexpr const FieldTypeStruct<4, "Date Added",     "<key>Date Added</key><date>",        "</date>">      DateAdded;
-constexpr const FieldTypeStruct<5, "Name",           "<key>Name</key><string>",            "</string>">    Name;
-constexpr const FieldTypeStruct<6, "Album Artist",   "<key>Album Artist</key><string>",    "</string>">    AlbumArtist;
-constexpr const FieldTypeStruct<7, "Album",          "<key>Album</key><string>",           "</string>">    Album;
-constexpr const FieldTypeStruct<8, "Genre",          "<key>Genre</key><string>",           "</string>">    Genre;
+using OrderedScansT =
+    const std::array<const IScanner*, TrackFieldsBoundingResult::Size>;
 
-constexpr const std::array<const IScanner*, TrackFieldsBoundingResult::Size> orderedScans {
-    &TrackID,
-    &DiscNumber,
-    &TrackNumber,
-    &Year,
-    &DateAdded,
-    &Name,
-    &AlbumArtist,
-    &Album,
-    &Genre,
-};
-
-}
+}  // namespace FieldType

@@ -52,7 +52,8 @@ struct TracksBoundaries : public std::string_view {
         return { searchSV.data() + foundBegin, foundEnd - foundBegin };
     }
 
-    static const std::size_t _findBeginTrackPos(const std::string_view& searchSV) {
+    static const std::size_t
+        _findBeginTrackPos(const std::string_view& searchSV) {
         //
         static constexpr const auto _beginTracksPattern =
             std::string_view { "<key>Tracks</key>" };
@@ -64,7 +65,8 @@ struct TracksBoundaries : public std::string_view {
         return foundBegin;
     }
 
-    static const std::size_t _findEndTrackPos(const std::string_view& searchSV) {
+    static const std::size_t
+        _findEndTrackPos(const std::string_view& searchSV) {
         //
         static constexpr const auto _endTracksPattern =
             std::string_view { "<key>Playlists</key>" };
