@@ -1,0 +1,2635 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Major Version</key><integer>1</integer>
+	<key>Minor Version</key><integer>1</integer>
+	<key>Application Version</key><string>12.9.5.5</string>
+	<key>Date</key><date>2019-08-12T21:29:55Z</date>
+	<key>Features</key><integer>5</integer>
+	<key>Show Content Ratings</key><true/>
+	<key>Library Persistent ID</key><string>90CA4683D465C501</string>
+	<key>Tracks</key>
+	<dict>
+		<key>74</key>
+		<dict>
+			<key>Track ID</key><integer>74</integer>
+			<key>Size</key><integer>6520347</integer>
+			<key>Total Time</key><integer>155350</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>46</integer>
+			<key>Track Count</key><integer>56</integer>
+			<key>Year</key><integer>2015</integer>
+			<key>Date Modified</key><date>2018-04-09T11:15:34Z</date>
+			<key>Date Added</key><date>2018-09-05T23:43:47Z</date>
+			<key>Bit Rate</key><integer>320</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>7</integer>
+			<key>Play Date</key><integer>3633305901</integer>
+			<key>Play Date UTC</key><date>2019-02-18T02:38:21Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>A4E3A7238CFEBBCC</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+			<key>Name</key><string>The Tree When We Sat Once</string>
+			<key>Artist</key><string>Mikolai Stroinski</string>
+			<key>Album Artist</key><string>Marcin Przybylowicz &#38; Mikolai Stroinski</string>
+			<key>Composer</key><string>Mikolai Stroinski</string>
+			<key>Album</key><string>The Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Genre</key><string>Game Soundtrack</string>
+			<key>Kind</key><string>Fichier audio MPEG</string>
+			<key>Comments</key><string>sittingoncloudsost.com/ost</string>
+			<key>Sort Name</key><string>Tree When We Sat Once</string>
+			<key>Sort Album</key><string>Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Location</key><string>file:///Users/Amphaal/Music/iTunes/iTunes%20Media/Music/Marcin%20Przybylowicz%20&#38;%20Mikolai%20Stroinski/The%20Witcher%203_%20Wild%20Hunt%20(Original%20Game%20Soundtrack)/46%20The%C2%A0Tree%C2%A0When%C2%A0We%C2%A0Sat%C2%A0Once.mp3</string>
+		</dict>
+		<key>76</key>
+		<dict>
+			<key>Track ID</key><integer>76</integer>
+			<key>Size</key><integer>4291576</integer>
+			<key>Total Time</key><integer>99631</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>12</integer>
+			<key>Track Count</key><integer>56</integer>
+			<key>Year</key><integer>2015</integer>
+			<key>Date Modified</key><date>2018-04-09T11:14:00Z</date>
+			<key>Date Added</key><date>2018-09-05T23:43:47Z</date>
+			<key>Bit Rate</key><integer>320</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>21</integer>
+			<key>Play Date</key><integer>3648286336</integer>
+			<key>Play Date UTC</key><date>2019-08-10T10:52:16Z</date>
+			<key>Skip Count</key><integer>1</integer>
+			<key>Skip Date</key><date>2019-02-22T16:29:50Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>3D326B743FF74A43</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+			<key>Name</key><string>The Nightingale</string>
+			<key>Artist</key><string>Percival Schuttenbach</string>
+			<key>Album Artist</key><string>Marcin Przybylowicz &#38; Mikolai Stroinski</string>
+			<key>Composer</key><string>Percival Schuttenbach</string>
+			<key>Album</key><string>The Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Genre</key><string>Game Soundtrack</string>
+			<key>Kind</key><string>Fichier audio MPEG</string>
+			<key>Comments</key><string>sittingoncloudsost.com/ost</string>
+			<key>Sort Name</key><string>Nightingale</string>
+			<key>Sort Album</key><string>Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Location</key><string>file:///Users/Amphaal/Music/iTunes/iTunes%20Media/Music/Marcin%20Przybylowicz%20&#38;%20Mikolai%20Stroinski/The%20Witcher%203_%20Wild%20Hunt%20(Original%20Game%20Soundtrack)/12%20The%C2%A0Nightingale.mp3</string>
+		</dict>
+		<key>78</key>
+		<dict>
+			<key>Track ID</key><integer>78</integer>
+			<key>Size</key><integer>3804705</integer>
+			<key>Total Time</key><integer>87457</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>19</integer>
+			<key>Track Count</key><integer>56</integer>
+			<key>Year</key><integer>2015</integer>
+			<key>Date Modified</key><date>2018-04-09T11:14:18Z</date>
+			<key>Date Added</key><date>2018-09-05T23:43:47Z</date>
+			<key>Bit Rate</key><integer>320</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>13</integer>
+			<key>Play Date</key><integer>3644958167</integer>
+			<key>Play Date UTC</key><date>2019-07-02T22:22:47Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>9E722A059BB0AA3D</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+			<key>Name</key><string>...Steel For Humans</string>
+			<key>Artist</key><string>Marcin Przybylowicz &#38; Percival Schuttenbach</string>
+			<key>Album Artist</key><string>Marcin Przybylowicz &#38; Mikolai Stroinski</string>
+			<key>Composer</key><string>Percival Schuttenbach</string>
+			<key>Album</key><string>The Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Genre</key><string>Game Soundtrack</string>
+			<key>Kind</key><string>Fichier audio MPEG</string>
+			<key>Comments</key><string>sittingoncloudsost.com/ost</string>
+			<key>Sort Album</key><string>Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Location</key><string>file:///Users/Amphaal/Music/iTunes/iTunes%20Media/Music/Marcin%20Przybylowicz%20&#38;%20Mikolai%20Stroinski/The%20Witcher%203_%20Wild%20Hunt%20(Original%20Game%20Soundtrack)/19%20...Steel%C2%A0For%C2%A0Humans.mp3</string>
+		</dict>
+		<key>80</key>
+		<dict>
+			<key>Track ID</key><integer>80</integer>
+			<key>Size</key><integer>6289413</integer>
+			<key>Total Time</key><integer>149577</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>7</integer>
+			<key>Track Count</key><integer>56</integer>
+			<key>Year</key><integer>2015</integer>
+			<key>Date Modified</key><date>2018-04-09T11:13:50Z</date>
+			<key>Date Added</key><date>2018-09-05T23:43:47Z</date>
+			<key>Bit Rate</key><integer>320</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>23</integer>
+			<key>Play Date</key><integer>3648285624</integer>
+			<key>Play Date UTC</key><date>2019-08-10T10:40:24Z</date>
+			<key>Skip Count</key><integer>7</integer>
+			<key>Skip Date</key><date>2019-02-22T14:03:27Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>CD9DF6F55C96C535</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+			<key>Name</key><string>Emhyr Var Emreis</string>
+			<key>Artist</key><string>Marcin Przybylowicz</string>
+			<key>Album Artist</key><string>Marcin Przybylowicz &#38; Mikolai Stroinski</string>
+			<key>Composer</key><string>Marcin Przybylowicz</string>
+			<key>Album</key><string>The Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Genre</key><string>Game Soundtrack</string>
+			<key>Kind</key><string>Fichier audio MPEG</string>
+			<key>Comments</key><string>sittingoncloudsost.com/ost</string>
+			<key>Sort Album</key><string>Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Location</key><string>file:///Users/Amphaal/Music/iTunes/iTunes%20Media/Music/Marcin%20Przybylowicz%20&#38;%20Mikolai%20Stroinski/The%20Witcher%203_%20Wild%20Hunt%20(Original%20Game%20Soundtrack)/07%20Emhyr%C2%A0Var%C2%A0Emreis.mp3</string>
+		</dict>
+		<key>82</key>
+		<dict>
+			<key>Track ID</key><integer>82</integer>
+			<key>Size</key><integer>5258068</integer>
+			<key>Total Time</key><integer>123794</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>45</integer>
+			<key>Track Count</key><integer>56</integer>
+			<key>Year</key><integer>2015</integer>
+			<key>Date Modified</key><date>2018-04-09T11:15:30Z</date>
+			<key>Date Added</key><date>2018-09-05T23:43:47Z</date>
+			<key>Bit Rate</key><integer>320</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>7</integer>
+			<key>Play Date</key><integer>3633305746</integer>
+			<key>Play Date UTC</key><date>2019-02-18T02:35:46Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>65E4D1A9058F9ED0</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+			<key>Name</key><string>Igni</string>
+			<key>Artist</key><string>Mikolai Stroinski</string>
+			<key>Album Artist</key><string>Marcin Przybylowicz &#38; Mikolai Stroinski</string>
+			<key>Composer</key><string>Mikolai Stroinski</string>
+			<key>Album</key><string>The Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Genre</key><string>Game Soundtrack</string>
+			<key>Kind</key><string>Fichier audio MPEG</string>
+			<key>Comments</key><string>sittingoncloudsost.com/ost</string>
+			<key>Sort Album</key><string>Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Location</key><string>file:///Users/Amphaal/Music/iTunes/iTunes%20Media/Music/Marcin%20Przybylowicz%20&#38;%20Mikolai%20Stroinski/The%20Witcher%203_%20Wild%20Hunt%20(Original%20Game%20Soundtrack)/45%20Igni.mp3</string>
+		</dict>
+		<key>84</key>
+		<dict>
+			<key>Track ID</key><integer>84</integer>
+			<key>Size</key><integer>7219382</integer>
+			<key>Total Time</key><integer>172826</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>29</integer>
+			<key>Track Count</key><integer>56</integer>
+			<key>Year</key><integer>2015</integer>
+			<key>Date Modified</key><date>2018-04-09T11:14:54Z</date>
+			<key>Date Added</key><date>2018-09-05T23:43:47Z</date>
+			<key>Bit Rate</key><integer>320</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>9</integer>
+			<key>Play Date</key><integer>3635917986</integer>
+			<key>Play Date UTC</key><date>2019-03-20T08:13:06Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>1B9FF3D301F1B3AD</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+			<key>Name</key><string>Farewell, Old Friend</string>
+			<key>Artist</key><string>Marcin Przybylowicz</string>
+			<key>Album Artist</key><string>Marcin Przybylowicz &#38; Mikolai Stroinski</string>
+			<key>Composer</key><string>Marcin Przybylowicz</string>
+			<key>Album</key><string>The Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Genre</key><string>Game Soundtrack</string>
+			<key>Kind</key><string>Fichier audio MPEG</string>
+			<key>Comments</key><string>sittingoncloudsost.com/ost</string>
+			<key>Sort Album</key><string>Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Location</key><string>file:///Users/Amphaal/Music/iTunes/iTunes%20Media/Music/Marcin%20Przybylowicz%20&#38;%20Mikolai%20Stroinski/The%20Witcher%203_%20Wild%20Hunt%20(Original%20Game%20Soundtrack)/29%20Farewell,%C2%A0Old%C2%A0Friend.mp3</string>
+		</dict>
+		<key>86</key>
+		<dict>
+			<key>Track ID</key><integer>86</integer>
+			<key>Size</key><integer>4050182</integer>
+			<key>Total Time</key><integer>93596</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>24</integer>
+			<key>Track Count</key><integer>56</integer>
+			<key>Year</key><integer>2015</integer>
+			<key>Date Modified</key><date>2018-04-09T11:14:32Z</date>
+			<key>Date Added</key><date>2018-09-05T23:43:47Z</date>
+			<key>Bit Rate</key><integer>320</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>10</integer>
+			<key>Play Date</key><integer>3635917339</integer>
+			<key>Play Date UTC</key><date>2019-03-20T08:02:19Z</date>
+			<key>Skip Count</key><integer>1</integer>
+			<key>Skip Date</key><date>2018-10-20T15:47:57Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>3D62EAB8414726E5</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+			<key>Name</key><string>Yes, I Do...</string>
+			<key>Artist</key><string>Mikolai Stroinski</string>
+			<key>Album Artist</key><string>Marcin Przybylowicz &#38; Mikolai Stroinski</string>
+			<key>Composer</key><string>Mikolai Stroinski</string>
+			<key>Album</key><string>The Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Genre</key><string>Game Soundtrack</string>
+			<key>Kind</key><string>Fichier audio MPEG</string>
+			<key>Comments</key><string>sittingoncloudsost.com/ost</string>
+			<key>Sort Album</key><string>Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Location</key><string>file:///Users/Amphaal/Music/iTunes/iTunes%20Media/Music/Marcin%20Przybylowicz%20&#38;%20Mikolai%20Stroinski/The%20Witcher%203_%20Wild%20Hunt%20(Original%20Game%20Soundtrack)/24%20Yes,%C2%A0I%C2%A0Do....mp3</string>
+		</dict>
+		<key>88</key>
+		<dict>
+			<key>Track ID</key><integer>88</integer>
+			<key>Size</key><integer>3214264</integer>
+			<key>Total Time</key><integer>72698</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>33</integer>
+			<key>Track Count</key><integer>56</integer>
+			<key>Year</key><integer>2015</integer>
+			<key>Date Modified</key><date>2018-04-09T11:14:56Z</date>
+			<key>Date Added</key><date>2018-09-05T23:43:47Z</date>
+			<key>Bit Rate</key><integer>320</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>10</integer>
+			<key>Play Date</key><integer>3635918422</integer>
+			<key>Play Date UTC</key><date>2019-03-20T08:20:22Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>6512A1DD9B352267</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+			<key>Name</key><string>No Surrender</string>
+			<key>Artist</key><string>Mikolai Stroinski</string>
+			<key>Album Artist</key><string>Marcin Przybylowicz &#38; Mikolai Stroinski</string>
+			<key>Composer</key><string>Mikolai Stroinski</string>
+			<key>Album</key><string>The Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Genre</key><string>Game Soundtrack</string>
+			<key>Kind</key><string>Fichier audio MPEG</string>
+			<key>Comments</key><string>sittingoncloudsost.com/ost</string>
+			<key>Sort Album</key><string>Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Location</key><string>file:///Users/Amphaal/Music/iTunes/iTunes%20Media/Music/Marcin%20Przybylowicz%20&#38;%20Mikolai%20Stroinski/The%20Witcher%203_%20Wild%20Hunt%20(Original%20Game%20Soundtrack)/33%20No%C2%A0Surrender.mp3</string>
+		</dict>
+		<key>90</key>
+		<dict>
+			<key>Track ID</key><integer>90</integer>
+			<key>Size</key><integer>2548674</integer>
+			<key>Total Time</key><integer>56058</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>51</integer>
+			<key>Track Count</key><integer>56</integer>
+			<key>Year</key><integer>2015</integer>
+			<key>Date Modified</key><date>2018-04-09T11:15:36Z</date>
+			<key>Date Added</key><date>2018-09-05T23:43:47Z</date>
+			<key>Bit Rate</key><integer>320</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>6</integer>
+			<key>Play Date</key><integer>3633306392</integer>
+			<key>Play Date UTC</key><date>2019-02-18T02:46:32Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>98935E682399209D</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+			<key>Name</key><string>Hjalmar's Axe</string>
+			<key>Artist</key><string>Marcin Przybylowicz</string>
+			<key>Album Artist</key><string>Marcin Przybylowicz &#38; Mikolai Stroinski</string>
+			<key>Composer</key><string>Marcin Przybylowicz</string>
+			<key>Album</key><string>The Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Genre</key><string>Game Soundtrack</string>
+			<key>Kind</key><string>Fichier audio MPEG</string>
+			<key>Comments</key><string>sittingoncloudsost.com/ost</string>
+			<key>Sort Album</key><string>Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Location</key><string>file:///Users/Amphaal/Music/iTunes/iTunes%20Media/Music/Marcin%20Przybylowicz%20&#38;%20Mikolai%20Stroinski/The%20Witcher%203_%20Wild%20Hunt%20(Original%20Game%20Soundtrack)/51%20Hjalmar's%C2%A0Axe.mp3</string>
+		</dict>
+		<key>92</key>
+		<dict>
+			<key>Track ID</key><integer>92</integer>
+			<key>Size</key><integer>3029319</integer>
+			<key>Total Time</key><integer>68075</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>47</integer>
+			<key>Track Count</key><integer>56</integer>
+			<key>Year</key><integer>2015</integer>
+			<key>Date Modified</key><date>2018-04-09T11:15:30Z</date>
+			<key>Date Added</key><date>2018-09-05T23:43:47Z</date>
+			<key>Bit Rate</key><integer>320</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>6</integer>
+			<key>Play Date</key><integer>3633305969</integer>
+			<key>Play Date UTC</key><date>2019-02-18T02:39:29Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>ECFA75C601104AED</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+			<key>Name</key><string>Go For It</string>
+			<key>Artist</key><string>Marcin Przybylowicz</string>
+			<key>Album Artist</key><string>Marcin Przybylowicz &#38; Mikolai Stroinski</string>
+			<key>Composer</key><string>Marcin Przybylowicz</string>
+			<key>Album</key><string>The Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Genre</key><string>Game Soundtrack</string>
+			<key>Kind</key><string>Fichier audio MPEG</string>
+			<key>Comments</key><string>sittingoncloudsost.com/ost</string>
+			<key>Sort Album</key><string>Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Location</key><string>file:///Users/Amphaal/Music/iTunes/iTunes%20Media/Music/Marcin%20Przybylowicz%20&#38;%20Mikolai%20Stroinski/The%20Witcher%203_%20Wild%20Hunt%20(Original%20Game%20Soundtrack)/47%20Go%C2%A0For%C2%A0It.mp3</string>
+		</dict>
+		<key>94</key>
+		<dict>
+			<key>Track ID</key><integer>94</integer>
+			<key>Size</key><integer>7045915</integer>
+			<key>Total Time</key><integer>168489</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>40</integer>
+			<key>Track Count</key><integer>56</integer>
+			<key>Year</key><integer>2015</integer>
+			<key>Date Modified</key><date>2018-04-09T11:15:20Z</date>
+			<key>Date Added</key><date>2018-09-05T23:43:47Z</date>
+			<key>Bit Rate</key><integer>320</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>7</integer>
+			<key>Play Date</key><integer>3635919301</integer>
+			<key>Play Date UTC</key><date>2019-03-20T08:35:01Z</date>
+			<key>Skip Count</key><integer>1</integer>
+			<key>Skip Date</key><date>2019-02-18T02:27:27Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>9C890178E2268985</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+			<key>Name</key><string>Words On Wind</string>
+			<key>Artist</key><string>Marcin Przybylowicz</string>
+			<key>Album Artist</key><string>Marcin Przybylowicz &#38; Mikolai Stroinski</string>
+			<key>Composer</key><string>Marcin Przybylowicz</string>
+			<key>Album</key><string>The Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Genre</key><string>Game Soundtrack</string>
+			<key>Kind</key><string>Fichier audio MPEG</string>
+			<key>Comments</key><string>sittingoncloudsost.com/ost</string>
+			<key>Sort Album</key><string>Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Location</key><string>file:///Users/Amphaal/Music/iTunes/iTunes%20Media/Music/Marcin%20Przybylowicz%20&#38;%20Mikolai%20Stroinski/The%20Witcher%203_%20Wild%20Hunt%20(Original%20Game%20Soundtrack)/40%20Words%C2%A0On%C2%A0Wind.mp3</string>
+		</dict>
+		<key>96</key>
+		<dict>
+			<key>Track ID</key><integer>96</integer>
+			<key>Size</key><integer>5332292</integer>
+			<key>Total Time</key><integer>125648</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>31</integer>
+			<key>Track Count</key><integer>56</integer>
+			<key>Year</key><integer>2015</integer>
+			<key>Date Modified</key><date>2018-04-09T11:14:52Z</date>
+			<key>Date Added</key><date>2018-09-05T23:43:47Z</date>
+			<key>Bit Rate</key><integer>320</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>8</integer>
+			<key>Play Date</key><integer>3635918244</integer>
+			<key>Play Date UTC</key><date>2019-03-20T08:17:24Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>46BEE609A145C2A1</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+			<key>Name</key><string>The Hunt Is Coming</string>
+			<key>Artist</key><string>Marcin Przybylowicz</string>
+			<key>Album Artist</key><string>Marcin Przybylowicz &#38; Mikolai Stroinski</string>
+			<key>Composer</key><string>Marcin Przybylowicz</string>
+			<key>Album</key><string>The Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Genre</key><string>Game Soundtrack</string>
+			<key>Kind</key><string>Fichier audio MPEG</string>
+			<key>Comments</key><string>sittingoncloudsost.com/ost</string>
+			<key>Sort Name</key><string>Hunt Is Coming</string>
+			<key>Sort Album</key><string>Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Location</key><string>file:///Users/Amphaal/Music/iTunes/iTunes%20Media/Music/Marcin%20Przybylowicz%20&#38;%20Mikolai%20Stroinski/The%20Witcher%203_%20Wild%20Hunt%20(Original%20Game%20Soundtrack)/31%20The%C2%A0Hunt%C2%A0Is%C2%A0Coming.mp3</string>
+		</dict>
+		<key>98</key>
+		<dict>
+			<key>Track ID</key><integer>98</integer>
+			<key>Size</key><integer>7889167</integer>
+			<key>Total Time</key><integer>189570</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>42</integer>
+			<key>Track Count</key><integer>56</integer>
+			<key>Year</key><integer>2015</integer>
+			<key>Date Modified</key><date>2018-04-09T11:15:24Z</date>
+			<key>Date Added</key><date>2018-09-05T23:43:47Z</date>
+			<key>Bit Rate</key><integer>320</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>8</integer>
+			<key>Play Date</key><integer>3635919588</integer>
+			<key>Play Date UTC</key><date>2019-03-20T08:39:48Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>0F802E379A8B6F60</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+			<key>Name</key><string>When No Man Has Gone Before</string>
+			<key>Artist</key><string>Mikolai Stroinski</string>
+			<key>Album Artist</key><string>Marcin Przybylowicz &#38; Mikolai Stroinski</string>
+			<key>Composer</key><string>Mikolai Stroinski</string>
+			<key>Album</key><string>The Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Genre</key><string>Game Soundtrack</string>
+			<key>Kind</key><string>Fichier audio MPEG</string>
+			<key>Comments</key><string>sittingoncloudsost.com/ost</string>
+			<key>Sort Album</key><string>Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Location</key><string>file:///Users/Amphaal/Music/iTunes/iTunes%20Media/Music/Marcin%20Przybylowicz%20&#38;%20Mikolai%20Stroinski/The%20Witcher%203_%20Wild%20Hunt%20(Original%20Game%20Soundtrack)/42%20When%C2%A0No%C2%A0Man%C2%A0Has%C2%A0Gone%C2%A0Before.mp3</string>
+		</dict>
+		<key>100</key>
+		<dict>
+			<key>Track ID</key><integer>100</integer>
+			<key>Size</key><integer>7736575</integer>
+			<key>Total Time</key><integer>185756</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>8</integer>
+			<key>Track Count</key><integer>56</integer>
+			<key>Year</key><integer>2015</integer>
+			<key>Date Modified</key><date>2018-04-09T11:13:54Z</date>
+			<key>Date Added</key><date>2018-09-05T23:43:47Z</date>
+			<key>Bit Rate</key><integer>320</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>22</integer>
+			<key>Play Date</key><integer>3648285810</integer>
+			<key>Play Date UTC</key><date>2019-08-10T10:43:30Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>922DF8C2F9782808</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+			<key>Name</key><string>Spikeroog</string>
+			<key>Artist</key><string>Mikolai Stroinski</string>
+			<key>Album Artist</key><string>Marcin Przybylowicz &#38; Mikolai Stroinski</string>
+			<key>Composer</key><string>Mikolai Stroinski</string>
+			<key>Album</key><string>The Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Genre</key><string>Game Soundtrack</string>
+			<key>Kind</key><string>Fichier audio MPEG</string>
+			<key>Comments</key><string>sittingoncloudsost.com/ost</string>
+			<key>Sort Album</key><string>Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Location</key><string>file:///Users/Amphaal/Music/iTunes/iTunes%20Media/Music/Marcin%20Przybylowicz%20&#38;%20Mikolai%20Stroinski/The%20Witcher%203_%20Wild%20Hunt%20(Original%20Game%20Soundtrack)/08%20Spikeroog.mp3</string>
+		</dict>
+		<key>102</key>
+		<dict>
+			<key>Track ID</key><integer>102</integer>
+			<key>Size</key><integer>2799429</integer>
+			<key>Total Time</key><integer>62328</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>36</integer>
+			<key>Track Count</key><integer>56</integer>
+			<key>Year</key><integer>2015</integer>
+			<key>Date Modified</key><date>2018-04-09T11:14:58Z</date>
+			<key>Date Added</key><date>2018-09-05T23:43:47Z</date>
+			<key>Bit Rate</key><integer>320</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>9</integer>
+			<key>Play Date</key><integer>3635918730</integer>
+			<key>Play Date UTC</key><date>2019-03-20T08:25:30Z</date>
+			<key>Skip Count</key><integer>1</integer>
+			<key>Skip Date</key><date>2019-02-18T02:25:34Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>6F3018DBC2650869</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+			<key>Name</key><string>Nemesis</string>
+			<key>Artist</key><string>Mikolai Stroinski</string>
+			<key>Album Artist</key><string>Marcin Przybylowicz &#38; Mikolai Stroinski</string>
+			<key>Composer</key><string>Mikolai Stroinski</string>
+			<key>Album</key><string>The Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Genre</key><string>Game Soundtrack</string>
+			<key>Kind</key><string>Fichier audio MPEG</string>
+			<key>Comments</key><string>sittingoncloudsost.com/ost</string>
+			<key>Sort Album</key><string>Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Location</key><string>file:///Users/Amphaal/Music/iTunes/iTunes%20Media/Music/Marcin%20Przybylowicz%20&#38;%20Mikolai%20Stroinski/The%20Witcher%203_%20Wild%20Hunt%20(Original%20Game%20Soundtrack)/36%20Nemesis.mp3</string>
+		</dict>
+		<key>104</key>
+		<dict>
+			<key>Track ID</key><integer>104</integer>
+			<key>Size</key><integer>5276900</integer>
+			<key>Total Time</key><integer>124264</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>17</integer>
+			<key>Track Count</key><integer>56</integer>
+			<key>Year</key><integer>2015</integer>
+			<key>Date Modified</key><date>2018-04-09T11:14:18Z</date>
+			<key>Date Added</key><date>2018-09-05T23:43:47Z</date>
+			<key>Bit Rate</key><integer>320</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>15</integer>
+			<key>Play Date</key><integer>3644957920</integer>
+			<key>Play Date UTC</key><date>2019-07-02T22:18:40Z</date>
+			<key>Skip Count</key><integer>1</integer>
+			<key>Skip Date</key><date>2018-10-20T14:57:00Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>C9A06ED08745116C</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+			<key>Name</key><string>Eyes of the Wolf</string>
+			<key>Artist</key><string>Mikolai Stroinski</string>
+			<key>Album Artist</key><string>Marcin Przybylowicz &#38; Mikolai Stroinski</string>
+			<key>Composer</key><string>Mikolai Stroinski</string>
+			<key>Album</key><string>The Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Genre</key><string>Game Soundtrack</string>
+			<key>Kind</key><string>Fichier audio MPEG</string>
+			<key>Comments</key><string>sittingoncloudsost.com/ost</string>
+			<key>Sort Album</key><string>Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Location</key><string>file:///Users/Amphaal/Music/iTunes/iTunes%20Media/Music/Marcin%20Przybylowicz%20&#38;%20Mikolai%20Stroinski/The%20Witcher%203_%20Wild%20Hunt%20(Original%20Game%20Soundtrack)/17%20Eyes%C2%A0of%C2%A0the%C2%A0Wolf.mp3</string>
+		</dict>
+		<key>106</key>
+		<dict>
+			<key>Track ID</key><integer>106</integer>
+			<key>Size</key><integer>6955022</integer>
+			<key>Total Time</key><integer>166217</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>22</integer>
+			<key>Track Count</key><integer>56</integer>
+			<key>Year</key><integer>2015</integer>
+			<key>Date Modified</key><date>2018-04-09T11:14:32Z</date>
+			<key>Date Added</key><date>2018-09-05T23:43:47Z</date>
+			<key>Bit Rate</key><integer>320</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>13</integer>
+			<key>Play Date</key><integer>3644958619</integer>
+			<key>Play Date UTC</key><date>2019-07-02T22:30:19Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>70C4621A94A545E9</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+			<key>Name</key><string>Cloak and Dagger</string>
+			<key>Artist</key><string>Percival Schuttenbach</string>
+			<key>Album Artist</key><string>Marcin Przybylowicz &#38; Mikolai Stroinski</string>
+			<key>Composer</key><string>Percival Schuttenbach</string>
+			<key>Album</key><string>The Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Genre</key><string>Game Soundtrack</string>
+			<key>Kind</key><string>Fichier audio MPEG</string>
+			<key>Comments</key><string>sittingoncloudsost.com/ost</string>
+			<key>Sort Album</key><string>Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Location</key><string>file:///Users/Amphaal/Music/iTunes/iTunes%20Media/Music/Marcin%20Przybylowicz%20&#38;%20Mikolai%20Stroinski/The%20Witcher%203_%20Wild%20Hunt%20(Original%20Game%20Soundtrack)/22%20Cloak%C2%A0and%C2%A0Dagger.mp3</string>
+		</dict>
+		<key>108</key>
+		<dict>
+			<key>Track ID</key><integer>108</integer>
+			<key>Size</key><integer>5011572</integer>
+			<key>Total Time</key><integer>117629</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>55</integer>
+			<key>Track Count</key><integer>56</integer>
+			<key>Year</key><integer>2015</integer>
+			<key>Date Modified</key><date>2018-04-09T11:15:48Z</date>
+			<key>Date Added</key><date>2018-09-05T23:43:47Z</date>
+			<key>Bit Rate</key><integer>320</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>6</integer>
+			<key>Play Date</key><integer>3633701273</integer>
+			<key>Play Date UTC</key><date>2019-02-22T16:27:53Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>E12388430B3F8561</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+			<key>Name</key><string>Another Round For Everyone</string>
+			<key>Artist</key><string>Marcin Przybylowicz &#38; Percival Schuttenbach</string>
+			<key>Album Artist</key><string>Marcin Przybylowicz &#38; Mikolai Stroinski</string>
+			<key>Composer</key><string>Marcin Przybylowicz</string>
+			<key>Album</key><string>The Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Genre</key><string>Game Soundtrack</string>
+			<key>Kind</key><string>Fichier audio MPEG</string>
+			<key>Comments</key><string>sittingoncloudsost.com/ost</string>
+			<key>Sort Album</key><string>Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Location</key><string>file:///Users/Amphaal/Music/iTunes/iTunes%20Media/Music/Marcin%20Przybylowicz%20&#38;%20Mikolai%20Stroinski/The%20Witcher%203_%20Wild%20Hunt%20(Original%20Game%20Soundtrack)/55%20Another%C2%A0Round%C2%A0For%C2%A0Everyone.mp3</string>
+		</dict>
+		<key>110</key>
+		<dict>
+			<key>Track ID</key><integer>110</integer>
+			<key>Size</key><integer>6548557</integer>
+			<key>Total Time</key><integer>156055</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>48</integer>
+			<key>Track Count</key><integer>56</integer>
+			<key>Year</key><integer>2015</integer>
+			<key>Date Modified</key><date>2018-04-09T11:15:36Z</date>
+			<key>Date Added</key><date>2018-09-05T23:43:47Z</date>
+			<key>Bit Rate</key><integer>320</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>6</integer>
+			<key>Play Date</key><integer>3633306125</integer>
+			<key>Play Date UTC</key><date>2019-02-18T02:42:05Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>CD78EB8926F60D66</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+			<key>Name</key><string>The Wolf and the Swallow</string>
+			<key>Artist</key><string>Mikolai Stroinski</string>
+			<key>Album Artist</key><string>Marcin Przybylowicz &#38; Mikolai Stroinski</string>
+			<key>Composer</key><string>Mikolai Stroinski</string>
+			<key>Album</key><string>The Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Genre</key><string>Game Soundtrack</string>
+			<key>Kind</key><string>Fichier audio MPEG</string>
+			<key>Comments</key><string>sittingoncloudsost.com/ost</string>
+			<key>Sort Name</key><string>Wolf and the Swallow</string>
+			<key>Sort Album</key><string>Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Location</key><string>file:///Users/Amphaal/Music/iTunes/iTunes%20Media/Music/Marcin%20Przybylowicz%20&#38;%20Mikolai%20Stroinski/The%20Witcher%203_%20Wild%20Hunt%20(Original%20Game%20Soundtrack)/48%20The%C2%A0Wolf%C2%A0and%C2%A0the%C2%A0Swallow.mp3</string>
+		</dict>
+		<key>112</key>
+		<dict>
+			<key>Track ID</key><integer>112</integer>
+			<key>Size</key><integer>3947788</integer>
+			<key>Total Time</key><integer>91036</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>27</integer>
+			<key>Track Count</key><integer>56</integer>
+			<key>Year</key><integer>2015</integer>
+			<key>Date Modified</key><date>2018-04-09T11:14:38Z</date>
+			<key>Date Added</key><date>2018-09-05T23:43:47Z</date>
+			<key>Bit Rate</key><integer>320</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>11</integer>
+			<key>Play Date</key><integer>3635917691</integer>
+			<key>Play Date UTC</key><date>2019-03-20T08:08:11Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>2C477A728A753BA9</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+			<key>Name</key><string>After the Storm</string>
+			<key>Artist</key><string>Mikolai Stroinski</string>
+			<key>Album Artist</key><string>Marcin Przybylowicz &#38; Mikolai Stroinski</string>
+			<key>Composer</key><string>Mikolai Stroinski</string>
+			<key>Album</key><string>The Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Genre</key><string>Game Soundtrack</string>
+			<key>Kind</key><string>Fichier audio MPEG</string>
+			<key>Comments</key><string>sittingoncloudsost.com/ost</string>
+			<key>Sort Album</key><string>Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Location</key><string>file:///Users/Amphaal/Music/iTunes/iTunes%20Media/Music/Marcin%20Przybylowicz%20&#38;%20Mikolai%20Stroinski/The%20Witcher%203_%20Wild%20Hunt%20(Original%20Game%20Soundtrack)/27%20After%C2%A0the%C2%A0Storm.mp3</string>
+		</dict>
+		<key>114</key>
+		<dict>
+			<key>Track ID</key><integer>114</integer>
+			<key>Size</key><integer>6228828</integer>
+			<key>Total Time</key><integer>148062</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>37</integer>
+			<key>Track Count</key><integer>56</integer>
+			<key>Year</key><integer>2015</integer>
+			<key>Date Modified</key><date>2018-04-09T11:15:06Z</date>
+			<key>Date Added</key><date>2018-09-05T23:43:47Z</date>
+			<key>Bit Rate</key><integer>320</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>8</integer>
+			<key>Play Date</key><integer>3635918878</integer>
+			<key>Play Date UTC</key><date>2019-03-20T08:27:58Z</date>
+			<key>Skip Count</key><integer>1</integer>
+			<key>Skip Date</key><date>2019-02-18T02:25:37Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>8918773B4BE76232</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+			<key>Name</key><string>Bonnie At Morn (Instrumental)</string>
+			<key>Artist</key><string>Mikolai Stroinski</string>
+			<key>Album Artist</key><string>Marcin Przybylowicz &#38; Mikolai Stroinski</string>
+			<key>Composer</key><string>Mikolai Stroinski</string>
+			<key>Album</key><string>The Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Genre</key><string>Game Soundtrack</string>
+			<key>Kind</key><string>Fichier audio MPEG</string>
+			<key>Comments</key><string>sittingoncloudsost.com/ost</string>
+			<key>Sort Album</key><string>Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Location</key><string>file:///Users/Amphaal/Music/iTunes/iTunes%20Media/Music/Marcin%20Przybylowicz%20&#38;%20Mikolai%20Stroinski/The%20Witcher%203_%20Wild%20Hunt%20(Original%20Game%20Soundtrack)/37%20Bonnie%C2%A0At%C2%A0Morn%20(Instrumental).mp3</string>
+		</dict>
+		<key>116</key>
+		<dict>
+			<key>Track ID</key><integer>116</integer>
+			<key>Size</key><integer>8421034</integer>
+			<key>Total Time</key><integer>202866</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>54</integer>
+			<key>Track Count</key><integer>56</integer>
+			<key>Year</key><integer>2015</integer>
+			<key>Date Modified</key><date>2018-04-09T11:15:52Z</date>
+			<key>Date Added</key><date>2018-09-05T23:43:47Z</date>
+			<key>Bit Rate</key><integer>320</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>6</integer>
+			<key>Play Date</key><integer>3633701164</integer>
+			<key>Play Date UTC</key><date>2019-02-22T16:26:04Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>1D9FA30400CD6149</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+			<key>Name</key><string>The Possession of Jarl Udalryk</string>
+			<key>Artist</key><string>Marcin Przybylowicz</string>
+			<key>Album Artist</key><string>Marcin Przybylowicz &#38; Mikolai Stroinski</string>
+			<key>Composer</key><string>Marcin Przybylowicz</string>
+			<key>Album</key><string>The Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Genre</key><string>Game Soundtrack</string>
+			<key>Kind</key><string>Fichier audio MPEG</string>
+			<key>Comments</key><string>sittingoncloudsost.com/ost</string>
+			<key>Sort Name</key><string>Possession of Jarl Udalryk</string>
+			<key>Sort Album</key><string>Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Location</key><string>file:///Users/Amphaal/Music/iTunes/iTunes%20Media/Music/Marcin%20Przybylowicz%20&#38;%20Mikolai%20Stroinski/The%20Witcher%203_%20Wild%20Hunt%20(Original%20Game%20Soundtrack)/54%20The%C2%A0Possession%C2%A0of%C2%A0Jarl%C2%A0Udalryk.mp3</string>
+		</dict>
+		<key>118</key>
+		<dict>
+			<key>Track ID</key><integer>118</integer>
+			<key>Size</key><integer>5443044</integer>
+			<key>Total Time</key><integer>128417</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>6</integer>
+			<key>Track Count</key><integer>56</integer>
+			<key>Year</key><integer>2015</integer>
+			<key>Date Modified</key><date>2018-04-09T11:13:46Z</date>
+			<key>Date Added</key><date>2018-09-05T23:43:47Z</date>
+			<key>Bit Rate</key><integer>320</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>24</integer>
+			<key>Play Date</key><integer>3648285475</integer>
+			<key>Play Date UTC</key><date>2019-08-10T10:37:55Z</date>
+			<key>Skip Count</key><integer>1</integer>
+			<key>Skip Date</key><date>2018-10-20T16:08:53Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>8CABD80D6A327D84</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+			<key>Name</key><string>Commanding the Fury</string>
+			<key>Artist</key><string>Mikolai Stroinski</string>
+			<key>Album Artist</key><string>Marcin Przybylowicz &#38; Mikolai Stroinski</string>
+			<key>Composer</key><string>Mikolai Stroinski</string>
+			<key>Album</key><string>The Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Genre</key><string>Game Soundtrack</string>
+			<key>Kind</key><string>Fichier audio MPEG</string>
+			<key>Comments</key><string>sittingoncloudsost.com/ost</string>
+			<key>Sort Album</key><string>Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Location</key><string>file:///Users/Amphaal/Music/iTunes/iTunes%20Media/Music/Marcin%20Przybylowicz%20&#38;%20Mikolai%20Stroinski/The%20Witcher%203_%20Wild%20Hunt%20(Original%20Game%20Soundtrack)/06%20Commanding%C2%A0the%C2%A0Fury.mp3</string>
+		</dict>
+		<key>120</key>
+		<dict>
+			<key>Track ID</key><integer>120</integer>
+			<key>Size</key><integer>6548528</integer>
+			<key>Total Time</key><integer>156055</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>5</integer>
+			<key>Track Count</key><integer>56</integer>
+			<key>Year</key><integer>2015</integer>
+			<key>Date Modified</key><date>2018-04-09T11:13:46Z</date>
+			<key>Date Added</key><date>2018-09-05T23:43:47Z</date>
+			<key>Bit Rate</key><integer>320</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>24</integer>
+			<key>Play Date</key><integer>3648285346</integer>
+			<key>Play Date UTC</key><date>2019-08-10T10:35:46Z</date>
+			<key>Skip Count</key><integer>3</integer>
+			<key>Skip Date</key><date>2019-02-18T01:30:08Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>09308D44602A982A</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+			<key>Name</key><string>Aen Seidhe</string>
+			<key>Artist</key><string>Mikolai Stroinski</string>
+			<key>Album Artist</key><string>Marcin Przybylowicz &#38; Mikolai Stroinski</string>
+			<key>Composer</key><string>Mikolai Stroinski</string>
+			<key>Album</key><string>The Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Genre</key><string>Game Soundtrack</string>
+			<key>Kind</key><string>Fichier audio MPEG</string>
+			<key>Comments</key><string>sittingoncloudsost.com/ost</string>
+			<key>Sort Album</key><string>Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Location</key><string>file:///Users/Amphaal/Music/iTunes/iTunes%20Media/Music/Marcin%20Przybylowicz%20&#38;%20Mikolai%20Stroinski/The%20Witcher%203_%20Wild%20Hunt%20(Original%20Game%20Soundtrack)/05%20Aen%C2%A0Seidhe.mp3</string>
+		</dict>
+		<key>122</key>
+		<dict>
+			<key>Track ID</key><integer>122</integer>
+			<key>Size</key><integer>3153678</integer>
+			<key>Total Time</key><integer>71183</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>43</integer>
+			<key>Track Count</key><integer>56</integer>
+			<key>Year</key><integer>2015</integer>
+			<key>Date Modified</key><date>2018-04-09T11:15:18Z</date>
+			<key>Date Added</key><date>2018-09-05T23:43:47Z</date>
+			<key>Bit Rate</key><integer>320</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>8</integer>
+			<key>Play Date</key><integer>3635919659</integer>
+			<key>Play Date UTC</key><date>2019-03-20T08:40:59Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>9716F02DB2156EEE</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+			<key>Name</key><string>Like a Wounded Animal</string>
+			<key>Artist</key><string>Mikolai Stroinski</string>
+			<key>Album Artist</key><string>Marcin Przybylowicz &#38; Mikolai Stroinski</string>
+			<key>Composer</key><string>Mikolai Stroinski</string>
+			<key>Album</key><string>The Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Genre</key><string>Game Soundtrack</string>
+			<key>Kind</key><string>Fichier audio MPEG</string>
+			<key>Comments</key><string>sittingoncloudsost.com/ost</string>
+			<key>Sort Album</key><string>Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Location</key><string>file:///Users/Amphaal/Music/iTunes/iTunes%20Media/Music/Marcin%20Przybylowicz%20&#38;%20Mikolai%20Stroinski/The%20Witcher%203_%20Wild%20Hunt%20(Original%20Game%20Soundtrack)/43%20Like%C2%A0a%C2%A0Wounded%C2%A0Animal.mp3</string>
+		</dict>
+		<key>124</key>
+		<dict>
+			<key>Track ID</key><integer>124</integer>
+			<key>Size</key><integer>5365719</integer>
+			<key>Total Time</key><integer>126484</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>13</integer>
+			<key>Track Count</key><integer>56</integer>
+			<key>Year</key><integer>2015</integer>
+			<key>Date Modified</key><date>2018-04-09T11:14:04Z</date>
+			<key>Date Added</key><date>2018-09-05T23:43:47Z</date>
+			<key>Bit Rate</key><integer>320</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>23</integer>
+			<key>Play Date</key><integer>3648286463</integer>
+			<key>Play Date UTC</key><date>2019-08-10T10:54:23Z</date>
+			<key>Skip Count</key><integer>8</integer>
+			<key>Skip Date</key><date>2018-10-20T14:29:22Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>22045962D78E6355</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+			<key>Name</key><string>City of Intrigues</string>
+			<key>Artist</key><string>Mikolai Stroinski</string>
+			<key>Album Artist</key><string>Marcin Przybylowicz &#38; Mikolai Stroinski</string>
+			<key>Composer</key><string>Mikolai Stroinski</string>
+			<key>Album</key><string>The Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Genre</key><string>Game Soundtrack</string>
+			<key>Kind</key><string>Fichier audio MPEG</string>
+			<key>Comments</key><string>sittingoncloudsost.com/ost</string>
+			<key>Sort Album</key><string>Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Location</key><string>file:///Users/Amphaal/Music/iTunes/iTunes%20Media/Music/Marcin%20Przybylowicz%20&#38;%20Mikolai%20Stroinski/The%20Witcher%203_%20Wild%20Hunt%20(Original%20Game%20Soundtrack)/13%20City%C2%A0of%C2%A0Intrigues.mp3</string>
+		</dict>
+		<key>126</key>
+		<dict>
+			<key>Track ID</key><integer>126</integer>
+			<key>Size</key><integer>4544431</integer>
+			<key>Total Time</key><integer>105952</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>32</integer>
+			<key>Track Count</key><integer>56</integer>
+			<key>Year</key><integer>2015</integer>
+			<key>Date Modified</key><date>2018-04-09T11:14:52Z</date>
+			<key>Date Added</key><date>2018-09-05T23:43:47Z</date>
+			<key>Bit Rate</key><integer>320</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>10</integer>
+			<key>Play Date</key><integer>3635918350</integer>
+			<key>Play Date UTC</key><date>2019-03-20T08:19:10Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>5F1DA0011AE8F1EE</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+			<key>Name</key><string>Family Matters</string>
+			<key>Artist</key><string>Marcin Przybylowicz</string>
+			<key>Album Artist</key><string>Marcin Przybylowicz &#38; Mikolai Stroinski</string>
+			<key>Composer</key><string>Marcin Przybylowicz</string>
+			<key>Album</key><string>The Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Genre</key><string>Game Soundtrack</string>
+			<key>Kind</key><string>Fichier audio MPEG</string>
+			<key>Comments</key><string>sittingoncloudsost.com/ost</string>
+			<key>Sort Album</key><string>Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Location</key><string>file:///Users/Amphaal/Music/iTunes/iTunes%20Media/Music/Marcin%20Przybylowicz%20&#38;%20Mikolai%20Stroinski/The%20Witcher%203_%20Wild%20Hunt%20(Original%20Game%20Soundtrack)/32%20Family%C2%A0Matters.mp3</string>
+		</dict>
+		<key>128</key>
+		<dict>
+			<key>Track ID</key><integer>128</integer>
+			<key>Size</key><integer>7102355</integer>
+			<key>Total Time</key><integer>169900</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>35</integer>
+			<key>Track Count</key><integer>56</integer>
+			<key>Year</key><integer>2015</integer>
+			<key>Date Modified</key><date>2018-04-09T11:15:04Z</date>
+			<key>Date Added</key><date>2018-09-05T23:43:47Z</date>
+			<key>Bit Rate</key><integer>320</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>9</integer>
+			<key>Play Date</key><integer>3635918668</integer>
+			<key>Play Date UTC</key><date>2019-03-20T08:24:28Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>0553FC95F6D09114</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+			<key>Name</key><string>In the Giant's Shadow</string>
+			<key>Artist</key><string>Marcin Przybylowicz</string>
+			<key>Album Artist</key><string>Marcin Przybylowicz &#38; Mikolai Stroinski</string>
+			<key>Composer</key><string>Marcin Przybylowicz</string>
+			<key>Album</key><string>The Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Genre</key><string>Game Soundtrack</string>
+			<key>Kind</key><string>Fichier audio MPEG</string>
+			<key>Comments</key><string>sittingoncloudsost.com/ost</string>
+			<key>Sort Album</key><string>Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Location</key><string>file:///Users/Amphaal/Music/iTunes/iTunes%20Media/Music/Marcin%20Przybylowicz%20&#38;%20Mikolai%20Stroinski/The%20Witcher%203_%20Wild%20Hunt%20(Original%20Game%20Soundtrack)/35%20In%C2%A0the%C2%A0Giant's%C2%A0Shadow.mp3</string>
+		</dict>
+		<key>130</key>
+		<dict>
+			<key>Track ID</key><integer>130</integer>
+			<key>Size</key><integer>4189152</integer>
+			<key>Total Time</key><integer>97071</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>49</integer>
+			<key>Track Count</key><integer>56</integer>
+			<key>Year</key><integer>2015</integer>
+			<key>Date Modified</key><date>2018-04-09T11:15:36Z</date>
+			<key>Date Added</key><date>2018-09-05T23:43:47Z</date>
+			<key>Bit Rate</key><integer>320</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>6</integer>
+			<key>Play Date</key><integer>3633306222</integer>
+			<key>Play Date UTC</key><date>2019-02-18T02:43:42Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>D1867EB2C34DACD0</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+			<key>Name</key><string>On Thin Ice</string>
+			<key>Artist</key><string>Mikolai Stroinski</string>
+			<key>Album Artist</key><string>Marcin Przybylowicz &#38; Mikolai Stroinski</string>
+			<key>Composer</key><string>Mikolai Stroinski</string>
+			<key>Album</key><string>The Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Genre</key><string>Game Soundtrack</string>
+			<key>Kind</key><string>Fichier audio MPEG</string>
+			<key>Comments</key><string>sittingoncloudsost.com/ost</string>
+			<key>Sort Album</key><string>Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Location</key><string>file:///Users/Amphaal/Music/iTunes/iTunes%20Media/Music/Marcin%20Przybylowicz%20&#38;%20Mikolai%20Stroinski/The%20Witcher%203_%20Wild%20Hunt%20(Original%20Game%20Soundtrack)/49%20On%C2%A0Thin%C2%A0Ice.mp3</string>
+		</dict>
+		<key>132</key>
+		<dict>
+			<key>Track ID</key><integer>132</integer>
+			<key>Size</key><integer>3338643</integer>
+			<key>Total Time</key><integer>75807</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>34</integer>
+			<key>Track Count</key><integer>56</integer>
+			<key>Year</key><integer>2015</integer>
+			<key>Date Modified</key><date>2018-04-09T11:14:58Z</date>
+			<key>Date Added</key><date>2018-09-05T23:43:47Z</date>
+			<key>Bit Rate</key><integer>320</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>10</integer>
+			<key>Play Date</key><integer>3635918498</integer>
+			<key>Play Date UTC</key><date>2019-03-20T08:21:38Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>0135F9F729359193</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+			<key>Name</key><string>Child of the Elder Blood</string>
+			<key>Artist</key><string>Marcin Przybylowicz</string>
+			<key>Album Artist</key><string>Marcin Przybylowicz &#38; Mikolai Stroinski</string>
+			<key>Composer</key><string>Percival Schuttenbach</string>
+			<key>Album</key><string>The Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Genre</key><string>Game Soundtrack</string>
+			<key>Kind</key><string>Fichier audio MPEG</string>
+			<key>Comments</key><string>sittingoncloudsost.com/ost</string>
+			<key>Sort Album</key><string>Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Location</key><string>file:///Users/Amphaal/Music/iTunes/iTunes%20Media/Music/Marcin%20Przybylowicz%20&#38;%20Mikolai%20Stroinski/The%20Witcher%203_%20Wild%20Hunt%20(Original%20Game%20Soundtrack)/34%20Child%C2%A0of%C2%A0the%C2%A0Elder%C2%A0Blood.mp3</string>
+		</dict>
+		<key>134</key>
+		<dict>
+			<key>Track ID</key><integer>134</integer>
+			<key>Size</key><integer>5988481</integer>
+			<key>Total Time</key><integer>142053</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>2</integer>
+			<key>Track Count</key><integer>56</integer>
+			<key>Year</key><integer>2015</integer>
+			<key>Date Modified</key><date>2018-04-09T11:13:34Z</date>
+			<key>Date Added</key><date>2018-09-05T23:43:47Z</date>
+			<key>Bit Rate</key><integer>320</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>23</integer>
+			<key>Play Date</key><integer>3648261368</integer>
+			<key>Play Date UTC</key><date>2019-08-10T03:56:08Z</date>
+			<key>Skip Count</key><integer>5</integer>
+			<key>Skip Date</key><date>2019-02-22T16:58:02Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>AFE347410C7038A2</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+			<key>Name</key><string>Geralt of Rivia</string>
+			<key>Artist</key><string>Marcin Przybylowicz</string>
+			<key>Album Artist</key><string>Marcin Przybylowicz &#38; Mikolai Stroinski</string>
+			<key>Composer</key><string>Marcin Przybylowicz</string>
+			<key>Album</key><string>The Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Genre</key><string>Game Soundtrack</string>
+			<key>Kind</key><string>Fichier audio MPEG</string>
+			<key>Comments</key><string>sittingoncloudsost.com/ost</string>
+			<key>Sort Album</key><string>Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Location</key><string>file:///Users/Amphaal/Music/iTunes/iTunes%20Media/Music/Marcin%20Przybylowicz%20&#38;%20Mikolai%20Stroinski/The%20Witcher%203_%20Wild%20Hunt%20(Original%20Game%20Soundtrack)/02%20Geralt%C2%A0of%C2%A0Rivia.mp3</string>
+		</dict>
+		<key>136</key>
+		<dict>
+			<key>Track ID</key><integer>136</integer>
+			<key>Size</key><integer>6726168</integer>
+			<key>Total Time</key><integer>160496</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>18</integer>
+			<key>Track Count</key><integer>56</integer>
+			<key>Year</key><integer>2015</integer>
+			<key>Date Modified</key><date>2018-04-09T11:14:26Z</date>
+			<key>Date Added</key><date>2018-09-05T23:43:47Z</date>
+			<key>Bit Rate</key><integer>320</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>13</integer>
+			<key>Play Date</key><integer>3644958080</integer>
+			<key>Play Date UTC</key><date>2019-07-02T22:21:20Z</date>
+			<key>Skip Count</key><integer>1</integer>
+			<key>Skip Date</key><date>2018-10-20T14:57:14Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>A608347E3B6DFCD8</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+			<key>Name</key><string>Witch Hunters</string>
+			<key>Artist</key><string>Mikolai Stroinski</string>
+			<key>Album Artist</key><string>Marcin Przybylowicz &#38; Mikolai Stroinski</string>
+			<key>Composer</key><string>Mikolai Stroinski</string>
+			<key>Album</key><string>The Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Genre</key><string>Game Soundtrack</string>
+			<key>Kind</key><string>Fichier audio MPEG</string>
+			<key>Comments</key><string>sittingoncloudsost.com/ost</string>
+			<key>Sort Album</key><string>Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Location</key><string>file:///Users/Amphaal/Music/iTunes/iTunes%20Media/Music/Marcin%20Przybylowicz%20&#38;%20Mikolai%20Stroinski/The%20Witcher%203_%20Wild%20Hunt%20(Original%20Game%20Soundtrack)/18%20Witch%C2%A0Hunters.mp3</string>
+		</dict>
+		<key>138</key>
+		<dict>
+			<key>Track ID</key><integer>138</integer>
+			<key>Size</key><integer>6918437</integer>
+			<key>Total Time</key><integer>165302</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>25</integer>
+			<key>Track Count</key><integer>56</integer>
+			<key>Year</key><integer>2015</integer>
+			<key>Date Modified</key><date>2018-04-09T11:14:42Z</date>
+			<key>Date Added</key><date>2018-09-05T23:43:47Z</date>
+			<key>Bit Rate</key><integer>320</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>8</integer>
+			<key>Play Date</key><integer>3635917504</integer>
+			<key>Play Date UTC</key><date>2019-03-20T08:05:04Z</date>
+			<key>Skip Count</key><integer>2</integer>
+			<key>Skip Date</key><date>2019-02-22T16:56:38Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>C587D7A2123EC8B8</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+			<key>Name</key><string>Welcome, Imlerith</string>
+			<key>Artist</key><string>Mikolai Stroinski</string>
+			<key>Album Artist</key><string>Marcin Przybylowicz &#38; Mikolai Stroinski</string>
+			<key>Composer</key><string>Mikolai Stroinski</string>
+			<key>Album</key><string>The Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Genre</key><string>Game Soundtrack</string>
+			<key>Kind</key><string>Fichier audio MPEG</string>
+			<key>Comments</key><string>sittingoncloudsost.com/ost</string>
+			<key>Sort Album</key><string>Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Location</key><string>file:///Users/Amphaal/Music/iTunes/iTunes%20Media/Music/Marcin%20Przybylowicz%20&#38;%20Mikolai%20Stroinski/The%20Witcher%203_%20Wild%20Hunt%20(Original%20Game%20Soundtrack)/25%20Welcome,%C2%A0Imlerith.mp3</string>
+		</dict>
+		<key>140</key>
+		<dict>
+			<key>Track ID</key><integer>140</integer>
+			<key>Size</key><integer>4056441</integer>
+			<key>Total Time</key><integer>93753</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>38</integer>
+			<key>Track Count</key><integer>56</integer>
+			<key>Year</key><integer>2015</integer>
+			<key>Date Modified</key><date>2018-04-09T11:15:04Z</date>
+			<key>Date Added</key><date>2018-09-05T23:43:47Z</date>
+			<key>Bit Rate</key><integer>320</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>7</integer>
+			<key>Play Date</key><integer>3635918972</integer>
+			<key>Play Date UTC</key><date>2019-03-20T08:29:32Z</date>
+			<key>Skip Count</key><integer>1</integer>
+			<key>Skip Date</key><date>2019-02-18T02:25:39Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>43B1488B27D5DEA5</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+			<key>Name</key><string>At War!</string>
+			<key>Artist</key><string>Mikolai Stroinski</string>
+			<key>Album Artist</key><string>Marcin Przybylowicz &#38; Mikolai Stroinski</string>
+			<key>Composer</key><string>Mikolai Stroinski</string>
+			<key>Album</key><string>The Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Genre</key><string>Game Soundtrack</string>
+			<key>Kind</key><string>Fichier audio MPEG</string>
+			<key>Comments</key><string>sittingoncloudsost.com/ost</string>
+			<key>Sort Album</key><string>Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Location</key><string>file:///Users/Amphaal/Music/iTunes/iTunes%20Media/Music/Marcin%20Przybylowicz%20&#38;%20Mikolai%20Stroinski/The%20Witcher%203_%20Wild%20Hunt%20(Original%20Game%20Soundtrack)/38%20At%C2%A0War!.mp3</string>
+		</dict>
+		<key>142</key>
+		<dict>
+			<key>Track ID</key><integer>142</integer>
+			<key>Size</key><integer>6513013</integer>
+			<key>Total Time</key><integer>155167</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>16</integer>
+			<key>Track Count</key><integer>56</integer>
+			<key>Year</key><integer>2015</integer>
+			<key>Date Modified</key><date>2018-04-09T11:14:14Z</date>
+			<key>Date Added</key><date>2018-09-05T23:43:47Z</date>
+			<key>Bit Rate</key><integer>320</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>17</integer>
+			<key>Play Date</key><integer>3644957795</integer>
+			<key>Play Date UTC</key><date>2019-07-02T22:16:35Z</date>
+			<key>Skip Count</key><integer>1</integer>
+			<key>Skip Date</key><date>2018-09-19T05:51:02Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>2C76EEC5F1D30256</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+			<key>Name</key><string>Kaer Morhen</string>
+			<key>Artist</key><string>Marcin Przybylowicz</string>
+			<key>Album Artist</key><string>Marcin Przybylowicz &#38; Mikolai Stroinski</string>
+			<key>Composer</key><string>Marcin Przybylowicz</string>
+			<key>Album</key><string>The Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Genre</key><string>Game Soundtrack</string>
+			<key>Kind</key><string>Fichier audio MPEG</string>
+			<key>Comments</key><string>sittingoncloudsost.com/ost</string>
+			<key>Sort Album</key><string>Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Location</key><string>file:///Users/Amphaal/Music/iTunes/iTunes%20Media/Music/Marcin%20Przybylowicz%20&#38;%20Mikolai%20Stroinski/The%20Witcher%203_%20Wild%20Hunt%20(Original%20Game%20Soundtrack)/16%20Kaer%C2%A0Morhen.mp3</string>
+		</dict>
+		<key>144</key>
+		<dict>
+			<key>Track ID</key><integer>144</integer>
+			<key>Size</key><integer>5606066</integer>
+			<key>Total Time</key><integer>132493</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>9</integer>
+			<key>Track Count</key><integer>56</integer>
+			<key>Year</key><integer>2015</integer>
+			<key>Date Modified</key><date>2018-04-09T11:13:58Z</date>
+			<key>Date Added</key><date>2018-09-05T23:43:47Z</date>
+			<key>Bit Rate</key><integer>320</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>22</integer>
+			<key>Play Date</key><integer>3648285942</integer>
+			<key>Play Date UTC</key><date>2019-08-10T10:45:42Z</date>
+			<key>Skip Count</key><integer>10</integer>
+			<key>Skip Date</key><date>2019-02-23T18:00:13Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>A7F722CB336436DB</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+			<key>Name</key><string>King Bran's Final Voyage</string>
+			<key>Artist</key><string>Marcin Przybylowicz</string>
+			<key>Album Artist</key><string>Marcin Przybylowicz &#38; Mikolai Stroinski</string>
+			<key>Composer</key><string>Marcin Przybylowicz</string>
+			<key>Album</key><string>The Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Genre</key><string>Game Soundtrack</string>
+			<key>Kind</key><string>Fichier audio MPEG</string>
+			<key>Comments</key><string>sittingoncloudsost.com/ost</string>
+			<key>Sort Album</key><string>Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Location</key><string>file:///Users/Amphaal/Music/iTunes/iTunes%20Media/Music/Marcin%20Przybylowicz%20&#38;%20Mikolai%20Stroinski/The%20Witcher%203_%20Wild%20Hunt%20(Original%20Game%20Soundtrack)/09%20King%C2%A0Bran's%C2%A0Final%C2%A0Voyage.mp3</string>
+		</dict>
+		<key>146</key>
+		<dict>
+			<key>Track ID</key><integer>146</integer>
+			<key>Size</key><integer>7190118</integer>
+			<key>Total Time</key><integer>172094</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>14</integer>
+			<key>Track Count</key><integer>56</integer>
+			<key>Year</key><integer>2015</integer>
+			<key>Date Modified</key><date>2018-04-09T11:14:08Z</date>
+			<key>Date Added</key><date>2018-09-05T23:43:47Z</date>
+			<key>Bit Rate</key><integer>320</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>29</integer>
+			<key>Play Date</key><integer>3648286635</integer>
+			<key>Play Date UTC</key><date>2019-08-10T10:57:15Z</date>
+			<key>Skip Count</key><integer>6</integer>
+			<key>Skip Date</key><date>2019-02-23T18:01:13Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>E2079E5CAC9D01E1</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+			<key>Name</key><string>The Hunter's Path</string>
+			<key>Artist</key><string>Marcin Przybylowicz</string>
+			<key>Album Artist</key><string>Marcin Przybylowicz &#38; Mikolai Stroinski</string>
+			<key>Composer</key><string>Marcin Przybylowicz</string>
+			<key>Album</key><string>The Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Genre</key><string>Game Soundtrack</string>
+			<key>Kind</key><string>Fichier audio MPEG</string>
+			<key>Comments</key><string>sittingoncloudsost.com/ost</string>
+			<key>Sort Name</key><string>Hunter's Path</string>
+			<key>Sort Album</key><string>Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Location</key><string>file:///Users/Amphaal/Music/iTunes/iTunes%20Media/Music/Marcin%20Przybylowicz%20&#38;%20Mikolai%20Stroinski/The%20Witcher%203_%20Wild%20Hunt%20(Original%20Game%20Soundtrack)/14%20The%C2%A0Hunter's%C2%A0Path.mp3</string>
+		</dict>
+		<key>148</key>
+		<dict>
+			<key>Track ID</key><integer>148</integer>
+			<key>Size</key><integer>5196461</integer>
+			<key>Total Time</key><integer>122253</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>28</integer>
+			<key>Track Count</key><integer>56</integer>
+			<key>Year</key><integer>2015</integer>
+			<key>Date Modified</key><date>2018-04-09T11:14:42Z</date>
+			<key>Date Added</key><date>2018-09-05T23:43:47Z</date>
+			<key>Bit Rate</key><integer>320</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>11</integer>
+			<key>Play Date</key><integer>3635917813</integer>
+			<key>Play Date UTC</key><date>2019-03-20T08:10:13Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>9B65450843766461</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+			<key>Name</key><string>Blood On the Cobblestones</string>
+			<key>Artist</key><string>Mikolai Stroinski</string>
+			<key>Album Artist</key><string>Marcin Przybylowicz &#38; Mikolai Stroinski</string>
+			<key>Composer</key><string>Mikolai Stroinski</string>
+			<key>Album</key><string>The Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Genre</key><string>Game Soundtrack</string>
+			<key>Kind</key><string>Fichier audio MPEG</string>
+			<key>Comments</key><string>sittingoncloudsost.com/ost</string>
+			<key>Sort Album</key><string>Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Location</key><string>file:///Users/Amphaal/Music/iTunes/iTunes%20Media/Music/Marcin%20Przybylowicz%20&#38;%20Mikolai%20Stroinski/The%20Witcher%203_%20Wild%20Hunt%20(Original%20Game%20Soundtrack)/28%20Blood%C2%A0On%C2%A0the%C2%A0Cobblestones.mp3</string>
+		</dict>
+		<key>150</key>
+		<dict>
+			<key>Track ID</key><integer>150</integer>
+			<key>Size</key><integer>6753397</integer>
+			<key>Total Time</key><integer>161175</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>39</integer>
+			<key>Track Count</key><integer>56</integer>
+			<key>Year</key><integer>2015</integer>
+			<key>Date Modified</key><date>2018-04-09T11:15:10Z</date>
+			<key>Date Added</key><date>2018-09-05T23:43:47Z</date>
+			<key>Bit Rate</key><integer>320</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>8</integer>
+			<key>Play Date</key><integer>3635919133</integer>
+			<key>Play Date UTC</key><date>2019-03-20T08:32:13Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>00E55CF1C9E70898</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+			<key>Name</key><string>Back On the Path</string>
+			<key>Artist</key><string>Marcin Przybylowicz &#38; Percival Schuttenbach</string>
+			<key>Album Artist</key><string>Marcin Przybylowicz &#38; Mikolai Stroinski</string>
+			<key>Composer</key><string>Marcin Przybylowicz</string>
+			<key>Album</key><string>The Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Genre</key><string>Game Soundtrack</string>
+			<key>Kind</key><string>Fichier audio MPEG</string>
+			<key>Comments</key><string>sittingoncloudsost.com/ost</string>
+			<key>Sort Album</key><string>Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Location</key><string>file:///Users/Amphaal/Music/iTunes/iTunes%20Media/Music/Marcin%20Przybylowicz%20&#38;%20Mikolai%20Stroinski/The%20Witcher%203_%20Wild%20Hunt%20(Original%20Game%20Soundtrack)/39%20Back%C2%A0On%C2%A0the%C2%A0Path.mp3</string>
+		</dict>
+		<key>152</key>
+		<dict>
+			<key>Track ID</key><integer>152</integer>
+			<key>Size</key><integer>5606127</integer>
+			<key>Total Time</key><integer>132493</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>30</integer>
+			<key>Track Count</key><integer>56</integer>
+			<key>Year</key><integer>2015</integer>
+			<key>Date Modified</key><date>2018-04-09T11:14:50Z</date>
+			<key>Date Added</key><date>2018-09-05T23:43:47Z</date>
+			<key>Bit Rate</key><integer>320</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>8</integer>
+			<key>Play Date</key><integer>3635918118</integer>
+			<key>Play Date UTC</key><date>2019-03-20T08:15:18Z</date>
+			<key>Skip Count</key><integer>1</integer>
+			<key>Skip Date</key><date>2018-10-20T15:55:33Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>5EFFFC237DE3C337</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+			<key>Name</key><string>The Song of the Sword-Dancer</string>
+			<key>Artist</key><string>Marcin Przybylowicz &#38; Percival Schuttenbach</string>
+			<key>Album Artist</key><string>Marcin Przybylowicz &#38; Mikolai Stroinski</string>
+			<key>Composer</key><string>Percival Schuttenbach</string>
+			<key>Album</key><string>The Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Genre</key><string>Game Soundtrack</string>
+			<key>Kind</key><string>Fichier audio MPEG</string>
+			<key>Comments</key><string>sittingoncloudsost.com/ost</string>
+			<key>Sort Name</key><string>Song of the Sword-Dancer</string>
+			<key>Sort Album</key><string>Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Location</key><string>file:///Users/Amphaal/Music/iTunes/iTunes%20Media/Music/Marcin%20Przybylowicz%20&#38;%20Mikolai%20Stroinski/The%20Witcher%203_%20Wild%20Hunt%20(Original%20Game%20Soundtrack)/30%20The%C2%A0Song%C2%A0of%C2%A0the%C2%A0Sword-Dancer.mp3</string>
+		</dict>
+		<key>154</key>
+		<dict>
+			<key>Track ID</key><integer>154</integer>
+			<key>Size</key><integer>4388765</integer>
+			<key>Total Time</key><integer>102060</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>56</integer>
+			<key>Track Count</key><integer>56</integer>
+			<key>Year</key><integer>2015</integer>
+			<key>Date Modified</key><date>2018-04-09T11:15:52Z</date>
+			<key>Date Added</key><date>2018-09-05T23:43:47Z</date>
+			<key>Bit Rate</key><integer>320</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>5</integer>
+			<key>Play Date</key><integer>3622179725</integer>
+			<key>Play Date UTC</key><date>2018-10-12T07:02:05Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>1F07DF366C37ECB2</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+			<key>Name</key><string>Conjunction of the Spheres</string>
+			<key>Artist</key><string>Marcin Przybylowicz</string>
+			<key>Album Artist</key><string>Marcin Przybylowicz &#38; Mikolai Stroinski</string>
+			<key>Composer</key><string>Marcin Przybylowicz</string>
+			<key>Album</key><string>The Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Genre</key><string>Game Soundtrack</string>
+			<key>Kind</key><string>Fichier audio MPEG</string>
+			<key>Comments</key><string>sittingoncloudsost.com/ost</string>
+			<key>Sort Album</key><string>Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Location</key><string>file:///Users/Amphaal/Music/iTunes/iTunes%20Media/Music/Marcin%20Przybylowicz%20&#38;%20Mikolai%20Stroinski/The%20Witcher%203_%20Wild%20Hunt%20(Original%20Game%20Soundtrack)/56%20Conjunction%C2%A0of%C2%A0the%C2%A0Spheres.mp3</string>
+		</dict>
+		<key>156</key>
+		<dict>
+			<key>Track ID</key><integer>156</integer>
+			<key>Size</key><integer>5907046</integer>
+			<key>Total Time</key><integer>140016</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>10</integer>
+			<key>Track Count</key><integer>56</integer>
+			<key>Year</key><integer>2015</integer>
+			<key>Date Modified</key><date>2018-04-09T11:13:58Z</date>
+			<key>Date Added</key><date>2018-09-05T23:43:48Z</date>
+			<key>Bit Rate</key><integer>320</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>22</integer>
+			<key>Play Date</key><integer>3648286082</integer>
+			<key>Play Date UTC</key><date>2019-08-10T10:48:02Z</date>
+			<key>Skip Count</key><integer>3</integer>
+			<key>Skip Date</key><date>2019-02-22T14:03:46Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>DC6472BC584B85D7</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+			<key>Name</key><string>Silver For Monsters...</string>
+			<key>Artist</key><string>Marcin Przybylowicz &#38; Percival Schuttenbach</string>
+			<key>Album Artist</key><string>Marcin Przybylowicz &#38; Mikolai Stroinski</string>
+			<key>Composer</key><string>Percival Schuttenbach</string>
+			<key>Album</key><string>The Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Genre</key><string>Game Soundtrack</string>
+			<key>Kind</key><string>Fichier audio MPEG</string>
+			<key>Comments</key><string>sittingoncloudsost.com/ost</string>
+			<key>Sort Album</key><string>Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Location</key><string>file:///Users/Amphaal/Music/iTunes/iTunes%20Media/Music/Marcin%20Przybylowicz%20&#38;%20Mikolai%20Stroinski/The%20Witcher%203_%20Wild%20Hunt%20(Original%20Game%20Soundtrack)/10%20Silver%C2%A0For%C2%A0Monsters....mp3</string>
+		</dict>
+		<key>158</key>
+		<dict>
+			<key>Track ID</key><integer>158</integer>
+			<key>Size</key><integer>4020933</integer>
+			<key>Total Time</key><integer>92865</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>52</integer>
+			<key>Track Count</key><integer>56</integer>
+			<key>Year</key><integer>2015</integer>
+			<key>Date Modified</key><date>2018-04-09T11:15:42Z</date>
+			<key>Date Added</key><date>2018-09-05T23:43:48Z</date>
+			<key>Bit Rate</key><integer>320</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>6</integer>
+			<key>Play Date</key><integer>3633306485</integer>
+			<key>Play Date UTC</key><date>2019-02-18T02:48:05Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>729AD9DD08D8092D</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+			<key>Name</key><string>The Big Four</string>
+			<key>Artist</key><string>Marcin Przybylowicz</string>
+			<key>Album Artist</key><string>Marcin Przybylowicz &#38; Mikolai Stroinski</string>
+			<key>Composer</key><string>Marcin Przybylowicz</string>
+			<key>Album</key><string>The Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Genre</key><string>Game Soundtrack</string>
+			<key>Kind</key><string>Fichier audio MPEG</string>
+			<key>Comments</key><string>sittingoncloudsost.com/ost</string>
+			<key>Sort Name</key><string>Big Four</string>
+			<key>Sort Album</key><string>Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Location</key><string>file:///Users/Amphaal/Music/iTunes/iTunes%20Media/Music/Marcin%20Przybylowicz%20&#38;%20Mikolai%20Stroinski/The%20Witcher%203_%20Wild%20Hunt%20(Original%20Game%20Soundtrack)/52%20The%C2%A0Big%C2%A0Four.mp3</string>
+		</dict>
+		<key>160</key>
+		<dict>
+			<key>Track ID</key><integer>160</integer>
+			<key>Size</key><integer>4869398</integer>
+			<key>Total Time</key><integer>114076</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>50</integer>
+			<key>Track Count</key><integer>56</integer>
+			<key>Year</key><integer>2015</integer>
+			<key>Date Modified</key><date>2018-04-09T11:15:36Z</date>
+			<key>Date Added</key><date>2018-09-05T23:43:48Z</date>
+			<key>Bit Rate</key><integer>320</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>6</integer>
+			<key>Play Date</key><integer>3633306336</integer>
+			<key>Play Date UTC</key><date>2019-02-18T02:45:36Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>2026D501BA357FBC</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+			<key>Name</key><string>Trial of the Grasses</string>
+			<key>Artist</key><string>Mikolai Stroinski</string>
+			<key>Album Artist</key><string>Marcin Przybylowicz &#38; Mikolai Stroinski</string>
+			<key>Composer</key><string>Mikolai Stroinski</string>
+			<key>Album</key><string>The Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Genre</key><string>Game Soundtrack</string>
+			<key>Kind</key><string>Fichier audio MPEG</string>
+			<key>Comments</key><string>sittingoncloudsost.com/ost</string>
+			<key>Sort Album</key><string>Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Location</key><string>file:///Users/Amphaal/Music/iTunes/iTunes%20Media/Music/Marcin%20Przybylowicz%20&#38;%20Mikolai%20Stroinski/The%20Witcher%203_%20Wild%20Hunt%20(Original%20Game%20Soundtrack)/50%20Trial%C2%A0of%C2%A0the%C2%A0Grasses.mp3</string>
+		</dict>
+		<key>162</key>
+		<dict>
+			<key>Track ID</key><integer>162</integer>
+			<key>Size</key><integer>5524531</integer>
+			<key>Total Time</key><integer>130455</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>15</integer>
+			<key>Track Count</key><integer>56</integer>
+			<key>Year</key><integer>2015</integer>
+			<key>Date Modified</key><date>2018-04-09T11:14:08Z</date>
+			<key>Date Added</key><date>2018-09-05T23:43:48Z</date>
+			<key>Bit Rate</key><integer>320</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>18</integer>
+			<key>Play Date</key><integer>3644957640</integer>
+			<key>Play Date UTC</key><date>2019-07-02T22:14:00Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>7864EF5E48C0538D</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+			<key>Name</key><string>Widow-Maker</string>
+			<key>Artist</key><string>Mikolai Stroinski</string>
+			<key>Album Artist</key><string>Marcin Przybylowicz &#38; Mikolai Stroinski</string>
+			<key>Composer</key><string>Mikolai Stroinski</string>
+			<key>Album</key><string>The Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Genre</key><string>Game Soundtrack</string>
+			<key>Kind</key><string>Fichier audio MPEG</string>
+			<key>Comments</key><string>sittingoncloudsost.com/ost</string>
+			<key>Sort Album</key><string>Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Location</key><string>file:///Users/Amphaal/Music/iTunes/iTunes%20Media/Music/Marcin%20Przybylowicz%20&#38;%20Mikolai%20Stroinski/The%20Witcher%203_%20Wild%20Hunt%20(Original%20Game%20Soundtrack)/15%20Widow-Maker.mp3</string>
+		</dict>
+		<key>164</key>
+		<dict>
+			<key>Track ID</key><integer>164</integer>
+			<key>Size</key><integer>6495259</integer>
+			<key>Total Time</key><integer>154723</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>11</integer>
+			<key>Track Count</key><integer>56</integer>
+			<key>Year</key><integer>2015</integer>
+			<key>Date Modified</key><date>2018-04-09T11:14:00Z</date>
+			<key>Date Added</key><date>2018-09-05T23:43:48Z</date>
+			<key>Bit Rate</key><integer>320</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>21</integer>
+			<key>Play Date</key><integer>3648286237</integer>
+			<key>Play Date UTC</key><date>2019-08-10T10:50:37Z</date>
+			<key>Skip Count</key><integer>2</integer>
+			<key>Skip Date</key><date>2019-02-22T16:29:47Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>FBD0C6743DC3D0C2</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+			<key>Name</key><string>Whispers of Oxenfurt</string>
+			<key>Artist</key><string>Mikolai Stroinski</string>
+			<key>Album Artist</key><string>Marcin Przybylowicz &#38; Mikolai Stroinski</string>
+			<key>Composer</key><string>Mikolai Stroinski</string>
+			<key>Album</key><string>The Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Genre</key><string>Game Soundtrack</string>
+			<key>Kind</key><string>Fichier audio MPEG</string>
+			<key>Comments</key><string>sittingoncloudsost.com/ost</string>
+			<key>Sort Album</key><string>Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Location</key><string>file:///Users/Amphaal/Music/iTunes/iTunes%20Media/Music/Marcin%20Przybylowicz%20&#38;%20Mikolai%20Stroinski/The%20Witcher%203_%20Wild%20Hunt%20(Original%20Game%20Soundtrack)/11%20Whispers%C2%A0of%C2%A0Oxenfurt.mp3</string>
+		</dict>
+		<key>166</key>
+		<dict>
+			<key>Track ID</key><integer>166</integer>
+			<key>Size</key><integer>6206882</integer>
+			<key>Total Time</key><integer>147513</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>3</integer>
+			<key>Track Count</key><integer>56</integer>
+			<key>Year</key><integer>2015</integer>
+			<key>Date Modified</key><date>2018-04-09T11:13:36Z</date>
+			<key>Date Added</key><date>2018-09-05T23:43:48Z</date>
+			<key>Bit Rate</key><integer>320</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>24</integer>
+			<key>Play Date</key><integer>3648261515</integer>
+			<key>Play Date UTC</key><date>2019-08-10T03:58:35Z</date>
+			<key>Skip Count</key><integer>5</integer>
+			<key>Skip Date</key><date>2019-02-22T13:58:40Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>AB91F973A6629026</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+			<key>Name</key><string>Eredin, King of the Hunt</string>
+			<key>Artist</key><string>Marcin Przybylowicz</string>
+			<key>Album Artist</key><string>Marcin Przybylowicz &#38; Mikolai Stroinski</string>
+			<key>Composer</key><string>Marcin Przybylowicz</string>
+			<key>Album</key><string>The Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Genre</key><string>Game Soundtrack</string>
+			<key>Kind</key><string>Fichier audio MPEG</string>
+			<key>Comments</key><string>sittingoncloudsost.com/ost</string>
+			<key>Sort Album</key><string>Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Location</key><string>file:///Users/Amphaal/Music/iTunes/iTunes%20Media/Music/Marcin%20Przybylowicz%20&#38;%20Mikolai%20Stroinski/The%20Witcher%203_%20Wild%20Hunt%20(Original%20Game%20Soundtrack)/03%20Eredin,%C2%A0King%C2%A0of%C2%A0the%C2%A0Hunt.mp3</string>
+		</dict>
+		<key>168</key>
+		<dict>
+			<key>Track ID</key><integer>168</integer>
+			<key>Size</key><integer>7026059</integer>
+			<key>Total Time</key><integer>167993</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>21</integer>
+			<key>Track Count</key><integer>56</integer>
+			<key>Year</key><integer>2015</integer>
+			<key>Date Modified</key><date>2018-04-09T11:14:32Z</date>
+			<key>Date Added</key><date>2018-09-05T23:43:48Z</date>
+			<key>Bit Rate</key><integer>320</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>13</integer>
+			<key>Play Date</key><integer>3644958453</integer>
+			<key>Play Date UTC</key><date>2019-07-02T22:27:33Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>30094CA1E411AE81</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+			<key>Name</key><string>The Vagabond</string>
+			<key>Artist</key><string>Marcin Przybylowicz</string>
+			<key>Album Artist</key><string>Marcin Przybylowicz &#38; Mikolai Stroinski</string>
+			<key>Composer</key><string>Marcin Przybylowicz</string>
+			<key>Album</key><string>The Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Genre</key><string>Game Soundtrack</string>
+			<key>Kind</key><string>Fichier audio MPEG</string>
+			<key>Comments</key><string>sittingoncloudsost.com/ost</string>
+			<key>Sort Name</key><string>Vagabond</string>
+			<key>Sort Album</key><string>Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Location</key><string>file:///Users/Amphaal/Music/iTunes/iTunes%20Media/Music/Marcin%20Przybylowicz%20&#38;%20Mikolai%20Stroinski/The%20Witcher%203_%20Wild%20Hunt%20(Original%20Game%20Soundtrack)/21%20The%C2%A0Vagabond.mp3</string>
+		</dict>
+		<key>170</key>
+		<dict>
+			<key>Track ID</key><integer>170</integer>
+			<key>Size</key><integer>4077350</integer>
+			<key>Total Time</key><integer>94275</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>4</integer>
+			<key>Track Count</key><integer>56</integer>
+			<key>Year</key><integer>2015</integer>
+			<key>Date Modified</key><date>2018-04-09T11:13:30Z</date>
+			<key>Date Added</key><date>2018-09-05T23:43:48Z</date>
+			<key>Bit Rate</key><integer>320</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>25</integer>
+			<key>Play Date</key><integer>3648285190</integer>
+			<key>Play Date UTC</key><date>2019-08-10T10:33:10Z</date>
+			<key>Skip Count</key><integer>5</integer>
+			<key>Skip Date</key><date>2019-02-23T17:59:22Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>AAC9560A03412361</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+			<key>Name</key><string>Wake Up, Ciri</string>
+			<key>Artist</key><string>Mikolai Stroinski</string>
+			<key>Album Artist</key><string>Marcin Przybylowicz &#38; Mikolai Stroinski</string>
+			<key>Composer</key><string>Mikolai Stroinski</string>
+			<key>Album</key><string>The Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Genre</key><string>Game Soundtrack</string>
+			<key>Kind</key><string>Fichier audio MPEG</string>
+			<key>Comments</key><string>sittingoncloudsost.com/ost</string>
+			<key>Sort Album</key><string>Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Location</key><string>file:///Users/Amphaal/Music/iTunes/iTunes%20Media/Music/Marcin%20Przybylowicz%20&#38;%20Mikolai%20Stroinski/The%20Witcher%203_%20Wild%20Hunt%20(Original%20Game%20Soundtrack)/04%20Wake%C2%A0Up,%C2%A0Ciri.mp3</string>
+		</dict>
+		<key>172</key>
+		<dict>
+			<key>Track ID</key><integer>172</integer>
+			<key>Size</key><integer>4423229</integer>
+			<key>Total Time</key><integer>102922</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>53</integer>
+			<key>Track Count</key><integer>56</integer>
+			<key>Year</key><integer>2015</integer>
+			<key>Date Modified</key><date>2018-04-09T11:15:46Z</date>
+			<key>Date Added</key><date>2018-09-05T23:43:48Z</date>
+			<key>Bit Rate</key><integer>320</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>6</integer>
+			<key>Play Date</key><integer>3633700962</integer>
+			<key>Play Date UTC</key><date>2019-02-22T16:22:42Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>EEC16197C5895DEA</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+			<key>Name</key><string>The Shrieker Contract</string>
+			<key>Artist</key><string>Mikolai Stroinski</string>
+			<key>Album Artist</key><string>Marcin Przybylowicz &#38; Mikolai Stroinski</string>
+			<key>Composer</key><string>Mikolai Stroinski</string>
+			<key>Album</key><string>The Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Genre</key><string>Game Soundtrack</string>
+			<key>Kind</key><string>Fichier audio MPEG</string>
+			<key>Comments</key><string>sittingoncloudsost.com/ost</string>
+			<key>Sort Name</key><string>Shrieker Contract</string>
+			<key>Sort Album</key><string>Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Location</key><string>file:///Users/Amphaal/Music/iTunes/iTunes%20Media/Music/Marcin%20Przybylowicz%20&#38;%20Mikolai%20Stroinski/The%20Witcher%203_%20Wild%20Hunt%20(Original%20Game%20Soundtrack)/53%20The%C2%A0Shrieker%C2%A0Contract.mp3</string>
+		</dict>
+		<key>174</key>
+		<dict>
+			<key>Track ID</key><integer>174</integer>
+			<key>Size</key><integer>3528856</integer>
+			<key>Total Time</key><integer>80561</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>44</integer>
+			<key>Track Count</key><integer>56</integer>
+			<key>Year</key><integer>2015</integer>
+			<key>Date Modified</key><date>2018-04-09T11:15:22Z</date>
+			<key>Date Added</key><date>2018-09-05T23:43:48Z</date>
+			<key>Bit Rate</key><integer>320</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>8</integer>
+			<key>Play Date</key><integer>3635919740</integer>
+			<key>Play Date UTC</key><date>2019-03-20T08:42:20Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>73AD9F9592E12B77</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+			<key>Name</key><string>I Name Thee Dea and Embrace Thee As My Daughter</string>
+			<key>Artist</key><string>Marcin Przybylowicz</string>
+			<key>Album Artist</key><string>Marcin Przybylowicz &#38; Mikolai Stroinski</string>
+			<key>Composer</key><string>Marcin Przybylowicz</string>
+			<key>Album</key><string>The Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Genre</key><string>Game Soundtrack</string>
+			<key>Kind</key><string>Fichier audio MPEG</string>
+			<key>Comments</key><string>sittingoncloudsost.com/ost</string>
+			<key>Sort Album</key><string>Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Location</key><string>file:///Users/Amphaal/Music/iTunes/iTunes%20Media/Music/Marcin%20Przybylowicz%20&#38;%20Mikolai%20Stroinski/The%20Witcher%203_%20Wild%20Hunt%20(Original%20Game%20Soundtrack)/44%20I%C2%A0Name%C2%A0Thee%C2%A0Dea%C2%A0and%C2%A0Embrace%C2%A0Thee%C2%A0As%C2%A0My%C2%A0Daughter.mp3</string>
+		</dict>
+		<key>176</key>
+		<dict>
+			<key>Track ID</key><integer>176</integer>
+			<key>Size</key><integer>7100240</integer>
+			<key>Total Time</key><integer>169848</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>1</integer>
+			<key>Track Count</key><integer>56</integer>
+			<key>Year</key><integer>2015</integer>
+			<key>Date Modified</key><date>2018-04-09T11:13:38Z</date>
+			<key>Date Added</key><date>2018-09-05T23:43:48Z</date>
+			<key>Bit Rate</key><integer>320</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>23</integer>
+			<key>Play Date</key><integer>3644955682</integer>
+			<key>Play Date UTC</key><date>2019-07-02T21:41:22Z</date>
+			<key>Skip Count</key><integer>17</integer>
+			<key>Skip Date</key><date>2019-08-10T03:53:46Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>3B6DB60D98CA43F5</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+			<key>Name</key><string>The Trail</string>
+			<key>Artist</key><string>Marcin Przybylowicz</string>
+			<key>Album Artist</key><string>Marcin Przybylowicz &#38; Mikolai Stroinski</string>
+			<key>Composer</key><string>Marcin Przybylowicz</string>
+			<key>Album</key><string>The Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Genre</key><string>Game Soundtrack</string>
+			<key>Kind</key><string>Fichier audio MPEG</string>
+			<key>Comments</key><string>sittingoncloudsost.com/ost</string>
+			<key>Sort Name</key><string>Trail</string>
+			<key>Sort Album</key><string>Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Location</key><string>file:///Users/Amphaal/Music/iTunes/iTunes%20Media/Music/Marcin%20Przybylowicz%20&#38;%20Mikolai%20Stroinski/The%20Witcher%203_%20Wild%20Hunt%20(Original%20Game%20Soundtrack)/01%20The%20Trail.mp3</string>
+		</dict>
+		<key>178</key>
+		<dict>
+			<key>Track ID</key><integer>178</integer>
+			<key>Size</key><integer>4222672</integer>
+			<key>Total Time</key><integer>97906</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>41</integer>
+			<key>Track Count</key><integer>56</integer>
+			<key>Year</key><integer>2015</integer>
+			<key>Date Modified</key><date>2018-04-09T11:15:16Z</date>
+			<key>Date Added</key><date>2018-09-05T23:43:48Z</date>
+			<key>Bit Rate</key><integer>320</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>8</integer>
+			<key>Play Date</key><integer>3635919399</integer>
+			<key>Play Date UTC</key><date>2019-03-20T08:36:39Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>F0A6808CEC9FF5A9</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+			<key>Name</key><string>A Story You Won't Believe</string>
+			<key>Artist</key><string>Marcin Przybylowicz &#38; Percival Schuttenbach</string>
+			<key>Album Artist</key><string>Marcin Przybylowicz &#38; Mikolai Stroinski</string>
+			<key>Composer</key><string>Marcin Przybylowicz</string>
+			<key>Album</key><string>The Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Genre</key><string>Game Soundtrack</string>
+			<key>Kind</key><string>Fichier audio MPEG</string>
+			<key>Comments</key><string>sittingoncloudsost.com/ost</string>
+			<key>Sort Name</key><string>Story You Won't Believe</string>
+			<key>Sort Album</key><string>Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Location</key><string>file:///Users/Amphaal/Music/iTunes/iTunes%20Media/Music/Marcin%20Przybylowicz%20&#38;%20Mikolai%20Stroinski/The%20Witcher%203_%20Wild%20Hunt%20(Original%20Game%20Soundtrack)/41%20A%C2%A0Story%C2%A0You%C2%A0Won't%C2%A0Believe.mp3</string>
+		</dict>
+		<key>180</key>
+		<dict>
+			<key>Track ID</key><integer>180</integer>
+			<key>Size</key><integer>5260178</integer>
+			<key>Total Time</key><integer>123846</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>23</integer>
+			<key>Track Count</key><integer>56</integer>
+			<key>Year</key><integer>2015</integer>
+			<key>Date Modified</key><date>2018-04-09T11:14:34Z</date>
+			<key>Date Added</key><date>2018-09-05T23:43:48Z</date>
+			<key>Bit Rate</key><integer>320</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>11</integer>
+			<key>Play Date</key><integer>3635917245</integer>
+			<key>Play Date UTC</key><date>2019-03-20T08:00:45Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>329283BEF8B88CCF</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+			<key>Name</key><string>Forged In Fire</string>
+			<key>Artist</key><string>Mikolai Stroinski</string>
+			<key>Album Artist</key><string>Marcin Przybylowicz &#38; Mikolai Stroinski</string>
+			<key>Composer</key><string>Mikolai Stroinski</string>
+			<key>Album</key><string>The Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Genre</key><string>Game Soundtrack</string>
+			<key>Kind</key><string>Fichier audio MPEG</string>
+			<key>Comments</key><string>sittingoncloudsost.com/ost</string>
+			<key>Sort Album</key><string>Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Location</key><string>file:///Users/Amphaal/Music/iTunes/iTunes%20Media/Music/Marcin%20Przybylowicz%20&#38;%20Mikolai%20Stroinski/The%20Witcher%203_%20Wild%20Hunt%20(Original%20Game%20Soundtrack)/23%20Forged%C2%A0In%C2%A0Fire.mp3</string>
+		</dict>
+		<key>182</key>
+		<dict>
+			<key>Track ID</key><integer>182</integer>
+			<key>Size</key><integer>5031337</integer>
+			<key>Total Time</key><integer>118125</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>20</integer>
+			<key>Track Count</key><integer>56</integer>
+			<key>Year</key><integer>2015</integer>
+			<key>Date Modified</key><date>2018-04-09T11:14:26Z</date>
+			<key>Date Added</key><date>2018-09-05T23:43:48Z</date>
+			<key>Bit Rate</key><integer>320</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>13</integer>
+			<key>Play Date</key><integer>3644958285</integer>
+			<key>Play Date UTC</key><date>2019-07-02T22:24:45Z</date>
+			<key>Skip Count</key><integer>2</integer>
+			<key>Skip Date</key><date>2018-10-20T14:57:43Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>E25854AF9D0A9083</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+			<key>Name</key><string>Fate Calls</string>
+			<key>Artist</key><string>Mikolai Stroinski</string>
+			<key>Album Artist</key><string>Marcin Przybylowicz &#38; Mikolai Stroinski</string>
+			<key>Composer</key><string>Mikolai Stroinski</string>
+			<key>Album</key><string>The Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Genre</key><string>Game Soundtrack</string>
+			<key>Kind</key><string>Fichier audio MPEG</string>
+			<key>Comments</key><string>sittingoncloudsost.com/ost</string>
+			<key>Sort Album</key><string>Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Location</key><string>file:///Users/Amphaal/Music/iTunes/iTunes%20Media/Music/Marcin%20Przybylowicz%20&#38;%20Mikolai%20Stroinski/The%20Witcher%203_%20Wild%20Hunt%20(Original%20Game%20Soundtrack)/20%20Fate%C2%A0Calls.mp3</string>
+		</dict>
+		<key>184</key>
+		<dict>
+			<key>Track ID</key><integer>184</integer>
+			<key>Size</key><integer>4166204</integer>
+			<key>Total Time</key><integer>96496</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>26</integer>
+			<key>Track Count</key><integer>56</integer>
+			<key>Year</key><integer>2015</integer>
+			<key>Date Modified</key><date>2018-04-09T11:14:38Z</date>
+			<key>Date Added</key><date>2018-09-05T23:43:48Z</date>
+			<key>Bit Rate</key><integer>320</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>10</integer>
+			<key>Play Date</key><integer>3635917600</integer>
+			<key>Play Date UTC</key><date>2019-03-20T08:06:40Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>8C621F8C9EC0D860</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+			<key>Name</key><string>Drink Up, There's More!</string>
+			<key>Artist</key><string>Percival Schuttenbach</string>
+			<key>Album Artist</key><string>Marcin Przybylowicz &#38; Mikolai Stroinski</string>
+			<key>Composer</key><string>Percival Schuttenbach</string>
+			<key>Album</key><string>The Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Genre</key><string>Game Soundtrack</string>
+			<key>Kind</key><string>Fichier audio MPEG</string>
+			<key>Comments</key><string>sittingoncloudsost.com/ost</string>
+			<key>Sort Album</key><string>Witcher 3: Wild Hunt (Original Game Soundtrack)</string>
+			<key>Location</key><string>file:///Users/Amphaal/Music/iTunes/iTunes%20Media/Music/Marcin%20Przybylowicz%20&#38;%20Mikolai%20Stroinski/The%20Witcher%203_%20Wild%20Hunt%20(Original%20Game%20Soundtrack)/26%20Drink%C2%A0Up,%C2%A0There's%C2%A0More!.mp3</string>
+		</dict>
+	</dict>
+	<key>Playlists</key>
+	<array>
+		<dict>
+			<key>Master</key><true/>
+			<key>Playlist ID</key><integer>186</integer>
+			<key>Playlist Persistent ID</key><string>122C74B61880ED3F</string>
+			<key>All Items</key><true/>
+			<key>Visible</key><false/>
+			<key>Name</key><string>Bibliothèque</string>
+			<key>Playlist Items</key>
+			<array>
+				<dict>
+					<key>Track ID</key><integer>74</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>76</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>78</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>80</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>82</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>84</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>86</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>88</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>90</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>92</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>94</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>96</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>98</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>100</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>102</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>104</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>106</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>108</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>110</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>112</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>114</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>116</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>118</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>120</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>122</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>124</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>126</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>128</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>130</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>132</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>134</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>136</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>138</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>140</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>142</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>144</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>146</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>148</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>150</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>152</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>154</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>156</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>158</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>160</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>162</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>164</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>166</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>168</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>170</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>172</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>174</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>176</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>178</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>180</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>182</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>184</integer>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>Playlist ID</key><integer>248</integer>
+			<key>Playlist Persistent ID</key><string>23219BE969BA1816</string>
+			<key>Distinguished Kind</key><integer>4</integer>
+			<key>Music</key><true/>
+			<key>All Items</key><true/>
+			<key>Name</key><string>Musique</string>
+			<key>Smart Info</key>
+			<data>
+			AQEAAwAAAAIAAAAZAAAAAAAAAAcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAA==
+			</data>
+			<key>Smart Criteria</key>
+			<data>
+			U0xzdAABAAEAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwAAAQAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEAAAAAAAQIbEAAAAAAAAAAAAAAAAAAAAB
+			AAAAAAAQIbEAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8AgAEAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARAAAAAAAIIAE
+			AAAAAAAAAAAAAAAAAAAAAQAAAAAAIIAEAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAA
+			AAAAAAAA
+			</data>
+			<key>Playlist Items</key>
+			<array>
+				<dict>
+					<key>Track ID</key><integer>80</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>84</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>78</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>86</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>82</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>74</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>76</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>96</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>94</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>92</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>90</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>116</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>108</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>120</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>118</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>100</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>104</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>112</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>88</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>102</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>114</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>98</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>110</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>106</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>126</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>132</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>128</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>124</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>122</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>130</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>134</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>136</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>138</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>140</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>144</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>146</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>142</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>148</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>158</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>154</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>156</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>152</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>150</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>164</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>162</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>160</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>176</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>166</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>168</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>174</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>170</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>172</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>178</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>182</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>180</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>184</integer>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>Playlist ID</key><integer>310</integer>
+			<key>Playlist Persistent ID</key><string>6BAED1F4AF714A66</string>
+			<key>Distinguished Kind</key><integer>65</integer>
+			<key>All Items</key><true/>
+			<key>Name</key><string>Téléchargé</string>
+			<key>Smart Info</key>
+			<data>
+			AQEAAwAAAAIAAAAZAAAAAAAAAAcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAA==
+			</data>
+			<key>Smart Criteria</key>
+			<data>
+			U0xzdAABAAEAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwAAAQAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEAAAAAAAQIbEAAAAAAAAAAAAAAAAAAAAB
+			AAAAAAAQIbEAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8AgAEAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARAAAAAAAIIAE
+			AAAAAAAAAAAAAAAAAAAAAQAAAAAAIIAEAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAhQAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAEQAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAQAAAAAAAAAAAAAAAAAA
+			AAEAAAAAAAAAAAAAAAAAAAAAAAAAAA==
+			</data>
+			<key>Playlist Items</key>
+			<array>
+				<dict>
+					<key>Track ID</key><integer>80</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>84</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>78</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>86</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>82</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>74</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>76</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>96</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>94</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>92</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>90</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>116</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>108</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>120</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>118</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>100</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>104</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>112</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>88</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>102</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>114</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>98</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>110</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>106</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>126</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>132</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>128</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>124</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>122</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>130</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>134</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>136</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>138</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>140</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>144</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>146</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>142</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>148</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>158</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>154</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>156</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>152</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>150</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>164</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>162</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>160</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>176</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>166</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>168</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>174</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>170</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>172</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>178</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>182</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>180</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>184</integer>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>Playlist ID</key><integer>372</integer>
+			<key>Playlist Persistent ID</key><string>430481E898AFF6EF</string>
+			<key>Distinguished Kind</key><integer>2</integer>
+			<key>Movies</key><true/>
+			<key>All Items</key><true/>
+			<key>Name</key><string>Films</string>
+			<key>Smart Info</key>
+			<data>
+			AQEAAwAAAAIAAAAZAAAAAAAAAAcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAA==
+			</data>
+			<key>Smart Criteria</key>
+			<data>
+			U0xzdAABAAEAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwAAAQAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAB
+			AAAAAAAAAAIAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8AgAEAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARAAAAAAAIKAE
+			AAAAAAAAAAAAAAAAAAAAAQAAAAAAIKAEAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAA
+			AAAAAAAA
+			</data>
+		</dict>
+		<dict>
+			<key>Playlist ID</key><integer>375</integer>
+			<key>Playlist Persistent ID</key><string>6ED996007933C31A</string>
+			<key>Distinguished Kind</key><integer>66</integer>
+			<key>All Items</key><true/>
+			<key>Name</key><string>Téléchargé</string>
+			<key>Smart Info</key>
+			<data>
+			AQEAAwAAAAIAAAAZAAAAAAAAAAcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAA==
+			</data>
+			<key>Smart Criteria</key>
+			<data>
+			U0xzdAABAAEAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwAAAQAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAB
+			AAAAAAAAAAIAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8AgAEAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARAAAAAAAIKAE
+			AAAAAAAAAAAAAAAAAAAAAQAAAAAAIKAEAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAhQAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAEQAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAQAAAAAAAAAAAAAAAAAA
+			AAEAAAAAAAAAAAAAAAAAAAAAAAAAAA==
+			</data>
+		</dict>
+		<dict>
+			<key>Playlist ID</key><integer>381</integer>
+			<key>Playlist Persistent ID</key><string>5E0656421D50B7DC</string>
+			<key>Distinguished Kind</key><integer>3</integer>
+			<key>TV Shows</key><true/>
+			<key>All Items</key><true/>
+			<key>Name</key><string>Séries TV</string>
+			<key>Smart Info</key>
+			<data>
+			AQEAAwAAAAIAAAAZAAAAAAAAAAcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAA==
+			</data>
+			<key>Smart Criteria</key>
+			<data>
+			U0xzdAABAAEAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwAAAQAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAB
+			AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8AgAEAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARAAAAAAAIKAE
+			AAAAAAAAAAAAAAAAAAAAAQAAAAAAIKAEAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAA
+			AAAAAAAA
+			</data>
+		</dict>
+		<dict>
+			<key>Playlist ID</key><integer>384</integer>
+			<key>Playlist Persistent ID</key><string>6D3C377CE78B87E2</string>
+			<key>Distinguished Kind</key><integer>67</integer>
+			<key>All Items</key><true/>
+			<key>Name</key><string>Téléchargé</string>
+			<key>Smart Info</key>
+			<data>
+			AQEAAwAAAAIAAAAZAAAAAAAAAAcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAA==
+			</data>
+			<key>Smart Criteria</key>
+			<data>
+			U0xzdAABAAEAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwAAAQAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAB
+			AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8AgAEAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARAAAAAAAIKAE
+			AAAAAAAAAAAAAAAAAAAAAQAAAAAAIKAEAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAhQAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAEQAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAQAAAAAAAAAAAAAAAAAA
+			AAEAAAAAAAAAAAAAAAAAAAAAAAAAAA==
+			</data>
+		</dict>
+		<dict>
+			<key>Playlist ID</key><integer>387</integer>
+			<key>Playlist Persistent ID</key><string>EE191D3286F82F3A</string>
+			<key>Distinguished Kind</key><integer>10</integer>
+			<key>Podcasts</key><true/>
+			<key>All Items</key><true/>
+			<key>Name</key><string>Podcasts</string>
+		</dict>
+		<dict>
+			<key>Playlist ID</key><integer>394</integer>
+			<key>Playlist Persistent ID</key><string>EC16E44E91DF4F02</string>
+			<key>Distinguished Kind</key><integer>5</integer>
+			<key>Audiobooks</key><true/>
+			<key>All Items</key><true/>
+			<key>Name</key><string>Livres audio</string>
+			<key>Smart Info</key>
+			<data>
+			AQEAAwAAAAIAAAAZAAAAAAAAAAcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAA==
+			</data>
+			<key>Smart Criteria</key>
+			<data>
+			U0xzdAABAAEAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwAAAQAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAB
+			AAAAAAAAAAgAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8AgAEAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARAAAAAAAIKAE
+			AAAAAAAAAAAAAAAAAAAAAQAAAAAAIKAEAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAA
+			AAAAAAAA
+			</data>
+		</dict>
+	</array>
+	<key>Music Folder</key><string>file:///Users/Amphaal/Music/iTunes/iTunes%20Media/</string>
+</dict>
+</plist>

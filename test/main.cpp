@@ -27,7 +27,7 @@ int main() {
     auto m = Measurable { "Parse XML ITunes Library File into JSON" };
 
         const auto parser = ITunesLibraryParser {
-            "../test/iTunes Music Library.xml",
+            "iTunes Music Library.xml",
             "output.json",
             "warnings.json"
         };

@@ -38,10 +38,17 @@ target_compile_options(itunes-library-parser INTERFACE "-march=native")
 target_compile_definitions(itunes-library-parser INTERFACE $<$<CONFIG:Debug>:_DEBUG>)
 
 # test executable
-if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
+if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME AND BUILD_TESTING)
     #
     add_executable(${PROJECT_NAME}_test 
         test/main.cpp
+    )
+
+    #
+    configure_file(
+        "test/samples/iTunes Music Library.xml" 
+        "iTunes Music Library.xml" 
+        COPYONLY
     )
     
     # LTO on, reduces exe size

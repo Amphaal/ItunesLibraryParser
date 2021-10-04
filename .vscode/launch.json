@@ -5,12 +5,21 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Launch Test (lldb)",
+            "program": "${workspaceFolder}/build/ITunesLibraryParser_test",
+            "args": [],
+            "preLaunchTask": "2. Build",
+            "cwd": "${workspaceFolder}/build"
+        },
+        {
             "targetArchitecture": "x64",
             "type": "cppdbg",
             "preLaunchTask": "2. Build",
-            "name" : "Launch Example",
+            "name" : "Launch test",
             "request": "launch",
-            "cwd": "${workspaceFolder}",
+            "cwd": "${workspaceFolder}/build",
             "externalConsole": false,
             "windows": {
                 "program": "${workspaceFolder}/build/ITunesLibraryParser_test.exe",
