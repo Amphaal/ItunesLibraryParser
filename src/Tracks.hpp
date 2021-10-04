@@ -1,3 +1,22 @@
+// ItunesLibraryParser
+// Allows JSON parsing of XML Itunes Library file
+// Copyright (C) 2021 Guillaume Vara <guillaume.vara@gmail.com>
+
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+
+// Any graphical resources available within the source code may
+// use a different license and copyright : please refer to their metadata
+// for further details. Graphical resources without explicit references to a
+// different license and copyright still refer to this GPL.
+
 #pragma once
 
 #include <assert.h>
@@ -5,6 +24,7 @@
 #include <string_view>
 #include <vector>
 #include <array>
+#include <string>
 
 namespace FieldType {
 
@@ -14,7 +34,7 @@ struct StringLiteral {
     constexpr StringLiteral(const char (&str)[N]) {
         std::copy_n(str, N, value);
     }
-    
+
     char value[N];
 };
 
@@ -29,7 +49,8 @@ struct ITrackFieldsBoundingResult {
 typedef ITrackFieldsBoundingResult<9> TrackFieldsBoundingResult;
 
 template<auto S = FieldType::TrackFieldsBoundingResult::Size>
-struct IOutputContainer : public std::vector<std::array<std::string_view, S>> {};
+struct IOutputContainer :
+    public std::vector<std::array<std::string_view, S>> {};
 
 using OutputContainer = IOutputContainer<>;
 
@@ -46,19 +67,21 @@ struct IScanner {
 
 template<unsigned int IndexT, StringLiteral FieldName, StringLiteral LBegin, StringLiteral LEnd>
 struct FieldTypeStruct : public IScanner {
-
- // make sure any FieldTypeStruct respects boundaries
- static_assert(IndexT < TrackFieldsBoundingResult::Size);
+    // make sure any FieldTypeStruct respects boundaries
+    static_assert(IndexT < TrackFieldsBoundingResult::Size);
 
  public:
-    void scanFill(const std::string_view &source, std::size_t &pos, TrackFieldsBoundingResult &result) const final {       
+    void scanFill(
+        const std::string_view &source,
+        std::size_t &pos,
+        TrackFieldsBoundingResult &result) const final {
         //
         auto &trackField = result.trackFields[index];
         auto &missingField = result.missingFields[index];
 
-        //  
+        //
         auto foundBegin = avx2_find(source, _beginFP, pos);
-        if(foundBegin == std::string::npos) {
+        if (foundBegin == std::string::npos) {
             missingField = true;
             return;
         }
@@ -67,9 +90,9 @@ struct FieldTypeStruct : public IScanner {
         foundBegin += _beginFP.size();
         pos = foundBegin;
 
-        // 
+        //
         auto foundEnd = avx2_find(source, _endFP, pos);
-        if(foundEnd == std::string::npos) {
+        if (foundEnd == std::string::npos) {
             missingField = true;
             return;
         }
@@ -79,17 +102,18 @@ struct FieldTypeStruct : public IScanner {
         pos += dataFieldLength + _endFP.size();
 
         //
-        trackField = std::string_view { 
-            source.begin() + foundBegin, 
+        trackField = std::string_view {
+            source.begin() + foundBegin,
             dataFieldLength
         };
     }
- 
+
     constexpr const std::string_view& fieldName() const final {
         return _fieldName;
     }
 
-    static constexpr const auto _fieldName = std::string_view { FieldName.value, sizeof(FieldName.value) - 1 };
+    static constexpr const auto _fieldName =
+        std::string_view { FieldName.value, sizeof(FieldName.value) - 1 };
 
     static constexpr const auto index = IndexT;
 

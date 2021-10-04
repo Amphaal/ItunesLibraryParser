@@ -1,12 +1,33 @@
+// ItunesLibraryParser
+// Allows JSON parsing of XML Itunes Library file
+// Copyright (C) 2021 Guillaume Vara <guillaume.vara@gmail.com>
+
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+
+// Any graphical resources available within the source code may
+// use a different license and copyright : please refer to their metadata
+// for further details. Graphical resources without explicit references to a
+// different license and copyright still refer to this GPL.
+
 #pragma once
+
+#include <string>
 
 #include "helpers/AVX2Find.hpp"
 #include "ITunesXMLLibrary.hpp"
 
-struct TracksBoundaries : public std::string_view { 
+struct TracksBoundaries : public std::string_view {
  public:
-    TracksBoundaries(const ITunesXMLLibrary& lib) : std::string_view(_getBoundaries(lib)) {}
-
+    TracksBoundaries(const ITunesXMLLibrary& lib) :
+        std::string_view(_getBoundaries(lib)) {}
     ~TracksBoundaries() {}
     TracksBoundaries(const TracksBoundaries&) = delete;
     void operator=(const TracksBoundaries&) = delete;
@@ -33,7 +54,8 @@ struct TracksBoundaries : public std::string_view {
 
     static const std::size_t _findBeginTrackPos(const std::string_view& searchSV) {
         //
-        static constexpr const auto _beginTracksPattern = std::string_view { "<key>Tracks</key>" };
+        static constexpr const auto _beginTracksPattern =
+            std::string_view { "<key>Tracks</key>" };
 
         //
         auto foundBegin = avx2_find(searchSV, _beginTracksPattern);
@@ -44,7 +66,8 @@ struct TracksBoundaries : public std::string_view {
 
     static const std::size_t _findEndTrackPos(const std::string_view& searchSV) {
         //
-        static constexpr const auto _endTracksPattern = std::string_view { "<key>Playlists</key>" };
+        static constexpr const auto _endTracksPattern =
+            std::string_view { "<key>Playlists</key>" };
 
         //
         auto foundEnd = searchSV.rfind(_endTracksPattern);

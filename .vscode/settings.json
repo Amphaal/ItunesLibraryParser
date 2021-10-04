@@ -10,7 +10,6 @@
         "CHERE_INVOKING": "1",
         "MSVSCODE": "1"
     },
-    "glsllint.glslangValidatorPath": "C:/msys64/mingw64/bin/glslangValidator.exe",
     "search.exclude": {
         "deps": true,
         "cmake": true

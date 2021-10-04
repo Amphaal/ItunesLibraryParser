@@ -19,13 +19,12 @@
                 "kind": "test"
             },
             "type": "shell",
-            "command": "cmake",
-            "args": [
-                "-GNinja", 
-                "-Bbuild", 
-                "-H.", 
-                "-DCMAKE_TOOLCHAIN_FILE=toolchains/msys2.cmake"
-            ]
+            "command": "cmake -GNinja -Bbuild -H.",
+            "windows":{
+                "args": [
+                    "-DCMAKE_TOOLCHAIN_FILE=toolchains/msys2.cmake"
+                ],
+            }
         },
         {
             "label": "2. Build",

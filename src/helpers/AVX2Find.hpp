@@ -1,3 +1,22 @@
+// ItunesLibraryParser
+// Allows JSON parsing of XML Itunes Library file
+// Copyright (C) 2021 Guillaume Vara <guillaume.vara@gmail.com>
+
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+
+// Any graphical resources available within the source code may
+// use a different license and copyright : please refer to their metadata
+// for further details. Graphical resources without explicit references to a
+// different license and copyright still refer to this GPL.
+
 //
 // Improvements are noticeable on release
 //
@@ -17,7 +36,6 @@ namespace bits {
 
     template <typename T>
     T clear_leftmost_set(const T value) {
-
         assert(value != 0);
 
         return value & (value - 1);
@@ -25,7 +43,6 @@ namespace bits {
 
     template <typename T>
     unsigned get_first_bit_set(const T value) {
-
         assert(value != 0);
 
         return __builtin_ctz(value);
@@ -33,28 +50,40 @@ namespace bits {
 
     template <>
     unsigned get_first_bit_set<uint64_t>(const uint64_t value) {
-
         assert(value != 0);
 
         return __builtin_ctzl(value);
     }
 
-} // namespace bits
+}  // namespace bits
 
 
-size_t FORCE_INLINE avx2_naive_strstr_anysize64(const char* s, size_t n, const char* needle, size_t k) {
+const __m256i avx2_sc_load256(const char* val) {
+    return _mm256_loadu_si256((const __m256i*)(val));
+}
 
+
+const uint32_t avx2_sc_maskgen(
+    const __m256i eq_first,
+    const __m256i eq_last) {
+    return _mm256_movemask_epi8(_mm256_and_si256(eq_first, eq_last));
+}
+
+
+size_t FORCE_INLINE avx2_naive_strstr_anysize64(const char* s,
+                                                size_t n,
+                                                const char* needle,
+                                                size_t k) {
     assert(k > 0);
     assert(n > 0);
-    const __m256i first = _mm256_set1_epi8(needle[0]);
-    const __m256i last  = _mm256_set1_epi8(needle[k - 1]);
+    const auto first = _mm256_set1_epi8(needle[0]);
+    const auto last  = _mm256_set1_epi8(needle[k - 1]);
     for (size_t i = 0; i < n; i += 64) {
+        const auto block_first1 = avx2_sc_load256(s + i);
+        const auto block_last1  = avx2_sc_load256(s + i + k - 1);
 
-        const __m256i block_first1 = _mm256_loadu_si256((const __m256i*)(s + i));
-        const __m256i block_last1  = _mm256_loadu_si256((const __m256i*)(s + i + k - 1));
-
-        const __m256i block_first2 = _mm256_loadu_si256((const __m256i*)(s + i + 32));
-        const __m256i block_last2  = _mm256_loadu_si256((const __m256i*)(s + i + k - 1 + 32));
+        const auto block_first2 = avx2_sc_load256(s + i + 32);
+        const auto block_last2  = avx2_sc_load256(s + i + k - 1 + 32);
 
         const __m256i eq_first1 = _mm256_cmpeq_epi8(first, block_first1);
         const __m256i eq_last1  = _mm256_cmpeq_epi8(last, block_last1);
@@ -62,8 +91,8 @@ size_t FORCE_INLINE avx2_naive_strstr_anysize64(const char* s, size_t n, const c
         const __m256i eq_first2 = _mm256_cmpeq_epi8(first, block_first2);
         const __m256i eq_last2  = _mm256_cmpeq_epi8(last, block_last2);
 
-        const uint32_t mask1 = _mm256_movemask_epi8(_mm256_and_si256(eq_first1, eq_last1));
-        const uint32_t mask2 = _mm256_movemask_epi8(_mm256_and_si256(eq_first2, eq_last2));
+        const auto mask1 = avx2_sc_maskgen(eq_first1, eq_last1);
+        const auto mask2 = avx2_sc_maskgen(eq_first2, eq_last2);
         uint64_t mask = mask1 | ((uint64_t)mask2 << 32);
 
         while (mask != 0) {
@@ -82,14 +111,13 @@ size_t FORCE_INLINE avx2_naive_strstr_anysize64(const char* s, size_t n, const c
 // ------------------------------------------------------------------------
 
 size_t avx2_find(const char* s, size_t n, const char* needle, size_t k) {
-
     size_t result = std::string::npos;
 
     if (n < k) {
         return result;
     }
 
-	result = avx2_naive_strstr_anysize64(s, n, needle, k);
+    result = avx2_naive_strstr_anysize64(s, n, needle, k);
 
     if (result <= n - k) {
         return result;
@@ -104,18 +132,22 @@ size_t avx2_find(const std::string_view& s, const std::string_view& needle) {
     return avx2_find(s.data(), s.size(), needle.data(), needle.size());
 }
 
-size_t avx2_find(const std::string_view& s, const std::string_view& needle, size_t pos) {
+size_t avx2_find(const std::string_view& s,
+                const std::string_view& needle,
+                size_t pos) {
     //
-    if(pos >= s.size()) return std::string::npos;
+    if (pos >= s.size()) return std::string::npos;
 
     //
     auto searchFrom = s.data() + pos;
-    auto found = avx2_find(searchFrom, s.size() - pos, needle.data(), needle.size());
+    auto found = avx2_find(searchFrom, s.size() - pos,
+                            needle.data(),
+                            needle.size());
 
     //
-    if(found != std::string::npos) 
+    if (found != std::string::npos)
         return found + pos;
-    
+
     //
     return found;
 }

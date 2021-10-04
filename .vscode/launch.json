@@ -11,10 +11,14 @@
             "name" : "Launch Example",
             "request": "launch",
             "cwd": "${workspaceFolder}",
-            "MIMode": "gdb",
             "externalConsole": false,
-            "program": "${workspaceFolder}/build/ITunesLibraryParser_test.exe",
-            "miDebuggerPath": "${env:MINGW64_ROOT}/bin/gdb.exe",
+            "windows": {
+                "program": "${workspaceFolder}/build/ITunesLibraryParser_test.exe",
+                "miDebuggerPath": "${env:MINGW64_ROOT}/bin/gdb.exe",
+                "MIMode": "gdb"
+            },
+            "program": "${workspaceFolder}/build/ITunesLibraryParser_test",
+            "MIMode": "lldb"
         },
     ]
 }
