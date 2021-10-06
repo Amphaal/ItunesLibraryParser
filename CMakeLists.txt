@@ -27,6 +27,19 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_C_STANDARD 11)
 
+#################################
+## define bundle configuration ##
+#################################
+
+# define build type if any
+IF(NOT DEFINED APP_BUNDLE_TYPE)
+    IF(CMAKE_SYSTEM_NAME STREQUAL "Windows")
+        SET(APP_BUNDLE_TYPE WIN32) 
+    ELSEIF(APPLE)
+        SET(APP_BUNDLE_TYPE MACOSX_BUNDLE)
+    endif()
+endif()
+
 #############
 ## Sources ##
 #############
@@ -37,27 +50,7 @@ target_include_directories(itunes-library-parser INTERFACE src)
 target_compile_options(itunes-library-parser INTERFACE "-march=native")
 target_compile_definitions(itunes-library-parser INTERFACE $<$<CONFIG:Debug>:_DEBUG>)
 
-# test executable
+# may produce tests ?
 if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME AND BUILD_TESTING)
-    #
-    add_executable(${PROJECT_NAME}_test 
-        test/main.cpp
-    )
-
-    #
-    configure_file(
-        "test/samples/iTunes Music Library.xml" 
-        "iTunes Music Library.xml" 
-        COPYONLY
-    )
-    
-    # LTO on, reduces exe size
-    set_target_properties(${PROJECT_NAME}_test PROPERTIES 
-        INTERPROCEDURAL_OPTIMIZATION ON
-    )
-    
-    # link
-    target_link_libraries(${PROJECT_NAME}_test PRIVATE
-        itunes-library-parser
-    )
+    add_subdirectory(tests)
 endif()

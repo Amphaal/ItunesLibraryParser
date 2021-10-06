@@ -5,29 +5,30 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "lldb",
-            "request": "launch",
-            "name": "Launch Test (lldb)",
-            "program": "${workspaceFolder}/build/ITunesLibraryParser_test",
-            "args": [],
-            "preLaunchTask": "2. Build",
-            "cwd": "${workspaceFolder}/build"
-        },
-        {
             "targetArchitecture": "x64",
             "type": "cppdbg",
             "preLaunchTask": "2. Build",
-            "name" : "Launch test",
+            "name" : "Launch tests",
             "request": "launch",
             "cwd": "${workspaceFolder}/build",
             "externalConsole": false,
             "windows": {
-                "program": "${workspaceFolder}/build/ITunesLibraryParser_test.exe",
+                "program": "${workspaceFolder}/build/tests/ITunesLibraryParser_tests.exe",
                 "miDebuggerPath": "${env:MINGW64_ROOT}/bin/gdb.exe",
-                "MIMode": "gdb"
+                "MIMode": "gdb",
+                "externalConsole": true, // TODO unset once VSCODE bug is removed
             },
-            "program": "${workspaceFolder}/build/ITunesLibraryParser_test",
+            "program": "${workspaceFolder}/build/tests/ITunesLibraryParser_tests",
             "MIMode": "lldb"
         },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Launch Test (lldb)",
+            "program": "${workspaceFolder}/build/tests/ITunesLibraryParser_tests",
+            "args": [],
+            "preLaunchTask": "2. Build",
+            "cwd": "${workspaceFolder}/build"
+        }
     ]
 }

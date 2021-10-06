@@ -17,17 +17,21 @@
 // for further details. Graphical resources without explicit references to a
 // different license and copyright still refer to this GPL.
 
+#define CATCH_CONFIG_MAIN
+
+#include <catch2/catch.hpp>
+
 #include "ITunesLibraryParser.hpp"
 #include "Mesurable.hpp"
 
-int main() {
+bool parsing_succeeded(const std::string &fileName) {
     // make measurements more precise
     Measurable::makeMorePrecise();
 
     auto m = Measurable { "Parse XML ITunes Library File into JSON" };
 
         const auto parser = ITunesLibraryParser {
-            "iTunes Music Library.xml",
+            fileName.c_str(),
             "output.json",
             "warnings.json"
         };
@@ -36,5 +40,13 @@ int main() {
 
     m.printElapsed();
 
-    return 0;
+    return true;
+}
+
+TEST_CASE("Parse small file", "[parser]") {
+    REQUIRE(parsing_succeeded("iTunes Music Library (S).xml"));
+}
+
+TEST_CASE("Parse big file", "[parser]") {
+    REQUIRE(parsing_succeeded("iTunes Music Library.xml"));
 }
