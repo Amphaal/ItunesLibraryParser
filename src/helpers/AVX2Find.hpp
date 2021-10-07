@@ -30,7 +30,7 @@
 
 #include <string>
 
-#ifdef __APPLE__
+#ifndef __APPLE__
 # define FORCE_INLINE __attribute__((always_inline)) inline
 #endif
 
