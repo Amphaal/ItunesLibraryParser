@@ -109,7 +109,7 @@ struct FieldTypeStruct : public IScanner {
 
         //
         trackField = std::string_view {
-            source.begin() + foundBegin,
+            source.data() + foundBegin, // use data() instead of begin() to avoid implicit casting issues
             dataFieldLength
         };
     }
