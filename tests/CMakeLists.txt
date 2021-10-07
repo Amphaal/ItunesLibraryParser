@@ -26,7 +26,7 @@ configure_file(
 )
 
 #
-add_executable(${PROJECT_NAME}_tests ${APP_BUNDLE_TYPE}
+add_executable(${PROJECT_NAME}_tests
     tests.cpp
 )
 

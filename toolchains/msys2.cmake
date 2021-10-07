@@ -16,9 +16,6 @@ list(APPEND CMAKE_PREFIX_PATH
     ${MINGW64_ROOT} 
 )
 
-#allows Debug cout/cerr console... from LLDB/GDB
-SET(APP_BUNDLE_TYPE "")
-
 SET (CMAKE_CXX_COMPILER         "clang++")
 
 SET (CMAKE_AR                   "llvm-ar")

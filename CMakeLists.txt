@@ -27,19 +27,6 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_C_STANDARD 11)
 
-#################################
-## define bundle configuration ##
-#################################
-
-# define build type if any
-IF(NOT DEFINED APP_BUNDLE_TYPE)
-    IF(CMAKE_SYSTEM_NAME STREQUAL "Windows")
-        SET(APP_BUNDLE_TYPE WIN32) 
-    ELSEIF(APPLE)
-        SET(APP_BUNDLE_TYPE MACOSX_BUNDLE)
-    endif()
-endif()
-
 #############
 ## Sources ##
 #############
