@@ -26,6 +26,10 @@
 #include <filesystem>
 #include <string_view>
 
+#ifdef __unix
+#define fopen_s(pFile,filename,mode) ((*(pFile))=fopen((filename),(mode)))==NULL
+#endif
+
 struct ITunesLibraryFileName : public std::filesystem::path {
  public:
     ITunesLibraryFileName(const char * filePath) :
