@@ -30,7 +30,9 @@
 
 #include <string>
 
+#ifdef __APPLE__
 # define FORCE_INLINE __attribute__((always_inline)) inline
+#endif
 
 namespace bits {
 

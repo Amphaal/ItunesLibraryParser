@@ -26,7 +26,7 @@
 #include <filesystem>
 #include <string_view>
 
-#ifdef __unix
+#ifdef __APPLE__
 #define fopen_s(pFile,filename,mode) ((*(pFile))=fopen((filename),(mode)))==NULL
 #endif
 
