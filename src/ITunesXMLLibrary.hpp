@@ -55,8 +55,9 @@ struct ITunesXMLLibrary {
     ITunesXMLLibrary(const ITunesLibraryFileName&& filePath) :
         _fileSize(filePath.fileSize) {
         //
-        auto f = fopen(filePath.string().c_str(), "rb");
-        assert(f);
+        FILE * f;
+        auto err = fopen_s(&f, filePath.string().c_str(), "rb");
+        assert(err == 0);
 
             _ptr = reinterpret_cast<char *>(malloc(_fileSize));
 
