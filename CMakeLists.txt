@@ -11,7 +11,7 @@ cmake_minimum_required(VERSION 3.19.3 FATAL_ERROR)
 
 # project definition
 project(ITunesLibraryParser
-    VERSION 0.0.1
+    VERSION 0.1.0
     LANGUAGES CXX
 )
 
@@ -47,7 +47,7 @@ endif()
 # library interface
 add_library(itunes-library-parser INTERFACE)
 target_include_directories(itunes-library-parser INTERFACE src)
-target_compile_options(itunes-library-parser INTERFACE "-march=native")
+target_compile_options(itunes-library-parser INTERFACE "-march=native") # for AVX2 compatibility ensured
 target_compile_definitions(itunes-library-parser INTERFACE $<$<CONFIG:Debug>:_DEBUG>)
 
 # may produce tests ?

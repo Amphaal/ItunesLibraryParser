@@ -19,8 +19,7 @@
 
 #pragma once
 
-#include <assert.h>
-
+#include <cassert>
 #include <string_view>
 #include <vector>
 #include <array>

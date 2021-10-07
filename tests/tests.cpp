@@ -22,31 +22,40 @@
 #include <catch2/catch.hpp>
 
 #include "ITunesLibraryParser.hpp"
-#include "Mesurable.hpp"
 
 bool parsing_succeeded(const std::string &fileName) {
-    // make measurements more precise
-    Measurable::makeMorePrecise();
+    
+    const auto parser = ITunesLibraryParser {
+        fileName.c_str(),
+        "output.json",
+        "warnings.json"
+    };
 
-    auto m = Measurable { "Parse XML ITunes Library File into JSON" };
-
-        const auto parser = ITunesLibraryParser {
-            fileName.c_str(),
-            "output.json",
-            "warnings.json"
-        };
-
-        parser.produceOutputs();
-
-    m.printElapsed();
+    parser.produceOutputs();
 
     return true;
 }
 
+TEST_CASE("Failing parsing on bad file name", "[parser]") {
+    REQUIRE_THROWS(parsing_succeeded("iTunes Music Library (Ssss).xml"));
+}
+
 TEST_CASE("Parse small file", "[parser]") {
-    REQUIRE(parsing_succeeded("iTunes Music Library (S).xml"));
+    const auto targetFile = "iTunes Music Library (S).xml";
+
+    REQUIRE(parsing_succeeded(targetFile));
+
+    BENCHMARK("Parsing") {
+        return parsing_succeeded(targetFile);
+    };
 }
 
 TEST_CASE("Parse big file", "[parser]") {
-    REQUIRE(parsing_succeeded("iTunes Music Library.xml"));
+    const auto targetFile = "iTunes Music Library.xml";
+
+    REQUIRE(parsing_succeeded(targetFile));
+
+    BENCHMARK("Parsing") {
+        return parsing_succeeded(targetFile);
+    };
 }

@@ -26,7 +26,7 @@ SET (CMAKE_RANLIB               "llvm-ranlib")
 SET (CMAKE_NM                   "llvm-nm")
 SET (CMAKE_RC_COMPILER          "llvm-rc")
 
-SET (CMAKE_CXX_FLAGS              "-fuse-ld=lld")
-SET (CMAKE_CXX_FLAGS_DEBUG        "-O0 -g")
+SET (CMAKE_CXX_FLAGS            "-fuse-ld=lld")
+SET (CMAKE_CXX_FLAGS_DEBUG      "-O0 -g")
 
 SET(CMAKE_BUILD_TYPE Debug)

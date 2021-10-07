@@ -20,8 +20,8 @@
 #pragma once
 
 #include <stdio.h>
-#include <assert.h>
 
+#include <cassert>
 #include <string>
 #include <filesystem>
 #include <string_view>
@@ -29,17 +29,24 @@
 struct ITunesLibraryFileName : public std::filesystem::path {
  public:
     ITunesLibraryFileName(const char * filePath) :
-        std::filesystem::path(filePath),
-        fileSize(std::filesystem::file_size(*this)) {
+        std::filesystem::path(filePath) {
         //
-        assert(std::filesystem::exists(*this));
-        assert(!std::filesystem::is_directory(*this));
+        if (!std::filesystem::exists(*this) || std::filesystem::is_directory(*this)) {
+            std::string m ("Cannot open expected XML Library File" );
+            m += " [";
+            m += std::filesystem::absolute(*this).string();
+            m += "]";
+            throw std::logic_error(m);
+        }
+
+        //
+        fileSize = std::filesystem::file_size(*this);
     }
 
     ITunesLibraryFileName(const ITunesLibraryFileName&) = delete;
     void operator=(const ITunesLibraryFileName&) = delete;
 
-    const uintmax_t fileSize;
+    uintmax_t fileSize;
 };
 
 // ITunes XML Library file stored on memory

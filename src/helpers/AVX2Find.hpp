@@ -23,7 +23,7 @@
 
 #pragma once
 
-#include <assert.h>
+#include <cassert>
 #include <immintrin.h>
 #include <stdint.h>
 #include <string.h>

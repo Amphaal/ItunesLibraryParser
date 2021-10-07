@@ -19,8 +19,7 @@
 
 #pragma once
 
-#include <assert.h>
-
+#include <cassert>
 #include <sstream>
 #include <fstream>
 #include <string>

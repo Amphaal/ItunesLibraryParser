@@ -43,9 +43,11 @@ class ITunesLibraryParser {
             }
         };
 
-        //
-        MissingFieldsJSONParser { std::move(missingFieldsTracks) }
-            .copyToFile(_warningJSONFilePath);
+        // if has missing fields tracks
+        if(missingFieldsTracks.size()) {
+            MissingFieldsJSONParser { std::move(missingFieldsTracks) }
+                .copyToFile(_warningJSONFilePath);
+        }
 
         //
         SuccessfulJSONParser { std::move(OKTracks) }

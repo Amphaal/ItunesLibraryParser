@@ -5,30 +5,15 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "targetArchitecture": "x64",
             "type": "cppdbg",
-            "preLaunchTask": "2. Build",
             "name" : "Launch tests",
             "request": "launch",
-            "cwd": "${workspaceFolder}/build",
-            "externalConsole": false,
-            "windows": {
-                "program": "${workspaceFolder}/build/tests/ITunesLibraryParser_tests.exe",
-                "miDebuggerPath": "${env:MINGW64_ROOT}/bin/gdb.exe",
-                "MIMode": "gdb",
-                "externalConsole": true, // TODO unset once VSCODE bug is removed
-            },
-            "program": "${workspaceFolder}/build/tests/ITunesLibraryParser_tests",
-            "MIMode": "lldb"
-        },
-        {
-            "type": "lldb",
-            "request": "launch",
-            "name": "Launch Test (lldb)",
-            "program": "${workspaceFolder}/build/tests/ITunesLibraryParser_tests",
-            "args": [],
             "preLaunchTask": "2. Build",
-            "cwd": "${workspaceFolder}/build"
+            "cwd": "${workspaceFolder}/build/tests",
+            "program": "${workspaceFolder}/build/tests/ITunesLibraryParser_tests",
+            "args": [
+                "--benchmark-samples 1"
+            ]
         }
     ]
 }

@@ -1,3 +1,19 @@
+# fetch
+if(NOT TARGET Catch2::Catch2)
+    message("Including [Catch2] !")
+    Include(FetchContent)
+
+    FetchContent_Declare(Catch2
+        GIT_REPOSITORY "https://github.com/catchorg/Catch2"
+        GIT_TAG "v2.x"
+    )
+
+    FetchContent_MakeAvailable(Catch2)
+    FetchContent_GetProperties(Catch2
+        SOURCE_DIR CATCH_SOURCE_DIR
+    )
+endif()
+
 # move and extract files against tests compute
 file(ARCHIVE_EXTRACT 
     INPUT "${CMAKE_CURRENT_SOURCE_DIR}/samples/iTunes Music Library (L).zip"
@@ -24,21 +40,9 @@ target_link_libraries(${PROJECT_NAME}_tests PRIVATE
     Catch2::Catch2
 )
 
-# fetch
-if(NOT TARGET Catch2::Catch2)
-    message("Including [Catch2] !")
-    Include(FetchContent)
-
-    FetchContent_Declare(Catch2
-        GIT_REPOSITORY "https://github.com/catchorg/Catch2"
-        GIT_TAG "v2.x"
-    )
-
-    FetchContent_MakeAvailable(Catch2)
-    FetchContent_GetProperties(Catch2
-        SOURCE_DIR CATCH_SOURCE_DIR
-    )
-endif()
+target_compile_definitions(${PROJECT_NAME}_tests 
+    PRIVATE CATCH_CONFIG_ENABLE_BENCHMARKING
+)
 
 #tests handling
 include(CTest)
