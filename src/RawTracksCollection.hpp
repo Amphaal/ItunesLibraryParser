@@ -55,7 +55,7 @@ struct RawTracksCollection : public std::vector<std::string_view> {
             startSearchingAt = input.data() + pos;
             remainingLengthToSearch = input.size() - pos;
             assert(remainingLengthToSearch > 0);
-            assert(startSearchingAt < input.end());
+            assert(input.end() > startSearchingAt);
 
             //
             found = avx2_find(
