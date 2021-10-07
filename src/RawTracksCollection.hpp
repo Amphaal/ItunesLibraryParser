@@ -55,7 +55,7 @@ struct RawTracksCollection : public std::vector<std::string_view> {
             startSearchingAt = input.data() + pos;
             remainingLengthToSearch = input.size() - pos;
             assert(remainingLengthToSearch > 0);
-            auto inputEnd = input.end();
+            auto inputEnd = reinterpret_cast<const char *>(input.end());
             assert(startSearchingAt < inputEnd);
 
             //
