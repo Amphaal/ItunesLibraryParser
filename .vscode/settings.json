@@ -26,7 +26,7 @@
                 "MSYS2_PATH_TYPE": "inherit",
                 "CHERE_INVOKING": "1",
                 "MSVSCODE": "1"
-            },
+            }
         }
     },
     "terminal.integrated.defaultProfile.windows": "Command Prompt",

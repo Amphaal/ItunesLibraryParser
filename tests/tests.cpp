@@ -24,7 +24,6 @@
 #include "ITunesLibraryParser.hpp"
 
 bool parsing_succeeded(const std::string &fileName) {
-    
     const auto parser = ITunesLibraryParser {
         fileName.c_str(),
         "output.json",
