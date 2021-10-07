@@ -30,11 +30,7 @@
 
 #include <string>
 
-#ifndef __APPLE__
 # define FORCE_INLINE __attribute__((always_inline)) inline
-#else
-# define FORCE_INLINE 
-#endif
 
 namespace bits {
 
@@ -62,12 +58,12 @@ namespace bits {
 }  // namespace bits
 
 
-const __m256i avx2_sc_load256(const char* val) {
+const __m256i FORCE_INLINE avx2_sc_load256(const char* val) {
     return _mm256_loadu_si256((const __m256i*)(val));
 }
 
 
-const uint32_t avx2_sc_maskgen(
+const uint32_t FORCE_INLINE avx2_sc_maskgen(
     const __m256i eq_first,
     const __m256i eq_last) {
     return _mm256_movemask_epi8(_mm256_and_si256(eq_first, eq_last));
