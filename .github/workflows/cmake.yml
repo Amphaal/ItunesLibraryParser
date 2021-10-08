@@ -20,7 +20,7 @@ jobs:
               os: windows-latest
               CXX: clang++
             - name: MacOS
-              os: macOs-latest
+              os: macOS-11
               CXX: clang++
               
 
