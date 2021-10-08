@@ -2,7 +2,7 @@
 [![CodeFactor](https://www.codefactor.io/repository/github/amphaal/ituneslibraryparser/badge)](https://www.codefactor.io/repository/github/amphaal/ituneslibraryparser)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/33cc1a2ab72b410ab6732ce7c6581a08)](https://www.codacy.com/gh/Amphaal/ItunesLibraryParser/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Amphaal/ItunesLibraryParser&amp;utm_campaign=Badge_Grade)
 
-Allows really fast JSON parsing of XML Itunes Library file, thanks to AVX2 CPU extensions ! Benchs shows that a 42Mb XML library file can be parsed from a standard HDD at 120ms avg. !
+Allows really fast JSON parsing of XML Itunes Library file, thanks to AVX2 CPU extensions ! Benchs shows that a 42Mb XML library file can be parsed from a standard HDD at 140ms avg. !
 
 ## License
     ItunesLibraryParser

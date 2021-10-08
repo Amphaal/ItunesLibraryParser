@@ -27,6 +27,16 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_C_STANDARD 11)
 
+##############################
+## Check AVX2 compatibility ##
+##############################
+
+include(FindAVX2)
+
+if(NOT AVX2_FOUND) 
+    message(FATAL_ERROR "${PROJECT_NAME} requires AVX2 instruction set to be handled by compiler and CPU !")
+endif()
+
 #############
 ## Sources ##
 #############
@@ -34,8 +44,16 @@ set(CMAKE_C_STANDARD 11)
 # library interface
 add_library(itunes-library-parser INTERFACE)
 target_include_directories(itunes-library-parser INTERFACE src)
-target_compile_options(itunes-library-parser INTERFACE "-march=native") # for AVX2 compatibility ensured
-target_compile_definitions(itunes-library-parser INTERFACE $<$<CONFIG:Debug>:_DEBUG>)
+
+# for AVX2 compatibility ensured
+target_compile_options(itunes-library-parser 
+    INTERFACE ${AVX2_FLAGS}
+) 
+
+# debug flag
+target_compile_definitions(itunes-library-parser 
+    INTERFACE $<$<CONFIG:Debug>:_DEBUG>
+)
 
 # may produce tests ?
 if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME AND BUILD_TESTING)
