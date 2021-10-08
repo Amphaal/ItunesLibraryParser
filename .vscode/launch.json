@@ -13,7 +13,10 @@
             "program": "${workspaceFolder}/build/tests/ITunesLibraryParser_tests",
             "args": [
                 "--benchmark-samples 1"
-            ]
+            ],
+            "osx": {
+                "MIMode": "lldb"
+            },
         }
     ]
 }
