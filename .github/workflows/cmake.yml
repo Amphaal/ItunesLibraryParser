@@ -21,7 +21,7 @@ jobs:
               CXX: clang++
             - name: MacOS
               os: macOS-11
-              CXX: clang++
+              #CXX: clang++
               
 
     # The CMake configure and build commands are platform agnostic and should work equally
