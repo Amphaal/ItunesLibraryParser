@@ -128,6 +128,10 @@ struct JSONParser {
         }
     }
 
+    const OneWayBuffer<EstMaxTrackLength>& data() const {
+        return _memFileStream;
+    }
+
  private:
     OneWayBuffer<EstMaxTrackLength> _memFileStream;
     std::vector<std::size_t> _dblQuotesPosToEscape;

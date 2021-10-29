@@ -34,14 +34,7 @@ class ITunesLibraryParser {
 
     void produceOutputs() const {
         //
-        const auto inMemoryFile = ITunesXMLLibrary { _xmlFilePath };
-
-        //
-        auto [OKTracks, missingFieldsTracks] = PackedTracks {
-            RawTracksCollection {
-                inMemoryFile
-            }
-        };
+        auto [OKTracks, missingFieldsTracks] = getStoragedResults();
 
         // if has missing fields tracks
         if(missingFieldsTracks.size()) {
@@ -52,6 +45,17 @@ class ITunesLibraryParser {
         //
         SuccessfulJSONParser { std::move(OKTracks) }
             .copyToFile(_outputJSONFilePath);
+    }
+
+    PackedTracks getStoragedResults() const {
+        const auto inMemoryFile = ITunesXMLLibrary { _xmlFilePath };
+
+        //
+        return {
+            RawTracksCollection {
+                inMemoryFile
+            }
+        };
     }
 
  private:
