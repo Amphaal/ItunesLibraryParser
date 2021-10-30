@@ -128,7 +128,7 @@ struct JSONParser {
         }
     }
 
-    const OneWayBuffer<EstMaxTrackLength>& data() const {
+    const OneWayBuffer<EstMaxTrackLength>& dataBuffer() const {
         return _memFileStream;
     }
 
