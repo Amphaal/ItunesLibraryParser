@@ -57,7 +57,7 @@ struct OneWayBuffer {
         return _index;
     }
 
-    const std::string_view str() const {
+    const std::string_view view() const {
         return std::string_view { _buffer, _eofIndex };
     }
 
@@ -105,7 +105,7 @@ struct JSONParser {
         std::ofstream { filePath,
         std::ifstream::out |
         std::ifstream::trunc |
-        std::ifstream::binary } << _memFileStream.str();
+        std::ifstream::binary } << _memFileStream.view();
     }
 
     void lfQuotesToEscape(
