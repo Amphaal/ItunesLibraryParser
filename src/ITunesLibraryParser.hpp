@@ -25,6 +25,14 @@
 
 class ITunesLibraryParser {
  public:
+    struct StoragedResults {
+        StoragedResults(const char * xmlFilePath) : source(xmlFilePath), packs(RawTracksCollection{source}) {}
+        
+        //
+        const ITunesXMLLibrary source;
+        PackedTracks packs;
+    };
+
     ITunesLibraryParser(const char * xmlFilePath,
                         const char * outputJSONFilePath,
                         const char * warningJSONFilePath) noexcept :
@@ -34,28 +42,21 @@ class ITunesLibraryParser {
 
     void produceOutputs() const {
         //
-        auto [OKTracks, missingFieldsTracks] = getStoragedResults();
+        auto [libFile, packs] = getStoragedResults();
 
         // if has missing fields tracks
-        if(missingFieldsTracks.size()) {
-            MissingFieldsJSONParser { std::move(missingFieldsTracks) }
+        if(packs.missingFieldsTracks.size()) {
+            MissingFieldsJSONParser { std::move(packs.missingFieldsTracks) }
                 .copyToFile(_warningJSONFilePath);
         }
 
         //
-        SuccessfulJSONParser { std::move(OKTracks) }
+        SuccessfulJSONParser { std::move(packs.OKTracks) }
             .copyToFile(_outputJSONFilePath);
     }
 
-    PackedTracks getStoragedResults() const {
-        const auto inMemoryFile = ITunesXMLLibrary { _xmlFilePath };
-
-        //
-        return {
-            RawTracksCollection {
-                inMemoryFile
-            }
-        };
+    StoragedResults getStoragedResults() const {
+        return StoragedResults(_xmlFilePath);
     }
 
  private:

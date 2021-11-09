@@ -78,6 +78,9 @@ struct ITunesXMLLibrary {
         return std::string_view { _ptr, static_cast<std::size_t>(_fileSize) };
     }
 
+    ITunesXMLLibrary(const ITunesXMLLibrary&) = delete;
+    void operator=(const ITunesXMLLibrary&) = delete;
+
  private:
     const uintmax_t _fileSize;
     char* _ptr;
