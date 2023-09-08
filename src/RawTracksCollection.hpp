@@ -22,13 +22,15 @@
 #include <vector>
 #include <string>
 
+#include "SIMD/SIMDFind.h"
+
 #include "TracksBoundaries.hpp"
 
 struct RawTracksCollection : public std::vector<std::string_view> {
  public:
     RawTracksCollection(const TracksBoundaries &&boundaries) {
         // process and fill
-        _fill_ST_AVX2(boundaries);
+        _fill_ST_SIMD(boundaries);
     }
 
     ~RawTracksCollection() {}
@@ -39,8 +41,8 @@ struct RawTracksCollection : public std::vector<std::string_view> {
     static constexpr const auto _endPattern = std::string_view { "</dict>" };
     static constexpr const std::size_t _avgTrackSize = 1500;
 
-    // Single-threaded AVX2
-    void _fill_ST_AVX2(const TracksBoundaries & input) {
+    // Single-threaded SIMD
+    void _fill_ST_SIMD(const TracksBoundaries & input) {
         // approx avg. track dict size
         const auto estimatedTrackCount = input.size() / _avgTrackSize;
         this->reserve(estimatedTrackCount);
@@ -58,7 +60,7 @@ struct RawTracksCollection : public std::vector<std::string_view> {
             assert(startSearchingAt < (input.data() + input.size())); // use this instead of input.end() to prevent casting issues
 
             //
-            found = avx2_find(
+            found = simd_find(
                 startSearchingAt,
                 remainingLengthToSearch,
                 _endPattern.data(),

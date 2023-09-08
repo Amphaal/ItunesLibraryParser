@@ -21,8 +21,6 @@
 
 #include <vector>
 
-#include "helpers/AVX2Find.hpp"
-
 #include "config/TracksScan.hpp"
 #include "RawTracksCollection.hpp"
 
@@ -32,7 +30,7 @@ struct TracksBoundingResult
  public:
     TracksBoundingResult(const RawTracksCollection&& rawTracks) {
         // process and fill
-        _fill_ST_AVX2(rawTracks);
+        _fill_ST_SIMD(rawTracks);
         _fillDefaultingValues();
     }
 
@@ -41,7 +39,7 @@ struct TracksBoundingResult
     void operator=(const TracksBoundingResult&) = delete;
 
  private:
-    void  _fill_ST_AVX2(const RawTracksCollection& rawTracks) {
+    void  _fill_ST_SIMD(const RawTracksCollection& rawTracks) {
         //
         const auto tracksC = rawTracks.size();
         reserve(tracksC);

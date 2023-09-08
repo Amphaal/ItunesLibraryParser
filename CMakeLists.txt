@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.19.3 FATAL_ERROR)
 
 # project definition
 project(ITunesLibraryParser
-    VERSION 0.1.2
+    VERSION 0.1.3
     LANGUAGES CXX
 )
 
@@ -20,13 +20,14 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_C_STANDARD 11)
 
 ##############################
-## Check AVX2 compatibility ##
+## Check AVX2 / Neon compatibility ##
 ##############################
 
 include(FindAVX2)
+include(FindARM)
 
-if(NOT AVX2_FOUND) 
-    message(FATAL_ERROR "${PROJECT_NAME} requires AVX2 instruction set to be handled by compiler and CPU !")
+if(NOT AVX2_FOUND AND NOT NEON_FOUND) 
+    message(FATAL_ERROR "${PROJECT_NAME} requires AVX2 (for x64 chips) or Neon (for ARM / Apple Silicon) instruction set to be handled by compiler and CPU !")
 endif()
 
 #############
@@ -37,10 +38,23 @@ endif()
 add_library(itunes-library-parser INTERFACE)
 target_include_directories(itunes-library-parser INTERFACE src)
 
-# for AVX2 compatibility ensured
-target_compile_options(itunes-library-parser 
-    INTERFACE ${AVX2_FLAGS}
-) 
+if(AVX2_FOUND) 
+    # for AVX2 compatibility ensured    
+    target_sources(itunes-library-parser INTERFACE src/SIMD/AVX2Find.cpp)
+
+    #
+    target_compile_options(itunes-library-parser 
+        INTERFACE ${AVX2_FLAGS}
+    ) 
+elseif(NEON_FOUND)
+    #
+    target_sources(itunes-library-parser INTERFACE src/SIMD/NeonFind.cpp)
+
+    #
+    target_link_options(itunes-library-parser 
+        INTERFACE "-mfpu=neon -mfloat-abi=hard"
+    )
+endif()
 
 # debug flag
 target_compile_definitions(itunes-library-parser 

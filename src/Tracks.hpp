@@ -25,6 +25,8 @@
 #include <array>
 #include <string>
 
+#include "SIMD/SIMDFind.h"
+
 namespace FieldType {
 
 template<size_t N>
@@ -86,7 +88,9 @@ struct FieldTypeStruct : public IScanner {
         auto &missingField = result.missingFields[index];
 
         //
-        auto foundBegin = avx2_find(source, _beginFP, pos);
+        //
+        auto foundBegin = simd_find(source, _beginFP, pos);
+
         if (foundBegin == std::string::npos) {
             missingField = true;
             return;
@@ -97,7 +101,8 @@ struct FieldTypeStruct : public IScanner {
         pos = foundBegin;
 
         //
-        auto foundEnd = avx2_find(source, _endFP, pos);
+        auto foundEnd = simd_find(source, _endFP, pos);
+
         if (foundEnd == std::string::npos) {
             missingField = true;
             return;

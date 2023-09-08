@@ -21,7 +21,8 @@
 
 #include <string>
 
-#include "helpers/AVX2Find.hpp"
+#include "SIMD/SIMDFind.h"
+
 #include "ITunesXMLLibrary.hpp"
 
 struct TracksBoundaries : public std::string_view {
@@ -59,7 +60,8 @@ struct TracksBoundaries : public std::string_view {
             std::string_view { "<key>Tracks</key>" };
 
         //
-        auto foundBegin = avx2_find(searchSV, _beginTracksPattern);
+        auto foundBegin = simd_find(searchSV, _beginTracksPattern);
+
         assert(foundBegin != std::string::npos);
         foundBegin += _beginTracksPattern.size();
         return foundBegin;
