@@ -1,6 +1,7 @@
 #include <string>
 #include <stdint.h>
 
+#include <cassert>
 #include <arm_neon.h>
 
 # define USE_SIMPLE_MEMCMP // for fixed-memcmp.cpp
