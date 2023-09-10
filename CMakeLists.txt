@@ -51,9 +51,7 @@ elseif(NEON_FOUND)
     target_sources(itunes-library-parser INTERFACE src/SIMD/NeonFind.cpp)
 
     #
-    target_link_options(itunes-library-parser 
-        INTERFACE "-mfpu=neon -mfloat-abi=hard"
-    )
+    target_link_options(itunes-library-parser INTERFACE -mfpu=neon -mfloat-abi=hard)
 endif()
 
 # debug flag
